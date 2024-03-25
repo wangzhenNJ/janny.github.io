@@ -1,4 +1,17 @@
 <html>
 <a href="http://www.taodudu.cc/news/show-4814191.html?action=onClick">APP漏洞扫描器之本地拒绝服务检测详解</a>
-<p></p>
+<p>
+常用adb命令：
+android手机休眠：adb shell svc power stayon true
+
+ContentProvider的一个攻击方式：超大数据注入 LargeData Injection
+会造成的影响：
+存储空间大量消耗造成拒绝服务
+数据渲染效率低造成应用无响应ANR
+异常数据引起系统崩溃CRASH
+异常数据引起应用崩溃FC
+应用死锁
+
+
+</p>
 </html>
