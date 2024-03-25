@@ -1,0 +1,189 @@
+electron初探问题总结
+https://www.cnblogs.com/wonyun/p/10991984.html
+
+挖洞经验| 芝麻开门：从Electron开放重定向到应用程序RCE提权
+https://www.google.com.hk/search?q=electron+RCE&newwindow=1&hl=zh-CN&ei=yGjWYqbIFdKb4-EPs-OaoAs&start=10&sa=N&ved=2ahUKEwimzOyCwoT5AhXSzTgGHbOxBrQQ8NMDegQIARBH&biw=1920&bih=855&dpr=1 
+
+XSS
+https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/electron-desktop-apps
+
+
+浅谈Electron 应用安全--源码防护的思考
+https://www.gznotes.com/how-to-protect-electron-app-source-code/
+
+https://www.electronjs.org/docs/latest/tutorial/security#17-validate-the-sender-of-all-ipc-messages
+
+
+Electron程序逆向（asar归档解包）
+https://blog.51cto.com/u_13488278/3194988
+
+
+0-click RCE in Electron Applications | by Pavel Shabarkin
+
+来自 <https://www.google.com.hk/search?q=electron+RCE&newwindow=1&hl=zh-CN&biw=1920&bih=855&ei=YGjWYq23Habn4-EP4K-SYA&ved=0ahUKEwit56jRwYT5AhWm8zgGHeCXBAwQ4dUDCA4&uact=5&oq=electron+RCE&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEMgQIABAeMgYIABAeEAgyBggAEB4QCDIGCAAQHhAIMgYIABAeEAgyBggAEB4QCDIGCAAQHhAIMggIABAeEA8QCDoHCAAQRxCwAzoECAAQQzoHCC4Q1AIQQzoECC4QQzoLCC4QgAQQxwEQ0QM6FAgAEOoCELQCEIoDELcDENQDEOUCOhEIABDqAhC0AhCKAxC3AxDlAjoHCAAQgAQQCjoLCC4QgAQQxwEQrwE6CgguEMcBENEDEEM6BwgAEIAEEAw6BggAEB4QCkoECEEYAEoECEYYAFDmBFisMWDgNGgDcAF4AIABlQGIAZcUkgEEMS4yM5gBAKABAbABBsgBCsABAQ&sclient=gws-wiz> 
+
+
+https://shabarkin.medium.com/0-click-rce-in-electron-applications-1c4f81a2cd6b
+
+
+1-click RCE in Electron Applications | OCTAL Security
+
+来自 <https://www.google.com.hk/search?q=electron+RCE&newwindow=1&hl=zh-CN&biw=1920&bih=855&ei=YGjWYq23Habn4-EP4K-SYA&ved=0ahUKEwit56jRwYT5AhWm8zgGHeCXBAwQ4dUDCA4&uact=5&oq=electron+RCE&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEMgQIABAeMgYIABAeEAgyBggAEB4QCDIGCAAQHhAIMgYIABAeEAgyBggAEB4QCDIGCAAQHhAIMggIABAeEA8QCDoHCAAQRxCwAzoECAAQQzoHCC4Q1AIQQzoECC4QQzoLCC4QgAQQxwEQ0QM6FAgAEOoCELQCEIoDELcDENQDEOUCOhEIABDqAhC0AhCKAxC3AxDlAjoHCAAQgAQQCjoLCC4QgAQQxwEQrwE6CgguEMcBENEDEEM6BwgAEIAEEAw6BggAEB4QCkoECEEYAEoECEYYAFDmBFisMWDgNGgDcAF4AIABlQGIAZcUkgEEMS4yM5gBAKABAbABBsgBCsABAQ&sclient=gws-wiz> 
+
+
+
+Escalating Open Redirect to RCE with Electron Code Review
+
+来自 <https://www.google.com.hk/search?q=electron+RCE&newwindow=1&hl=zh-CN&biw=1920&bih=855&ei=YGjWYq23Habn4-EP4K-SYA&ved=0ahUKEwit56jRwYT5AhWm8zgGHeCXBAwQ4dUDCA4&uact=5&oq=electron+RCE&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEMgQIABAeMgYIABAeEAgyBggAEB4QCDIGCAAQHhAIMgYIABAeEAgyBggAEB4QCDIGCAAQHhAIMggIABAeEA8QCDoHCAAQRxCwAzoECAAQQzoHCC4Q1AIQQzoECC4QQzoLCC4QgAQQxwEQ0QM6FAgAEOoCELQCEIoDELcDENQDEOUCOhEIABDqAhC0AhCKAxC3AxDlAjoHCAAQgAQQCjoLCC4QgAQQxwEQrwE6CgguEMcBENEDEEM6BwgAEIAEEAw6BggAEB4QCkoECEEYAEoECEYYAFDmBFisMWDgNGgDcAF4AIABlQGIAZcUkgEEMS4yM5gBAKABAbABBsgBCsABAQ&sclient=gws-wiz> 
+
+
+Hacking Modern Desktop apps with XSS and RCE - DeepSec
+
+来自 <https://www.google.com.hk/search?q=electron+RCE&newwindow=1&hl=zh-CN&biw=1920&bih=855&ei=YGjWYq23Habn4-EP4K-SYA&ved=0ahUKEwit56jRwYT5AhWm8zgGHeCXBAwQ4dUDCA4&uact=5&oq=electron+RCE&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEMgQIABAeMgYIABAeEAgyBggAEB4QCDIGCAAQHhAIMgYIABAeEAgyBggAEB4QCDIGCAAQHhAIMggIABAeEA8QCDoHCAAQRxCwAzoECAAQQzoHCC4Q1AIQQzoECC4QQzoLCC4QgAQQxwEQ0QM6FAgAEOoCELQCEIoDELcDENQDEOUCOhEIABDqAhC0AhCKAxC3AxDlAjoHCAAQgAQQCjoLCC4QgAQQxwEQrwE6CgguEMcBENEDEEM6BwgAEIAEEAw6BggAEB4QCkoECEEYAEoECEYYAFDmBFisMWDgNGgDcAF4AIABlQGIAZcUkgEEMS4yM5gBAKABAbABBsgBCsABAQ&sclient=gws-wiz> 
+
+
+
+
+记一次客服软件挖掘RCE - Dejavu的博客
+
+来自 <https://www.google.com.hk/search?q=electron+RCE&newwindow=1&hl=zh-CN&biw=1920&bih=855&ei=YGjWYq23Habn4-EP4K-SYA&ved=0ahUKEwit56jRwYT5AhWm8zgGHeCXBAwQ4dUDCA4&uact=5&oq=electron+RCE&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEMgQIABAeMgYIABAeEAgyBggAEB4QCDIGCAAQHhAIMgYIABAeEAgyBggAEB4QCDIGCAAQHhAIMggIABAeEA8QCDoHCAAQRxCwAzoECAAQQzoHCC4Q1AIQQzoECC4QQzoLCC4QgAQQxwEQ0QM6FAgAEOoCELQCEIoDELcDENQDEOUCOhEIABDqAhC0AhCKAxC3AxDlAjoHCAAQgAQQCjoLCC4QgAQQxwEQrwE6CgguEMcBENEDEEM6BwgAEIAEEAw6BggAEB4QCkoECEEYAEoECEYYAFDmBFisMWDgNGgDcAF4AIABlQGIAZcUkgEEMS4yM5gBAKABAbABBsgBCsABAQ&sclient=gws-wiz> 
+
+
+
+
+
+[Simplenote for Windows] Client RCE via External JavaScript ...
+
+来自 <https://www.google.com.hk/search?q=electron+RCE&newwindow=1&hl=zh-CN&biw=1920&bih=855&ei=YGjWYq23Habn4-EP4K-SYA&ved=0ahUKEwit56jRwYT5AhWm8zgGHeCXBAwQ4dUDCA4&uact=5&oq=electron+RCE&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEMgQIABAeMgYIABAeEAgyBggAEB4QCDIGCAAQHhAIMgYIABAeEAgyBggAEB4QCDIGCAAQHhAIMggIABAeEA8QCDoHCAAQRxCwAzoECAAQQzoHCC4Q1AIQQzoECC4QQzoLCC4QgAQQxwEQ0QM6FAgAEOoCELQCEIoDELcDENQDEOUCOhEIABDqAhC0AhCKAxC3AxDlAjoHCAAQgAQQCjoLCC4QgAQQxwEQrwE6CgguEMcBENEDEEM6BwgAEIAEEAw6BggAEB4QCkoECEEYAEoECEYYAFDmBFisMWDgNGgDcAF4AIABlQGIAZcUkgEEMS4yM5gBAKABAbABBsgBCsABAQ&sclient=gws-wiz> 
+
+
+
+Modern Alchemy: Turning XSS into RCE - Doyensec's Blog
+
+来自 <https://www.google.com.hk/search?q=electron+RCE&newwindow=1&hl=zh-CN&biw=1920&bih=855&ei=YGjWYq23Habn4-EP4K-SYA&ved=0ahUKEwit56jRwYT5AhWm8zgGHeCXBAwQ4dUDCA4&uact=5&oq=electron+RCE&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEMgQIABAeMgYIABAeEAgyBggAEB4QCDIGCAAQHhAIMgYIABAeEAgyBggAEB4QCDIGCAAQHhAIMggIABAeEA8QCDoHCAAQRxCwAzoECAAQQzoHCC4Q1AIQQzoECC4QQzoLCC4QgAQQxwEQ0QM6FAgAEOoCELQCEIoDELcDENQDEOUCOhEIABDqAhC0AhCKAxC3AxDlAjoHCAAQgAQQCjoLCC4QgAQQxwEQrwE6CgguEMcBENEDEEM6BwgAEIAEEAw6BggAEB4QCkoECEEYAEoECEYYAFDmBFisMWDgNGgDcAF4AIABlQGIAZcUkgEEMS4yM5gBAKABAbABBsgBCsABAQ&sclient=gws-wiz> 
+
+
+
+
+Chromium RCE Vulnerability Fix | Electron
+
+来自 <https://www.google.com.hk/search?q=electron+RCE&newwindow=1&hl=zh-CN&biw=1920&bih=855&ei=YGjWYq23Habn4-EP4K-SYA&ved=0ahUKEwit56jRwYT5AhWm8zgGHeCXBAwQ4dUDCA4&uact=5&oq=electron+RCE&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEMgQIABAeMgYIABAeEAgyBggAEB4QCDIGCAAQHhAIMgYIABAeEAgyBggAEB4QCDIGCAAQHhAIMggIABAeEA8QCDoHCAAQRxCwAzoECAAQQzoHCC4Q1AIQQzoECC4QQzoLCC4QgAQQxwEQ0QM6FAgAEOoCELQCEIoDELcDENQDEOUCOhEIABDqAhC0AhCKAxC3AxDlAjoHCAAQgAQQCjoLCC4QgAQQxwEQrwE6CgguEMcBENEDEEM6BwgAEIAEEAw6BggAEB4QCkoECEEYAEoECEYYAFDmBFisMWDgNGgDcAF4AIABlQGIAZcUkgEEMS4yM5gBAKABAbABBsgBCsABAQ&sclient=gws-wiz> 
+
+
+
+XSS to RCE Electron Desktop Apps - HackTricks - Boitatech
+https://hacktricks.boitatech.com.br › pentesting-web › x...
+When I test Electron app, first I always check the options of the BrowserWindow API ... By checking it, I think about how RCE can be achieved when arbitrary ...
+挖洞经验| 芝麻开门：从Electron开放重定向到应用程序RCE提权
+https://www.freebuf.com › articles › web
+2020年8月21日 — 白盒测试方式发现漏洞. 某天，我看到了上述Jasmin Landry对Electron应用从XSS到RCE的提权，由此让我灵感启发。刚好 ...
+Hacking JavaScript Desktop Apps with XSS and RCE
+https://www.secwest.net › workshops › hackin...
+2022年4月14日 — js and Electron but using techniques that will also work against any other desktop app platform. Ideal for Penetration Testers, Desktop app ...
+Brief analysis of electron frame XSS to rce - 文章整合
+https://chowdera.com › ...
+Brief analysis of electron frame XSS to rce. 2022-06-02 11:21:38【InfoQ】. Electron Introduction to the framework. Electron By Github Development , use HTML ...
+Electron框架XSS TO RCE简析 - CN-SEC 中文网
+https://cn-sec.com › archives
+2022年5月8日 — Electron框架XSS TO RCE简析 ... Electron是由Github开发，用HTML，CSS和JavaScript来构建跨平台桌面应用程序的一个开源库。Electron通过将Chromium和Node.
+Remote Code Execution (RCE) Vulnerability in the electron ...
+https://sca.analysiscenter.veracode.com › sid-5...
+electron (electron). Electron is vulnerable to remote code execution (RCE) attacks. A malicious user can pass a Electron Protocol Handler to the application ...
+Electron-Updater RCE - Atom @ HackTheBox - YouTube
+https://www.youtube.com › watch
+预览
+12:39
+We are going to solve Atom, a 30-point machine on HackTheBox where we'll analyze an electron app and exploit its updater.
+YouTube · xct · 2021年7月10日
+RCE using XSS in Electron - Discover gists · GitHub
+https://gist.github.com › thejh
+RCE using XSS in Electron. GitHub Gist: instantly share code, notes, and snippets.
+Exploiting Electron RCE in Exodus wallet - HackerNoon
+https://hackernoon.com › exploiting-electron-...
+2018年1月25日 — While browsing Twitter I've noticed ElectronJS remote code execution vulnerability in protocol handler. That sounds severe.
+Remote Code Execution Through Cross-Site Scripting In ...
+https://infosecwriteups.com › remote-code-exe...
+2021年1月5日 — How to execute a Remote Code Execution (RCE) attack through a Cross-Site Scripting (XSS) payload in Electron Apps that have Node.js ...
+
+来自 <https://www.google.com.hk/search?q=electron+RCE&newwindow=1&hl=zh-CN&ei=yGjWYqbIFdKb4-EPs-OaoAs&start=10&sa=N&ved=2ahUKEwimzOyCwoT5AhXSzTgGHbOxBrQQ8NMDegQIARBH&biw=1920&bih=855&dpr=1> 
+
+
+Windows Remote Code Execution in Electron Applications ...
+https://blog.securityevaluators.com › windows...
+RCE in your favorite windows desktop apps, from Slack to Discord. ... Electron is a very popular open source library currently in use by well-known and ...
+Hacking Electron Apps | Redfox Security
+https://redfoxsec.com › Blog
+2022年5月1日 — Disabling Node.js integration helps prevent XSS attacks from becoming RCE attacks. // Bad const mainWindow = new BrowserWindow({ webPreferences: ...
+An Intro To Electron Application Penetration Testing - Payatu
+https://payatu.com › blog › hariprasad › An-I...
+2022年3月21日 — ... through some fundamental concepts like reversing the Electron applications, identifying vulnerabilities in dependencies & XSS == RCE.
+
+来自 <https://www.google.com.hk/search?q=electron+RCE&newwindow=1&hl=zh-CN&ei=rGvWYu3oIq_N2roP6P-PsAs&start=20&sa=N&ved=2ahUKEwjt7ufjxIT5AhWvplYBHej_A7Y4ChDw0wN6BAgBEEc&biw=1920&bih=855&dpr=1> 
+
+
+
+Escalating Open Redirect to RCE with electron code review
+https://www.reddit.com › netsec › comments
+2020年8月14日 — I'm not familiar with actually writing electron apps, but can anyone explain why XSS issues are even a thing here? Like sure, some devs just ...
+Windows 10 RCE: The exploit is in the link - Positive Security
+https://positive.security › ms-officecmd-rce
+Debugging the Office UWP app (Electron PWA) — We exploit an argument injection vulnerability in the URI handler and bypass a security measure in Electron to ...
+
+来自 <https://www.google.com.hk/search?q=electron+RCE&newwindow=1&hl=zh-CN&ei=rGvWYu3oIq_N2roP6P-PsAs&start=20&sa=N&ved=2ahUKEwjt7ufjxIT5AhWvplYBHej_A7Y4ChDw0wN6BAgBEEc&biw=1920&bih=855&dpr=1> 
+
+
+代码审计--42--NodeJS代码审计中常见的漏洞（一
+
+来自 <https://security.blog.csdn.net/article/details/103815509?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7EPayColumn-1-103815509-blog-103816362.pc_relevant_multi_platform_whitelistv2&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7EPayColumn-1-103815509-blog-103816362.pc_relevant_multi_platform_whitelistv2&utm_relevant_index=1> 
+
+
+代码审计--43--NodeJS代码审计中常见的漏洞（二）
+
+来自 <https://blog.csdn.net/wutianxu123/article/details/103816362> 
+
+
+【一起玩蛇】Nodejs代码审计中的器_TinyMind
+
+来自 <https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%E4%BB%8Enodejs%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E5%88%B0&fenlei=256&rsv_pq=a12fc2cb002fce77&rsv_t=65e5qH2d4sRi15aOG58geMyX1M9SboFDs3TJS%2FeKJdq4vXpsaJpnqRwrsx0&rqlang=cn&rsv_dl=tb&rsv_enter=1&rsv_sug3=28&rsv_sug2=0&rsv_btype=i&inputT=4279&rsv_sug4=4280> 
+
+
+
+代码审计--48--新篇章之NodeJS代码审计(一)-博客
+
+来自 <https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%E4%BB%8Enodejs%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E5%88%B0&fenlei=256&rsv_pq=a12fc2cb002fce77&rsv_t=65e5qH2d4sRi15aOG58geMyX1M9SboFDs3TJS%2FeKJdq4vXpsaJpnqRwrsx0&rqlang=cn&rsv_dl=tb&rsv_enter=1&rsv_sug3=28&rsv_sug2=0&rsv_btype=i&inputT=4279&rsv_sug4=4280> 
+
+
+SSJI —— Node.js漏洞审计系列(一) - 安全客,安全资讯平台
+
+来自 <https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%E4%BB%8Enodejs%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E5%88%B0&fenlei=256&rsv_pq=a12fc2cb002fce77&rsv_t=65e5qH2d4sRi15aOG58geMyX1M9SboFDs3TJS%2FeKJdq4vXpsaJpnqRwrsx0&rqlang=cn&rsv_dl=tb&rsv_enter=1&rsv_sug3=28&rsv_sug2=0&rsv_btype=i&inputT=4279&rsv_sug4=4280> 
+
+
+
+Nodejs代码安全审计之YAPI_园荐_博客园
+
+来自 <https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%E4%BB%8Enodejs%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E5%88%B0&fenlei=256&rsv_pq=a12fc2cb002fce77&rsv_t=65e5qH2d4sRi15aOG58geMyX1M9SboFDs3TJS%2FeKJdq4vXpsaJpnqRwrsx0&rqlang=cn&rsv_dl=tb&rsv_enter=1&rsv_sug3=28&rsv_sug2=0&rsv_btype=i&inputT=4279&rsv_sug4=4280> 
+
+
+
+
+
+security-audit-nodejs:您的Node.js项目的安全性测试的集
+
+来自 <https://download.csdn.net/download/weixin_42116672/18350652?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-download-2%7Edefault%7ECTRLIST%7EPaid-1-18350652-blog-103815509.pc_relevant_multi_platform_whitelistv1_exp2&depth_1-utm_source=distribute.pc_relevant.none-task-download-2%7Edefault%7ECTRLIST%7EPaid-1-18350652-blog-103815509.pc_relevant_multi_platform_whitelistv1_exp2&utm_relevant_index=2> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
