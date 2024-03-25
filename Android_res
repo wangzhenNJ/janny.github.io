@@ -1,0 +1,27 @@
+加载方法
+1、asset--AssetManager
+2、res--openRawResource
+3、webview--以file:///xxx的方式加载
+setJavaScriptEnabled
+setAllowFileAccess
+setAllowFileAccessFromFileURLs
+setAllowUniversalAccessFromFileURLs
+
+4、WebViewAssetLoader
+支持3种类型的handler
+	• AssetsPathHandler：AssetManager
+	• ResourcesPathHandler：openRawResource
+	• InternalStoragePathHandler：加载/data/data/packagename/xxx部分目录下的文件（有预置的黑名单？）
+
+安卓 API 30中，已废弃了webview的2个设置
+setAllowFileAccessFromFileURLs
+setAllowUniversalAccessFromFileURLs
+ 
+替代方案：WebViewAssetLoader
+https://developer.android.com/reference/kotlin/androidx/webkit/WebViewAssetLoader
+https://stackoverflow.com/questions/63054818/websetting-allowfileaccessfromfileurls-is-deprecated-in-api-level-30
+
+
+
+
+
