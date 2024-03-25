@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>eduTest</title>
+</head>
+<body>
+<iframe src='educenter://com.huawei.educenter?activityName=activityUri|webview.activity&params={"params":[{"name":"url","type":"String","value":"payment://com.huawei/wallet"},{"name":"uri","type":"String","value":"external_webview"}]}&channelId=educenter'></iframe>
+<p>或者</p>
+<iframe src='educenter://transtitlehtml?uri=payment://com.huawei/wallet'></iframe>
+
+</body>
+</html>
