@@ -1,0 +1,29 @@
+android 系统相册调用，各方式返回的URI总结
+https://blog.csdn.net/kongku/article/details/71793034
+3种方式：
+
+使用三种隐式方式拉起图库/或者文件管理等应用时，可仿冒对应应用，让用户选择攻击应用，攻击应用返回受害应用的私有目录，进而通过H5返回到攻击应用的后台
+
+PoC是攻击应用返回受害应用私有目录下的文件路径
+
+
+
+
+Sqlmap MindMap
+https://mp.weixin.qq.com/s/JlzOzzR0zePx852_aWNXmw
+
+
+记一次赏金10000美金的漏洞挖掘(从.git泄露到RCE）
+https://www.secpulse.com/archives/196797.html
+
+Android12 应用启动流程分析
+https://evilpan.com/2021/12/05/apk-startup/
+
+
+Android 组件逻辑漏洞漫谈
+https://paper.seebug.org/2018/
+
+
+不可忽视的威胁：Android中的点击劫持攻击
+https://mp.weixin.qq.com/s?__biz=MzUyNzc4Mzk3MQ==&mid=2247487493&idx=1&sn=c5be070f204b919747a0865156d7caf9&chksm=fa7b1149cd0c985ff69bbbfa4901e026c1db38c32219ba9b777f8a0b163b9b6e3ec9b181bd87&scene=178&cur_album_id=1420861949369303041#rd
+
