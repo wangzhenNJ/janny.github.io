@@ -2,9 +2,11 @@
 http://www.taodudu.cc/news/show-3380507.html?action=onClick
 
 
+
 android脱壳之DexExtractor原理分析[zhuan]
 http://www.cnblogs.com/jiaoxiake/p/6818786.html
 
+JDWP协议？
 
 cors 利用方式
 https://cloud.tencent.com/developer/article/2225047
@@ -18,7 +20,7 @@ https://www.cnblogs.com/yanganok/p/4976819.html
 android.permission.START_ANY_ACTIVITY
 可以打开任意系统App和三方App的私有activity，无视导出属性和权限要求（https://android.googlesource.com/platform/frameworks/base/+/master/core/res/AndroidManifest.xml#3770）
 
-JDWP协议？
+
 
 安卓系统应用启动流程分析
 https://www.cnblogs.com/Linux-tech/p/13326566.html
@@ -26,14 +28,21 @@ https://www.cnblogs.com/Linux-tech/p/13326566.html
 sqlite3入门之sqlite3_mprintf
 https://www.cnblogs.com/icefree/p/11182941.html
 
+[原创]Android APP漏洞之战（4）——Content Provider漏洞详解
+https://bbs.kanxue.com/thread-269447-1.htm
+
+android Content Provider漏洞挖掘
+https://tea9.xyz/post/758430476.html
+
+终端安全 | setResult是怎么让你的隐私被泄露的
+https://mp.weixin.qq.com/s/tKhPHvbzGOsWs4qyFdQe9Q
+
+【js里父页面与子页面的相互调用 - 岁月淡忘了谁 - 博客园】
+https://www.cnblogs.com/henuyuxiang/p/6233300.html
 
 
-
-
-
-
-
-
+Spring Boot Actuator( Jolokia )漏洞利用
+https://www.codenong.com/js8c18f1e05c94/
 
 
 
