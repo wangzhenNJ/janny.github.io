@@ -1,0 +1,457 @@
+浅谈在数据包被加密和签名保护时的渗透方式
+https://xz.aliyun.com/t/12295?time__1311=mqmhD5YIxAhh8DlxGoIDymbN40Id0Q1Yq4D
+
+Vulnerability via IndependentProcessDownloadService AIDL interface
+https://blog.oversecured.com/Oversecured-detects-dangerous-vulnerabilities-in-the-TikTok-Android-app/#vulnerability-via-independentprocessdownloadservice-aidl-interface
+
+
+用GPT做静态代码扫描实现自动化漏洞挖掘思路分享
+https://cn-sec.com/archives/1617092.html
+
+【ChatGPT专题】ChatGPT在软件测试中七大应用方式
+https://m.chinaaet.com/article/3000159197
+
+SpEL表达式注入漏洞学习和回显poc研究
+https://www.cnblogs.com/bitterz/p/15206255.html
+
+Lib之过？Java反序列化漏洞通用利用分析
+https://blog.chaitin.com/2015-11-11_java_unserialize_rce/ 
+ 
+Session攻击（会话劫持+固定）与防御 
+https://www.cnblogs.com/phpstudy2015-6/p/6776919.html
+
+XSSI
+https://www.mbsd.jp/Whitepaper/xssi.pdf
+
+PDD
+https://wrlus.com/android-security/bundle-mismatch/
+
+https://xz.aliyun.com/t/2364
+
+https://evilpan.com/2023/02/18/parcel-bugs/#leakvalue
+
+内存马学习(文末附部分学习资源链接)
+http://cn-sec.com/archives/880172.html
+
+
+Memcache未受权访问漏洞利用及修复
+http://www.javashuo.com/article/p-diwmitgb-ne.html
+
+攻击者是如何利用Memcache注入漏洞来窃取Zimbra Email用户的明文凭证的
+https://nosec.org/home/detail/5017.html
+
+1. 年轻人如何挖掘第一个RCE
+
+https://paper.seebug.org/1809/
+
+2. The New Remote Attack Surface in Telegram
+
+https://cyberweek.ae/2021/presentations/animated-bugs-the-new-remote-attack-surface-in-telegram/
+
+3. Attacking Java RMI via SSRF
+
+https://blog.tneitzel.eu/posts/01-attacking-java-rmi-via-ssrf/
+
+4. XXXX第X次内部红蓝对抗
+
+https://xz.aliyun.com/t/10731
+
+5. THE TOP 5 BUGS SUBMITTED IN 2021
+
+https://www.zerodayinitiative.com/blog/2022/1/5/the-top-5-bugs-submitted-in-2021
+
+6. 2021 十大漏洞利用
+
+https://mp.weixin.qq.com/s/M5xcnU_TTtMCTVUp-vrvFQ
+
+
+1. 虚假的 RCE vs 真实的 RCE
+
+https://evilpan.com/2021/09/23/macos-rce/
+
+介绍了一种针对 mac 上从 APP 内下载并打开文件的行为的RCE攻击
+
+2. FINDING GADGETS LIKE IT'S 2015: PART 2
+
+https://www.synacktiv.com/publications/finding-gadgets-like-its-2015-part-2.html
+
+介绍了通过 gadget inspector 发现 JBOSS 库中的一个新的 gadget chain 的过程，其中对 CC 链的分析很值得学习
+
+3.Cybersecurity conferences 2022: A rundown of online, in person, and ‘hybrid’ events
+
+https://portswigger.net/daily-swig/cybersecurity-conferences-a-rundown-of-online-in-person-and-hybrid-events
+
+2022世界安全会议时间表，包含DEF CON、Black Hat Asia 2022等，大多可以在线参会
+
+4. Node.js code injection (RCE)
+
+https://artsploit.blogspot.com/2016/08/pprce2.html
+
+基于Node.js开发产品使用了eval函数，其使用typeof s === 'string'进行参数过滤时可使用数组形式传参绕过从而RCE
+
+5. 使用 codeql 查找未处理异常
+
+https://blog.trailofbits.com/2022/01/11/finding-unhandled-errors-using-codeql/
+
+介绍了如何使用 codeql 在 c++ 工程中查找未被显式处理的异常，其中有一些语句编写时的细节可以学习
+
+6. Fuzzing101
+
+https://github.com/antonio-morales/Fuzzing101
+
+用来实例学习 fuzz 的一套练习教程
+
+
+1. python受限的任意代码执行与黑魔法
+
+https://tttang.com/archive/1397/
+
+通过一道 CTF 题，介绍了在受限的 python 环境下借助注解或者内置库实现代码执行，其中对于内置库的思考非常值得学习
+
+2. PHP无参数命令执行学习
+
+https://xz.aliyun.com/t/10780#toc-1
+
+PHP特定版本可使用getallheaders、get_defined_vars、session_start、scandir等函数在请求头等地方传参的方式绕过黑名单检测，实现命令执行
+
+3. 别再 --gpu-launcher 了——Chromium 参数注入的利用技巧
+
+https://mp.weixin.qq.com/s/iK0IeNUfUTeqe5dX1AheOQ
+
+介绍了 chrome 衍生应用的 url scheme 参数注入方法，并通过原理分析说明了一个参数的作用
+
+4. Zooming in on Zero-click Exploits
+
+https://googleprojectzero.blogspot.com//2022/01/zooming-in-on-zero-click-exploits.html
+
+natali 针对 2021 pwn2own 上 0 click 攻击 zoom 的一个分析，非常精彩的利用
+
+5.cve-2021-21661-exposing-database-info-via-wordpress-sql-injection
+
+https://www.zerodayinitiative.com/blog/2022/1/18/cve-2021-21661-exposing-database-info-via-wordpress-sql-injection
+
+WordPress WP_Query SQL 注入漏洞（CVE-2022-21661）的分析
+
+6. tomcat容器url解析特性研究
+
+https://xz.aliyun.com/t/10799
+
+tomcat具有某些特性，会对/;/、/./、/../、/..;/进行特殊处理，从而可能存在使用/sql_vuln/id=1+and+1=1;favicon.ico或/;/admin或/aaa/../admin等方式绕过认证鉴权的问题，究竟是怎样的机制导致了这些特性，文章通过动态调试tomcat源码来分析url解析过程，解开疑惑
+
+
+1. 记一次前端安全测试
+
+https://xz.aliyun.com/t/10801
+
+本文呈现了一个在没有后端源码黑盒渗透的情况下，如何通过前台js代码审计找出所有后台URL，如何根据js代码逻辑来发现无需输入原密码就可以修改任意用户密码的漏洞以及如何逆向js代码加密逻辑的案例
+
+2. fastjson 1.2.24 反序列化 RCE 漏洞复现
+
+https://www.freebuf.com/articles/web/258253.html
+
+本文详细记录了fastjson 1.2.24版本反序列化漏洞复现过程。当后台使用Java 8u102（没有 com.sun.jndi.rmi.object.trustURLCodebase的限制）等条件的情况下，可使用 com.sun.rowset.JdbcRowSetImpl的利用链，借助JNDI注入来执行命令，可反弹shell
+
+3. RWCTF 4th Desperate Cat Writeup
+
+https://mp.weixin.qq.com/s/QQ2xR32Fxj_nnMsFCucbCg
+
+本文介绍了Tomcat Web目录写文存在()<>等的HTML编码限制场景下，如何getshell的几个思路，值得学习
+
+4.Zoom RCE from Pwn2Own 2021
+
+https://sector7.computest.nl/post/2021-08-zoom/
+
+2021 pwn2own 上 0 click 攻击 zoom 的原始 writeup，完整的涵盖了漏洞发现和利用的各种细节，直观的感受这个精彩的漏洞利用
+
+1. 代码安全审计之道
+
+https://evilpan.com/2022/01/22/code-audit/
+
+是一篇针对The Art of Software Security Assessment 一书的阅读笔记，总结了代码审计过程中常用的方法和思路，对于我们工作的开展很有作用
+
+2. 浅谈React框架的XSS及后利用
+
+http://f5.pm/go-88868.html
+
+以实际的案例介绍了React框架前端应用的攻击面，包括原型链污染和后利用等攻击方法
+
+3. 本人在2019年对一些NodeJS问题的研究
+
+https://xz.aliyun.com/t/7237#toc-0
+
+是一篇针对 nodejs 库中问题的介绍，主要的问题均在于 js 语言的灵活性，可以动态的进行很多种的类型转换，代码的编写者在编写逻辑时会忽略这一现象，从而造成一些不确定性
+
+4. 《2022美国竞争法案》中的网络安全议题
+
+https://www.secrss.com/articles/39041
+
+本文介绍了《2022美国竞争法案》中的网络安全议题，包括加强政府相关部门对网络安全工作的指导；支持网络安全技术和标准研发，利用技术优势维护网络安全；制定网络安全具体实施方案，并加强评估检查等。
+
+5. 无回显条件下的命令执行判断和利用方式研究
+
+https://www.freebuf.com/articles/network/321428.html
+
+本文介绍了命令无回显场景下可通过延时判断、流量监控、反弹shell以及盲写文件等方式对进一步利用
+
+6.Hacking the Apple Webcam (again)-Gaining unauthorized camera access via Safari UXSS: the story of how a shared iCloud document can hack every website you've ever visited.
+
+https://www.ryanpickren.com/safari-uxss
+
+本文介绍了作者如何在iCloud文件共享的场景挖掘出Safari UXSS漏洞，漏洞挖掘过程中的技巧值得参考
+
+7. News and updates from the Project Zero team at Google
+
+https://googleprojectzero.blogspot.com/2022/02/a-walk-through-project-zero-metrics.html
+
+PJ0 针对 2021 年报告的漏洞的统计分析，主要统计了厂商对于漏洞的响应情况，对我们的漏测分析流程优化有一定的参考价值
+
+1. Top 10 web hacking techniques of 2021
+
+https://portswigger.net/research/top-10-web-hacking-techniques-of-2021
+
+BurpSuite工具开发厂商PortSwigger评选的2021 TOP 10 web攻击技术，包含XSS 攻击、HTTP请求走私、原型链污染漏洞等等，另外提名未入选的议题也值得参考：https://portswigger.net/research/top-10-web-hacking-techniques-of-2021-nominations-open
+
+2. 无回显条件下的命令执行判断和利用方式研究
+
+https://www.freebuf.com/articles/network/321428.html
+
+讨论了在无回显情况下发现命令执行点时的判断方法。主要包括延时，dns，shell，盲写文件等方法
+
+3. 为什么Lisp语言如此先进
+
+http://www.ruanyifeng.com/blog/2010/10/why_lisp_is_superior.html
+
+《黑客与画家》一书中的一篇文章，介绍了Lisp 语言设计的 9个特性原则，对于理解编程语言的设计非常有帮助
+
+4. Automatic Policy Generation for Inter-Service Access Control of Microservices
+
+https://www.usenix.org/conference/usenixsecurity21/presentation/li-xing
+
+开发者介绍了一款可以自动生成微服务间访问控制策略的工具。可以自动获取微服务之间的调用逻辑，并且生成响应的访问控制策略
+
+
+1. 一道有趣的CTF赛题-unicode引发的WebAssembly与js交互问题
+
+https://tttang.com/archive/1434/
+ 
+
+结介绍了一个非常有用的思路：某些unicode字符会在大小写转换时被转成英文字母，甚至有的unicode字符，会在转换后变成两个甚至三个英文字母
+
+2. Bypassing 2FA using OpenID Misconfiguration
+
+https://www.freebuf.com/articles/network/321428.html
+
+越来越多高风险的业务登录等场景都会使用双因子认证，由于服务端误配置，攻击者可以修改请求中的双因子认证类型从而绕绕过原有双因子认证，测试思路和绕过方式值得参考
+
+3. 秒懂Java类型（Type）系统
+
+http://www.ruanyifeng.com/blog/2010/10/why_lisp_is_superior.html
+
+介绍了 Java 中反射的基础 Type 接口及其子接口的意义，对理解整个反射机制很很有帮助
+
+4. Logic Flaw Leading to RCE in Dynamicweb 9.5.0 - 9.12.7
+
+https://www.usenix.org/conference/usenixsecurity21/presentation/li-xing
+
+一个接口的鉴权条件由于 && 和 || 错误使用，导致的鉴权绕过。漏洞本身比较简单，但是需要结合对 Context 理解。文章主要是在推他们的扫描器 https://assetnote.io/continuous-security/index.html，可以借鉴看看
+
+5. uBlock, I exfiltrate: exploiting ad blockers with CSS
+
+https://portswigger.net/research/ublock-i-exfiltrate-exploiting-ad-blockers-with-css
+ 
+
+作者针对浏览器广告拦截工具进行CSS注入攻击，可成功实现从网页中窃取数据（如用户密码等），本文中公开的CSS注入POC值得参考
+
+
+1. Attacking the ARM's TrustZone
+
+https://blog.quarkslab.com/attacking-the-arms-trustzone.html
+
+介绍了 TrustZone 的攻击面，比较通俗易懂的文章，很适合入门学习，理解概念
+
+2. Android App 逆向入门系列文章
+
+"https://tech-blog.cymetrics.io/posts/huli/android-apk-decompile-intro-1/",
+
+Android APP逆向入门的系列文章，包括简单的重打包、修改smali代码、抓取HTTPS报文以及frida的动态分析，值得入门参考学习
+
+3. DNS Rebinding in Browser
+
+"https://mp.weixin.qq.com/s/jiX1zC5_1y9tipYzM8Oxdg",
+
+本文介绍了客户端（通常是浏览器）DNS重绑定的利用技术/框架，然后尝试绕过PNA (Private Network Access) -目前 Chrome 正在推广的一个安全策略，目标就是缓解 CSRF 对本地或者内网服务的攻击利用。
+
+4. OWASP Find Security Bugs
+
+ "https://github.com/find-sec-bugs/find-sec-bugs#readme"
+
+用于java-web应用的安全审计插件，支持eclipse、idea等，可参考其支持的扫描能力
+
+5. RCE的Bypass与骚姿势总结
+
+"https://cloud.tencent.com/developer/article/1599149",
+
+在 whoami，chmod 等关键字被禁用或者监控的情况下如何进行继续渗透，适合getshell 之后绕过纵深防御
+
+1. 从SSRF 到 RCE —— 对 Spring Cloud Gateway RCE漏洞的分析
+
+https://mp.weixin.qq.com/s/w3et7TzqZ4ctyybEWQ82HQ
+
+本文对最近爆出的Spring Cloud Gateway RCE漏洞进行了详细分析，其分析过程值得参考和学习，漏洞复现可参考下文：https://mp.weixin.qq.com/s/gSktQ_TyVTgZIIWfaUKBCQ
+
+2. Pascom: The story of 3 bugs that lead to unauthed RCE.
+
+https://kerbit.io/research/read/blog/4
+
+攻击者利用niginx 的目录穿越漏洞通过外部访问到了内部的接口，接着通过 ssrf 问题+localhost访问无认证的设计取得了服务器的 passwd，最后通过一个文件的命令注入达到了 rce 。整个利用链非常顺畅，利用过程中的一些思考和技巧值得我们学习
+
+3. 一文看懂内存马
+
+https://mp.weixin.qq.com/s/-sgKUPXGuKZoG8L9ez9j0w
+
+讲解了WebShell的历史变迁以及各种Webshell的优缺点，重点针对内存马的原理、实现进行了说明，有助于加深对Web容器的理解，为后续漏洞挖掘利用提供一种利用手段。
+
+4. Spring 框架相关漏洞合集
+
+https://mp.weixin.qq.com/s/Jid5XVtE0WDS_j4hgR_W5A
+
+细数了从2010年到2020年Spring系框架，如Spring Framework，Spring Boot，Spring Cloud等的CVE漏洞，其中不乏远程代码执行、SPEL表达式注入、认证绕过等严重漏洞，包含了漏洞版本号、利用PoC以及部分演练环境等，对于加深对Spring框架的理解有较大帮助。
+
+5. Node.js常见漏洞学习与总结
+
+https://ljdd520.github.io/2020/03/14/Node-js%E5%B8%B8%E8%A7%81%E6%BC%8F%E6%B4%9E%E5%AD%A6%E4%B9%A0%E4%B8%8E%E6%80%BB%E7%BB%93/
+
+通过代码演示，介绍了Nodejs的危险函数、原型链污染、目录穿越、vm沙箱逃逸等漏洞
+
+6. Python 内存马分析
+
+https://xz.aliyun.com/t/10933
+
+作者分享了如何利用Django/Flask框架中的SSTI模板注入漏洞注入内存马，同时也分享了绕过关键字（中括号[]等）过滤的思路，其利用方式值得参考
+
+7. Make JDBC Attacks Brilliant Again 番外篇
+
+https://tttang.com/archive/1462/
+
+作者分享了对JDBC攻击面的研究：当jdbc url/properties配置文件可控（相对少见）或者存在其他突破口时，如何利用jdbc获得系统shell，更详细的分析可以参考作者在安全会议的分享《Make JDBC Attacks Brilliant Again》
+
+8. 记一次Node.js站点渗透
+
+https://xz.aliyun.com/t/10978
+
+作者分享了对某个nodejs网站进行黑盒渗透，最终获得管理员权限的案例，其整个攻击流程和思路值得参考
+
+1. 告别脚本小子系列丨JAVA安全(1)——JAVA本地调试和远程调试技巧
+
+https://www.freebuf.com/vuls/317697.html
+
+WebRAY分享的告别脚本小子系列文章，涵盖JAVA调试、反编译技巧、反射机制以及ClassLoader，值得学习
+
+2. LDAP注入的深入利用
+
+https://xz.aliyun.com/t/10985
+
+作者实践了可以外带ldap储存的用户密码的方法,类似于SQL注入中的bool型盲注，另外也总结了ldap注入的防御方式（对特殊字符进行转义），可供参考
+
+3. 通过恶意pdf执行xss漏洞
+
+https://mp.weixin.qq.com/s/Z3xvtAJCOQRUFMKKxaWcAg
+
+通过修改PDF文件“页面属性”导致浏览器在线解析PDF文件时触发XSS漏洞，对业务存在解析PDF场景有一定的借鉴意义。
+
+4. Nodejs中模板引擎渲染原理与潜在隐患探讨
+
+https://www.anquanke.com/post/id/229301
+
+文章介绍了模板引擎的使用方式、渲染机制，结合原型链污染，演示了ejs模板引擎远程代码执行漏洞
+
+5. CodeQL 提升篇
+
+https://tttang.com/archive/1415/
+
+作者分享了CodeQL实战过程中的一些经验和技巧，可供参考
+
+6. WebShell基础详解
+
+https://mp.weixin.qq.com/s/0SOi3Gvcz2SAbrlESnbkEg
+
+对WebShell原理进行了讲解，同时对各种WebShell类型进行了比较，如大小马、一句话木马、打包马、拖库马、内存马等。另外，列举了常见的WebShell工具，如菜刀、蚁剑、冰蝎等，对漏洞利用有一定的参考价值
+
+7. 最全fastjson漏洞复现与绕过
+
+https://f5.pm/go-83366.html
+
+本文较全面地讲解了fastjson多个反序列化漏洞的原理、漏洞复现等，包括多次fastjson反序列化漏洞修复后的绕过。同时在文章开头，对反序列化涉及到的基本概念，如JNDI、RMI等概念作了扫盲。
+
+8.滥用 Telegram 的 People Near Me 特性实现位置跟踪
+
+https://github.com/jkctech/Telegram-Trilateration
+
+telegram 使用 grs 实现了 NearMe 能力，本意是让用户可以知道周围有哪些人。但但是攻击者可以滥用这个能力，通过修改自己的 grs 定位去定位任意的用户位置
+
+9.Spring Boot Vulnerability Exploit Check List
+
+https://github.com/LandGrey/SpringBootVulExploit
+
+Spring Boot 相关漏洞学习资料，利用方法和技巧合集，黑盒安全评估 check list，可供参考
+
+1. Exploiting Android Vulnerabilities with Malicious Third-Party Apps (featuring Oversecured APK)
+
+https://medium.com/@as3ng/exploiting-android-vulnerabilities-with-malicious-third-party-apps-featuring-oversecured-apk-adea3241ce49
+
+文章结合一个集合了Android常见漏洞的APK（oversecured：https://github.com/oversecured/ovaa）讲解了漏洞原理和PoC等，适合端侧学习实践。
+
+2. CVE-2022-32223 Discovery: DLL Hijacking via npm CLI
+
+https://blog.aquasec.com/cve-2022-32223-dll-hijacking
+
+【PC安全】作者分享了利用npm实现dll劫持的漏洞挖掘过程，漏洞挖掘和利用思路值得参考
+
+3. SSD Advisory – Microsoft SharePoint Server WizardConnectToDataStep4 Deserialization Of Untrusted Data RCE
+
+https://ssd-disclosure.com/ssd-advisory-microsoft-sharepoint-server-wizardconnecttodatastep4-deserialization-of-untrusted-data-rce/
+
+【C#安全】C#中使用 BinaryFormatter 和相关类型时存如入参可控则存在反序列化漏洞，文中分享了基于BinaryFormatter 的反序列化漏洞挖掘和利用过程，值得参考
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
