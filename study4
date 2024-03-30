@@ -1,0 +1,430 @@
+渗透测试web安全漏洞库exp&poc集合
+初岄笔记
+
+漏洞挖掘之路
+
+
+
+
+
+
+
+
+1
+乌云镜像网站
+
+
+http://drops.xmd5.com/
+https://wooyun.website/
+http://wooyun.2xss.cc/index.php
+https://wooyun.js.org/
+http://wy.zone.ci/
+
+
+
+
+2
+大型平台漏洞库
+
+
+国家信息安全漏洞库
+
+http://www.cnnvd.org.cn/web/index.html
+
+漏洞银行
+https://skills.bugbank.cn/
+
+综合性的软件脆弱性和漏洞信息收集平台
+https://www.exploit-db.com/
+
+知道创宇Seebug漏洞平台
+https://www.seebug.org/
+
+
+
+3
+各大团队项目
+
+
+
+基于零组公开漏洞库
+https://wiki.96.mk/
+
+PeiQi WiKi-POC文库
+http://47.99.151.68:4000/
+
+面向网络安全从业者的知识文库
+https://github.com/PeiQi0/PeiQi-WIKI-Book
+
+基于Pocsuite3、goby、yaml编写的漏洞poc&exp存档
+https://github.com/luck-ying/Library-POC
+
+goby poc or exp,分享goby最新网络安全漏洞检测或利用代码
+https://github.com/aetkrad/goby_poc
+
+漏洞POC、EXP合集，持续更新
+https://github.com/Sma11New/PocList
+
+红队作战中比较常遇到的一些重点系统漏洞整理。行
+https://github.com/r0eXpeR/redteam_vul
+
+白阁文库
+https://wiki.bylibrary.cn/
+
+各大漏洞文库合集
+https://github.com/cckuailong/vulbase
+
+2021hvv漏洞汇总
+https://github.com/YinWC/2021hvv_vul
+
+棱角社区对外进行公布的一些最新漏洞
+https://github.com/EdgeSecurityTeam/Vulnerability
+
+各种漏洞poc、Exp的收集或编写
+https://github.com/coffeehb/Some-PoC-oR-ExP
+
+POC&EXP仓库、hvv弹药库、Nday、1day
+https://github.com/DawnFlame/POChouse
+
+渗透测试有关的POC、EXP、脚本、提权、小工具等
+
+https://github.com/Gality369/Penetration_Testing_POC
+
+CVE利用脚本
+https://github.com/RhinoSecurityLabs/CVEs
+
+浏览器逻辑漏洞
+https://github.com/Metnew/uxss-db
+
+PwnWiki 数据库搜索命令行工具
+https://github.com/k4yt3x/pwsearch
+
+[SpringBoot 项目鉴权的 4 种方式 : 
+  http://mp.weixin.qq.com/s?__biz=MzU4MDUyMDQyNQ==&mid=2247505470&idx=2&sn=331dcab6decfbc3b1d7c352a39e5b521&chksm=fd5706b8ca208fae283736b14367e1ac189e88571138a528a8e0b054e416b02e8774251b89c1&mpshare=1&scene=1&srcid=0415QE8PHNTIi3u3c1AvAozW&sharer_sharetime=1650005778558&sharer_shareid=dace9c19e0784a93949160f15a3f3dd8#rd]
+
+
+[【漏洞预警】Jira 和 Jira Service Management身份验证绕过漏洞 : 
+  http://mp.weixin.qq.com/s?__biz=MzI3NzMzNzE5Ng==&mid=2247485442&idx=2&sn=cbb3bd8d8d7f21113cda1673c5b9e385&chksm=eb668d01dc1104172620a858cc3345fdcf7397f2525ffd3d0ff6c2ec2f1ca1a191f436140f60&mpshare=1&scene=1&srcid=04214facbL0V9rRDHTiWNOFU&sharer_sharetime=1650546828554&sharer_shareid=dace9c19e0784a93949160f15a3f3dd8#rd]
+ 
+https://mp.weixin.qq.com/s/T4_ZXVez_KZKVTvqEuOmkw
+
+IFS简单说明
+https://www.cnblogs.com/f-ck-need-u/p/7402137.html
+
+bash&shell系列文章：
+http://www.cnblogs.com/f-ck-need-u/p/7048359.html
+
+
+https://mp.weixin.qq.com/s/kgw-O4Hsd9r2vfme3Y2Ynw?from=singlemessage&isappinstalled=0&scene=1&clicktime=1649207169&enterid=1649207169
+
+
+
+https://mp.weixin.qq.com/s/Bvy8vrD_-9vbM69_s9nGEQ
+
+
+
+
+来自 <https://mp.weixin.qq.com/s/DdHm1lZDLZ5pclaX3Kz5Gg> 
+
+
+1. IANA已注册的密码套件列表：
+https://www.iana.org/assignments/tls-parameters/tls-parameters.xml#tls-parameters-4
+ 
+2. OpenSSL的密码套件说明：
+https://www.openssl.org/docs/manmaster/man1/openssl-ciphers.html
+ 
+3. 命名映射关系查询：
+https://ciphersuite.info/
+https://testssl.sh/openssl-iana.mapping.html 
+
+5. 浏览器对密码协议的支持情况：
+https://en.wikipedia.org/wiki/Transport_Layer_Security#Web_browsers
+
+
+This book reads you - exploiting services and readers that support the ePub book format
+这本书正在读你——利用支持ePub书籍格式的服务和阅读软件
+使用ePub的脚本功能对用户执行本地攻击
+https://s1gnalcha0s.github.io/epub/2017/01/25/This-book-reads-you.html
+
+CVE-2017-2426：苹果iBook正在利用JavaScript“读”你
+http://www.myhack58.com/Article/html/2/5/2017/84791.htm
+This book reads you - using JavaScript
+https://s1gnalcha0s.github.io/ibooks/epub/2017/03/27/This-book-reads-you-using-JavaScript.html
+https://s1gnalcha0s.github.io/ibooks/epub/2017/03/27/This-book-reads-you-using-JavaScript.html
+
+
+工具：epubcheck
+https://github.com/w3c/epubcheck/releases
+
+
+【CVE-2017-2426】iBook使用JavaScript远程访问漏洞分析
+https://www.hackbase.net/article-234151-1.html
+
+
+
+
+
+
+
+JSch - Java实现的SFTP（文件上传详解篇）
+https://www.cnblogs.com/longyg/archive/2012/06/25/2556576.html
+
+
+JSch - Java实现的SFTP（文件下载详解篇）
+https://www.cnblogs.com/longyg/archive/2012/06/25/2561332.html
+
+
+
+Find Security Bugs插件
+
+http://find-sec-bugs.github.io/bugs.htm
+
+
+java代码审计手书(四）
+翻译自：http://find-sec-bugs.github.io/bugs.htm
+
+
+Android代码审计
+https://dhexx.cn/news/show-640163.html
+
+
+java代码审计系统课程
+https://edu.csdn.net/course/detail/32634
+
+https://edu.csdn.net/course/detail/32634
+
+java代码审计中的一些常见漏洞及其特征函数
+文章来源：https://xz.aliyun.com/t/1633
+
+JAVA代码审计的一些Tips(附脚本)
+https://xz.aliyun.com/t/1633
+
+Java代码审计漏洞挖掘
+https://blog.csdn.net/shuteer_xu/article/details/121244123?spm=1001.2101.3001.6650.3&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-3-121244123-blog-127364763.235%5Ev36%5Epc_relevant_default_base3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-3-121244123-blog-127364763.235%5Ev36%5Epc_relevant_default_base3&utm_relevant_index=4
+
+
+
+Java代码审计审技巧及方法
+
+来自 <https://blog.csdn.net/liguangyao213/article/details/127364763> 
+
+代码审计之旅之百家CMS
+https://mp.weixin.qq.com/s/H4n8qlC1YouHWeKEOvyXLQ
+
+
+JAVA代码审计之SSRF
+https://blog.csdn.net/Jiajiazml/article/details/127012285?spm=1001.2101.3001.6650.16&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-16-127012285-blog-113150211.pc_relevant_multi_platform_whitelistv3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-16-127012285-blog-113150211.pc_relevant_multi_platform_whitelistv3&utm_relevant_index=23
+
+
+
+增强版白盒审计插件，你试过了吗？
+https://openx.huawei.com/communityHome/postDetail?postId=5628&id=32&welink_open_uri=aDU6Ly8xMDE1OTU1MDIyOTgwNzMvaHRtbC9pbmRleC5odG1sIy9wb3N0RGV0YWlsP3Bvc3RJZD01NjI4JmlkPTMyJmlzU2hhcmU9dHJ1ZSZ1cmw9&source=espacePcShare&token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ3MDA1NjYwOTQiLCJjcmVhdGVkIjoxNjg0NzIxMTQxNDA1LCJJUCI6IjEwLjg0Ljk3LjE4MCIsImV4cCI6MTY4NzMxMzE0MX0.IhUsm-A3gdY66Fsvw7bBzNc5xP0UZSZZXXKlPIy8t4YOjWcxBbHP7wzLISfOxOB_YNsywVh6myxb7sC13THCcg
+
+DevFlow
+
+https://openx.huawei.com/DevFlow/overview?welink_open_uri=aDU6Ly8xMDE1OTU1MDIyOTgwNzMvaHRtbC9pbmRleC5odG1sIy9wcm9EZXRhaWw%2FaWQ9MTUwMCZ1cmw9&shareBy=yWX1100803&source=espacePcShare
+
+
+find-sec-bugs
+https://openx.huawei.com/find-sec-bugs/overview?welink_open_uri=aDU6Ly8xMDE1OTU1MDIyOTgwNzMvaHRtbC9pbmRleC5odG1sIy9wcm9EZXRhaWw%2FaWQ9NzgyJnVybD0%3D&shareBy=yWX1100803&source=espacePcShare
+
+
+【**】代码安全审计之道
+https://evilpan.com/2022/01/22/code-audit/
+
+
+The Science of Code Auditing
+
+The Art of Software Security Assessment
+
+
+
+
+常见的Web源码泄露的漏洞：
+git源码泄露
+svn源码泄露
+hg源码泄漏
+CVS泄露
+Bazaar/bzr泄露
+网站备份压缩文件
+WEB-INF/web.xml 泄露
+DS_Store 文件泄露
+SWP 文件泄露
+GitHub源码泄漏
+ 
+考到可能性比较大的有这几类：
+网站备份压缩文件
+WEB-INF/web.xml 泄露
+git源码泄露
+GitHub源码泄漏
+ 
+参考：
+https://www.cnblogs.com/xiaozi/p/12397114.html
+
+
+漏洞利用工具：GitHack
+https://github.com/BugScanTeam/GitHack
+ 
+用法：
+python GitHack.py http://www.openssl.org/.git/
+ 
+注意：
+windows上扫描报错，linux上无问题
+需要python2版本
+还原后的文件在 dist/ 目录下
+ 
+题目
+https://www.ctfhub.com/#/skilltree
+剩余两个题目参考：
+https://www.i4k.xyz/article/weixin_45254208/108227590
+
+
+
+ctfhub技能树—信息泄露—git泄露—Log
+https://www.cnblogs.com/anweilx/p/12453703.html
+
+
+https://ctf.bugku.com/challenges/detail/id/79.html
+
+
+
+xpath注入详解
+https://www.cnblogs.com/backlion/p/8554749.html
+
+浅析Apache Commons Jxpath命令执行分析(CVE-2022-41852)
+https://tttang.com/archive/1771/
+
+
+基于Python：XPath注入测试脚本
+https://www.freebuf.com/vuls/352787.html
+
+
+SQL注入实战之报错注入篇（updatexml extractvalue floor） 
+https://www.cnblogs.com/c1047509362/p/12806297.html
+https://buuoj.cn/login?next=%2Fchallenges%3F#[%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98%202019]HardSQL
+
+BUUCTF-[极客大挑战 2019]HardSQL 1详解
+https://www.cnblogs.com/junlebao/p/13836583.html
+
+十种mysql报错函数
+https://www.cnblogs.com/wocalieshenmegui/p/5917967.html
+
+Sqlmap Tamper 编写
+https://y4er.com/posts/sqlmap-tamper/
+
+
+[GYCTF2020]Ezsqli
+https://www.cnblogs.com/zhwyyswdg/p/14019129.html
+
+
+quine注入
+https://www.shysecurity.com/post/20140705-SQLi-Quine
+
+
+
+注释掉单引号exp结合rlike盲注
+http://82.156.190.31/build/index.php/archives/25/
+来自 <http://roverdoge.top/archives/204> 
+
+
+
+
+
+
+
+
+
+nosql注入讲的比较详细
+https://whoamianony.top/2021/07/30/Web%E5%AE%89%E5%85%A8/Nosql%20%E6%B3%A8%E5%85%A5%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80/
+来自 <https://www.lemonprefect.cn/zh-cn/posts/751c0b7> 
+
+
+
+记一次攻防演练	
+https://xz.aliyun.com/t/11921
+介绍在一次攻防演练中，如何一步步突破防御，getshell的过程
+
+
+xp_cmdshell
+科学技术，绕过WAF
+SQL注入
+xp_cmdshell可以让系统管理员以操作系统命令行解释器的方式执行给定的命令字符串，并以文本行方式返回任何输出，是一个功能非常强大的扩展存贮过程。
+
+
+史上最完整的MySQL注入
+
+来自 <https://www.freebuf.com/articles/network/183546.html> 
+
+
+
+
+SQL注入Getshell的奇思妙想（上）
+来自 <https://www.freebuf.com/vuls/334032.html> 
+
+
+SQL注入Getshell的奇思妙想（下）
+来自 <https://www.freebuf.com/articles/web/334078.html> 
+
+
+
+CVE-2022-38627：Linear eMerge E3楼宇管理系统SQL注入
+来自 <http://www.hackdig.com/01/hack-877848.htm> 
+
+
+MySQL大小写敏感的解决方案
+https://www.cnblogs.com/myitnews/p/13697923.html
+
+
+sqlmap
+https://github.com/sqlmapproject/sqlmap/wiki/Usage
+超详细SQLMap使用攻略及技巧分享
+https://www.freebuf.com/sectool/164608.html
+
+常用命令：
+python sqlmap.py -u "http://100.93.25.123:30387/control/sqlinject/manifest_error.php?id=1"  --batch --cookie="PHPSESSID=k1cajvhlc24ij053le3c0057h0"
+python sqlmap.py -u "http://100.93.25.123:30387/control/sqlinject/manifest_error.php?id=1"  --batch --banner --cookie="PHPSESSID=k1cajvhlc24ij053le3c0057h0"  --dbs
+python sqlmap.py -u "http://100.93.25.123:30387/control/sqlinject/manifest_error.php?id=1"  --batch --banner --cookie="PHPSESSID=k1cajvhlc24ij053le3c0057h0"  --current-db
+python sqlmap.py -u "http://100.93.25.123:30387/control/sqlinject/manifest_error.php?id=1"  --batch --banner --cookie="PHPSESSID=k1cajvhlc24ij053le3c0057h0"  --tables -D webug
+python sqlmap.py -u "http://100.93.25.123:30387/control/sqlinject/manifest_error.php?id=1"  --batch --banner --cookie="PHPSESSID=k1cajvhlc24ij053le3c0057h0"  --columns -T flag -D webug
+python sqlmap.py -u "http://100.93.25.123:30387/control/sqlinject/manifest_error.php?id=1"  --batch --banner --cookie="PHPSESSID=k1cajvhlc24ij053le3c0057h0"  --dump -C "id,flag" -T flag -D webug
+
+
+
+对于需要替换cookie的请求，SQL注入需要借助burpsuite
+
+(转)Burpsuite+SQLMAP双璧合一绕过Token保护的应用进行注入攻击
+http://blog.sina.com.cn/s/blog_1574497330102ww1z.html
+
+
+	1. 基本的注入流程
+https://coggle.it/diagram/WTpCoTUhXQABa2wg/t/sql%E6%B3%A8%E5%85%A5%E6%B5%8B%E8%AF%95%E6%B5%81%E7%A8%8B%E5%9B%BE
+
+
+	在线做题平台：
+	BUUCTF-https://buuoj.cn/challenges
+	247 CTF https://247ctf.com/dashboard
+	官方赛事wp https://www.ctfwp.com/
+	攻防世界：https://adworld.xctf.org.cn/ 
+	https://www.ctfhub.com/
+
+这里有很全的总结，包括各种类型的注入及试探的脚本以及利用过程的描述
+对MYSQL注入相关内容及部分Trick的归类小结：
+https://xz.aliyun.com/t/7169#toc-35
+
+
+
+盲注的可以试下这个
+https://portswigger.net/web-security/sql-injection/blind/lab-conditional-errors
+
+
+
+
+
+
+
+
+
+
+
+
+
