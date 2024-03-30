@@ -1,0 +1,439 @@
+HACK学习-信息安全导航
+https://index.tesla-space.com/
+安全导航汇总网站
+
+
+WEB漏洞挖掘
+www.bilibili.com/video/BV1TG4y1V7xc/
+www.bilibili.com/video/BV1sD4y1Y7vt/
+www.bilibili.com/video/BV15e411N7Gt/
+www.bilibili.com/video/BV1JD4y1Y75W/
+WEB漏洞挖掘基础教学视频
+
+DNS Rebinding in Browser
+https://www.anquanke.com/post/id/268125
+介绍了chrome浏览器提供的防范DNS重绑定攻击的PNA策略，及其绕过方法等
+
+
+
+Identity Confusion in WebView-based Mobile App-in-app Ecosystems
+https://www.usenix.org/conference/usenixsecurity22/presentation/zhang-lei
+超级应用程序中的身份混淆漏洞研究
+
+
+Scalpel：解构API复杂参数Fuzz的「手术刀」
+https://mp.weixin.qq.com/s/U_llBwC05vb84U9wb8NZog
+scalpel是一款命令行漏洞扫描工具，支持深度参数注入，拥有一个强大的数据解析和变异算法，可以将常见的数据格式（json, xml, form等）解析为树结构，然后根据poc中的规则，对树进行变异，包括对叶子节点和树结构 的变异。变异完成之后，将树结构还原为原始的数据格式
+
+
+2022信息安全四大顶会Fuzz论文汇总｜技术进展
+https://mp.weixin.qq.com/s/fXopKsFW4mwkUK29AwsnSA
+信息安全领域四大顶会——USENIX Security、S&P、NDSS、CCS，代表了信息安全领域研究的前沿方向，其论文涵盖的安全领域非常广泛，一直以来备受关注。我们将2022年四大顶会中与Fuzz技术相关的论文进行了统计，并对此次分享的论文在研究方向上进行了分类，以供大家查阅、参考
+
+
+Android组件安全之drozer实战
+https://mp.weixin.qq.com/s/96f6wVomEjC9_kyzsoylQg
+drozer是一款针对Android的安全测试框架，可动态的发现被测试APP的安全风险，对安卓APP四大组件activity、 broadcast receivers、 content providers、 services进行安全测试。
+
+
+基于代码属性图的自动化漏洞挖掘实践
+安全研究人员大多以人工或一些辅助工具来完成此类形式项目的漏洞挖掘。很明显，这种方式审计效率是非常低的，而且，审计结果也很容易遗漏。为此，需要一款能解决此类问题的工具
+https://paper.seebug.org/2041/
+
+
+
+
+
+
+
+逻辑漏洞挖掘技巧
+https://www.wangan.com/p/11v72e25b9ee19db
+
+Nodejs原型链污染
+
+介绍了Nodejs原型链污染原理，并通过案例演示攻击方法
+
+https://www.secpulse.com/archives/195776.html
+
+IoT 设备通信安全讨论
+IoT 设备日益增多的今天，以及智能家居这一话题愈发火热，智能家居市场正在飞速的壮大和发展，无数 IoT 设备正在从影片中不断的走向用户的身边。但是这其中却拥有着大量的安全问题和隐患。此次以结合实际案例的方式来谈一谈目前国内 IoT 市场中普遍存在的安全问题。
+https://paper.seebug.org/436/
+
+iptables 在 Android 抓包中的妙用
+
+本文介绍一种在 Andorid 中实现单应用、全局、优雅的抓包方法
+
+https://paper.seebug.org/2044/
+
+黑帽大会议题解读 BadAlloc内存分配漏洞致数百万设备易受攻击
+对BH 的议题进行了解读，有些系统底层的 alloc 内存分配函数实现不当，未考虑整数溢出问题，导致内存分配时会以小内存代替大内存，从而引发后续程序崩溃
+https://cloud.tencent.com/developer/article/1883250
+
+
+
+Authentication Bypass in Izanami 
+Izanami 容器化部署相关的一个问题，在使用容器进行部署时，需要检查容器内是否存在硬编码问题
+https://www.synacktiv.com/sites/default/files/2023-02/Synacktiv-Advisory-Izanami-CVE-2023-22495.pdf
+
+另一种绕过 Android P以上非公开API限制的办法
+Android O 之后系统对某些API 的调用进行了限制，不允许普通应用调用，文章从原理的角度提供了一种普适的方法绕过了这种限制，非常奇妙
+https://zhuanlan.zhihu.com/p/59455212
+
+Tracing the Linux kernel using Exein Pulsar: a 5 Minute Tutorial | Exein Blog
+blog.exein.io • Linux
+基于ebpf的Linux event 监控框架Pulsar的一个简单教程，支持监控网络、进程、log、系统调用等事件。 – Atum • 5 日 之前
+https://sec.today/pulses/1654dc67-d111-47e0-b285-5097cce821cb/
+
+
+如何使用 eBPF 观测用户空间应用程序	
+介绍了 eBPF 在用户空间进行 hook 跟踪的原理	
+https://www.cnxct.com/ebpf-uprobe-userspace-app/ 
+
+ebpf user-space probes 原理探究	
+从原理的角度分析了 user-space probes 是如何对用户态程序进行跟踪的	
+https://www.edony.ink/deep-in-ebpf-uprobe/
+
+
+6.eCapture旁观者：Android HTTPS明文抓包	
+https://mp.weixin.qq.com/s/KWm5d0uuzOzReRtr9PmuWQ	
+采用eBPF 的原理，提出了一种从底层抓取对安卓系统上https流量的归一化方法。eBPF 是一种十分强大的能力，在很多地方都能够发挥意想不到的用处
+
+
+On Bypassing eBPF Security Monitoring	
+https://tttang.com/archive/1779/	
+Extended Berkeley Packet Filter（eBPF）的发展越来越火热，对于它的安全研究工作也应该为我们所重视。文章从 eBPF的实际工作方式角度研究分析，找到了基于 eBPF 监控的一些问题
+
+深入浅出内存马（一）
+https://developer.aliyun.com/article/1221267
+
+
+BPMN这点事-三种流程模型
+http://www.uml.org.cn/workclass/201109205.asp
+
+用户在执行机运行ftp服务：
+sudo python3 ftpserver.py
+ftp服务的用户名为a，密码为b，默认目录为/home/code。
+使用执行机连接到靶机的服务后，运行upload命令进行文件上传：
+upload <ip> <username> <password> <remote_file> <local_file>
+上传成功会提示 upload success!
+来自 <http://pwnstonetraining-green.huawei.com/#/otherCommunities?communityId=4&id=259&count=14&courseSortId=1119> 
+
+
+4. Web协议层安全之websocket安全分析	
+https://www.freebuf.com/articles/web/336291.html	
+本文讲解了WebSocket相关协议基础，并且针对WebSocket讲解了可能存在的安全威胁，如XSS、认证鉴权、拒绝服务、中间人攻击等，对于使用了WebSocket相关协议的业务有参考意义。
+
+
+1. 浅析websocket劫持	
+https://www.secpulse.com/archives/183639.html	
+文章讲解了WebSocket通信的基本原理，并且结合实战对跨站WebSocket劫持漏洞-CSWSH进行了探讨。
+
+
+What are WebSockets?：
+https://portswigger.net/web-security/websockets/what-are-websockets
+
+Testing for WebSockets security vulnerabilities：
+https://portswigger.net/web-security/websockets
+
+Cross-site WebSocket hijacking (CSWSH)：
+https://book.hacktricks.xyz/pentesting-web/cross-site-websocket-hijacking-cswsh
+
+WebSocket协议：5分钟从入门到精通：
+https://www.cnblogs.com/chyingp/p/websocket-deep-in.html
+
+https://christian-schneider.net/CrossSiteWebSocketHijacking.html
+https://www.liaoxuefeng.com/wiki/1022910821149312/1103327377678688
+https://segmentfault.com/q/1010000020661067
+https://www.mi1k7ea.com/2019/10/04/CSWSH%E6%BC%8F%E6%B4%9E%E6%80%BB%E7%BB%93/#0x02-CSWSH%E6%BC%8F%E6%B4%9E
+https://security.tencent.com/index.php/blog/msg/119
+https://www.mi1k7ea.com/2021/01/30/%E6%B5%85%E6%9E%90WebSocket%E5%AE%89%E5%85%A8/
+https://www.freebuf.com/articles/web/252298.html
+https://wiki.wgpsec.org/knowledge/web/websocket-sec.html
+https://www.mi1k7ea.com/2021/01/30/%E6%B5%85%E6%9E%90WebSocket%E5%AE%89%E5%85%A8/
+
+
+靶场搭建及攻击示例
+PortSwigger有3个靶场，分别是XSS注入、业务逻辑绕过以及跨域劫持问题，可以参考。
+https://portswigger.net/web-security/websockets
+
+burp靶场
+294675330@qq.com
+https://portswigger.net/users/forgottenpassword
+
+靶场
+https://portswigger.net/web-security/all-labs
+
+漏洞挖掘 | 弱口令漏洞
+https://my.oschina.net/u/4258878/blog/3267831
+
+https://www.ctfhub.com/
+
+1005.Web安全攻防靶场之WebGoat – 1 
+
+https://www.cnblogs.com/beijibing/p/10393205.html
+
+攻防世界：https://adworld.xctf.org.cn/ 
+官方赛事wp https://www.ctfwp.com/
+247 CTF https://247ctf.com/dashboard
+BUUCTF- https://buuoj.cn/challenges
+http://vulapps.evalbug.com/
+
+vulhub
+https://vulhub.org/
+安装docker环境
+https://vulhub.org/#/docs/install-docker/
+
+加载其他靶场
+https://www.vulnhub.com/?page=3
+
+
+Vulnhub--DC-8
+来自 <https://www.freebuf.com/vuls/354653.html> 
+
+Vulnhub--DC-9
+来自 <https://www.freebuf.com/vuls/354654.html> 
+
+
+http://vulapps.evalbug.com/
+
+Java靶场
+ms08067靶场：
+http://bachang.ms08067.com/
+
+知识星球靶场：
+http://study.ms08067.com/
+
+
+Vulhub 这个有人用过吗，公开漏洞的靶场环境，一键搭建公开漏洞的复现环境
+https://vulhub.org/#/index/
+
+
+Python靶场
+
+
+
+Android靶场
+
+
+IOS靶场
+
+
+虚拟机
+vmtools做了些优化，但在ubuntu上有个bug，装完要打个补丁 
+https://blog.csdn.net/weixin_42123570/article/details/110715734
+
+aper-安全技术精粹
+https://paper.seebug.org/1264/
+
+
+看雪
+
+Freebuf
+
+
+安全客
+
+
+先知社区
+https://xz.aliyun.com/t/496
+
+安全脉搏
+https://www.secpulse.com/archives/141703.html
+
+
+
+
+
+
+
+
+
+https://sec.today/pulses/
+
+
+Dota 2 Under Attack: How a V8 Bug Was Exploited in the Game
+https://decoded.avast.io/janvojtesek/dota-2-under-attack-how-a-v8-bug-was-exploited-in-the-game/
+decoded.avast.io • Browser
+Dota2 使用旧版本的 V8 引擎导致游戏易被攻击。攻击者可以先在游廊中建立自定义地图，向自定义地图中插入恶意 JS 脚本。若玩家下载并运行了该自定义地图，则会被攻击。该漏洞已经出现在野利用，黑客会向被攻击的电脑中注入远控。 – WireFish • 5 日 之前
+2   
+ESXiArgs-Recover
+github.com • Tools Malware
+一个可能可以恢复ESXiArgs勒索病毒的脚本。 – Atum • 5 日 之前
+0   
+ESXiArgs Ransomware: Knocking Out Unpatched VMware ESXi Linux Servers Worldwide
+https://blogs.blackberry.com/en/2023/02/esxiargs-ransomware-knocking-out-unpatched-vmware-esxi-linux-servers-worldwide
+blogs.blackberry.com • Malware
+
+ESXiArgs勒索病毒开始流行，利用未patch的ESXi漏洞
+
+
+CVE-2023-24813 (CVSS score of 10): RCE Flaw in Dompdf Project
+https://securityonline.info/cve-2023-24813-rce-flaw-dompdf-project/
+securityonline.info • Vulnerability
+Dompdf 项目中存在反序列化导致的 RCE 漏洞，该漏洞是因为 CVE-2023-23924 修复不完整导致可以绕过补丁进行攻击。 – ThomasonZhao • 5 日 之前
+0   
+Isn't C++ fun? : ProgrammerHumor
+www.reddit.com
+编译器优化导致未定义行为的meme – keenan • 5 日 之前
+0   
+OpenSSL Security Advisory
+https://mta.openssl.org/pipermail/openssl-announce/2023-February/000251.html
+mta.openssl.org
+OpenSSL的多个漏洞简报 – keenan • 5 日 之前
+0   
+CVE-2023-25136 OpenSSH Pre-Auth Double Free Writeup & PoC
+https://jfrog.com/blog/openssh-pre-auth-double-free-cve-2023-25136-writeup-and-proof-of-concept/
+jfrog.com
+OpenSSH CVE-2023-25136的漏洞细节和POC – keenan • 5 日 之前
+0   
+hackebds: backdoor and shellcode generation for various architecture devices
+https://securityonline.info/hackebds-backdoor-and-shellcode-generation-for-various-architecture-devices/
+securityonline.info • Tools
+支持多种 CPU 架构的后门、shellcode 生成器 – WireFish • 5 日 之前
+
+
+
+
+
+
+
+
+
+
+
+blackhat USA 2022
+https://www.blackhat.com/us-22/briefings/schedule/#trying-to-be-everything-to-everyone-lets-talk-about-burnout-28230
+社区与职业相关议题：本次演讲将讨论计算机安全行业中关于倦怠的现有研究，并将讨论真正导致倦怠的原因、它发生的原因以及您可以采取哪些措施来减轻它，包括设定健康的界限、避免内疚、管理焦虑的现实方法以及诚实的自我对话，这样你就可以确定需要什么来补充你的能量和激情。
+
+
+blackhat USA 2022
+https://www.blackhat.com/us-22/briefings/schedule/#devils-are-in-the-file-descriptors-it-is-time-to-catch-them-all-26536
+云平台基础设施内核安全议题：发现在 Linux 内核中使用 fd 导入操作可能是一个非常脆弱的场景。场景中发现了几种新型漏洞，并首次披露。发现的部分漏洞的特殊性，其中一些漏洞很难被 syzkaller 之类的 fuzzer 发现，为了克服在 fd 操作使用中发现漏洞的困难，作者开发了几种创造性的方法来指导 fuzzer。借助这些方法，可以轻松找到上述场景中的漏洞，对于作者提出的创造性的fuzz方法可供参考
+
+blackhat USA 2022
+https://www.blackhat.com/us-22/briefings/schedule/#electrovolt-pwning-popular-desktop-apps-while-uncovering-new-attack-surface-on-electron-26322
+Electron的新攻击面，在很多应用程序中可被利用，导致RCE。
+
+blackhat USA 2022
+https://www.blackhat.com/us-22/briefings/schedule/#the-battle-against-the-billion-scale-internet-underground-industry-advertising-fraud-detection-and-defense-27254
+"广告欺诈和反欺诈
+1、移动端某知名数据分析SDK从网络加载恶意dex文件，使用透明界面自动模拟用户点击广告
+2、PC端广告点击工具
+3、多种广告自动点击工具介绍
+4、自动点击工具技术分析
+1）移动端
+2）PC端
+5、如何检测这些自动点击工具"
+
+blackhat USA 2022
+https://www.blackhat.com/us-22/briefings/schedule/#scaling-the-security-researcher-to-eliminate-oss-vulnerabilities-once-and-for-all-27131
+从学术领域的思维，阐述了一套开源漏洞自动修复系统，如何大规模的修复开源软件的漏洞。思维方式和方法值得我们学习
+
+
+
+
+
+1. codeql with JNDI injection
+https://tttang.com/archive/1660/
+
+
+2. CVE-2022-29885 - Don't Open That Port - A Denial Of Service vulnerability on Apache Tomcat Cluster Service Listener
+https://voidzone.me/cve-2022-29885-apache-tomcat-cluster-service-dos/
+作者分享了对Tomcat漏洞CVE-2022-29885分析及复现，通过不断往Tomcat集群服务器发送垃圾数据触发Tomcat不断创建新的缓冲区从而遭受DoS攻击，针对集群的一些特有利用方式值得参考
+
+3. Remote Code Execution via Prototype Pollution in Blitz.js
+https://blog.sonarsource.com/blitzjs-prototype-pollution/
+作者分享了在Blitz.js中原型链污染漏洞挖掘的过程，整个挖掘和利用过程值得参考
+
+4. 我是如何利用环境变量注入执行任意命令
+https://tttang.com/archive/1450/
+笔者从一个环境变量注入+system执行特定命令的场景着手，完整地讲述了是如何研究环境变量注入导致的安全问题。从问题的根源出发，详细分析了执行的底层原理，并且最终给出了攻击方法。其解决问题和思考的方式非常值得我们学习
+
+5. 记一次实战之若依SSTI注入绕过玄某盾
+https://xz.aliyun.com/t/11509
+文中讲解了如何绕过玄武盾WAF完成Thymeleaf SSTI漏洞的利用（实质上是绕过WAF对于SpEL表达式的拦截），对于后续现网漏洞利用绕过有参考意义。
+
+6. How data on a billion people may have leaked from a Chinese police dashboard
+https://www.theregister.com/2022/07/10/stolen_shanghai_police_data/?td=rt-3a
+上海公安数据库是如何泄露的，运行在 .kibana.elasticsearch.aliyuncs.com 域名上的一个 Elasticsearch Kibana 实例可从公网访问，可能使用了默认的用户名密码 elastic/elastic，运行旧版本的5.5.3，不支持开箱即用的身份验证。
+
+1. 一种全新的内存马
+https://veo.pub/2022/memshell/
+作者分享了使用websocket来构建内存马的思路和具体实践，可供参考
+
+2. 微信小程序抓包之路
+https://www.anquanke.com/post/id/275674
+微信小程序只信赖内置的证书，不信任系统证书，基于此种场景作者提供了2种方便的抓包思路可供参考
+
+3. Android设备锁屏绕过漏洞利用(CVE-2022-20006)
+https://mp.weixin.qq.com/s/9eoRa3MQ0oKkOE5KJ-DOfg?ref=www.ctfiot.com
+通过利用Android系统在UI上处理事件时的静态条件，达到绕过锁屏的目的。
+
+1. OpenHarmony HiTrace在IPC通信中的应用(L2)
+https://os.51cto.com/article/713141.html
+以openharmony 3.1代码基础, 以IPC进程通信中的HiTrace应用介绍HiTrace的使用和数据流转，同时指明了在 IPC通信中关键的收发函数
+
+2. Openharmony IPC通信(L2)
+https://ost.51cto.com/posts/10355
+图文并茂的从源码和设计角度展示了鸿蒙系统 IPC 通信的底层原理，对我们理解鸿蒙系统的内在很有帮助
+
+1. Inside JavaScript Engines, Part 1: Parsing
+https://medium.com/@yanguly/inside-javascript-engines-part-1-parsing-c519d75833d7
+讲解了JavaScript的三种引擎（V8、SpiderMonkey、JavaScriptCore）的工作原理，对加深对JavaScript语言特性以及攻防有一定的借鉴意义。
+
+2. SPRING FUNCTION CLOUD DOS (CVE-2022-22979) AND UNINTENDED FUNCTION INVOCATION
+https://checkmarx.com/blog/spring-function-cloud-dos-cve-2022-22979-and-unintended-function-invocation/
+作者分享了spring-cloud-function可以触发的DoS攻击漏洞，漏洞挖掘的思路和利用方式可供参考
+
+3. Did You Know Your Browser’s Autofill Credentials Could Be Stolen via Cross-Site Scripting (XSS)
+https://www.gosecure.net/blog/2022/06/29/did-you-know-your-browsers-autofill-credentials-could-be-stolen-via-cross-site-scripting-xss/
+作者分享了利用XSS在不同浏览器上窃取浏览器自动填充的密码的测试过程，在谷歌/火狐浏览器都能成功，其利用方式可供参考
+
+4. PortSwigger JWT 安全问题
+https://www.freebuf.com/articles/web/337347.html
+作者基于PortSwigger新靶场JWT attacks进行了漏洞复现与分析，针对JWT存在的几种漏洞场景可供学习参考，靶场地址：https://portswigger.net/web-security/jwt
+
+
+1. 单聊下最近2个有意思的漏洞
+https://paper.seebug.org/1926/
+黑哥从方法论的角度对漏洞研究的一些思考：1.安全考古很有必要，特别是复杂项目，一些已经修复的问题很有可能复活；2.fuzz 或者其他工具的使用可以很大程度提升我们的工作效率；
+
+2. Zooming in on Zero-click Exploits
+https://sec.today/pulses/323cb28a-52d4-442b-a622-ea01e969422c/
+Natalie 在 Recon 会议关于 Zoom Zero-click Exploit 的演讲，主要介绍了zoom 的几个攻击面，XMPP 的解析库，RTP 的解析库等，数据协议解析层面的问题
+
+3. 如何使用NodeSecurityShield保障NodeJS应用程序安全
+https://www.freebuf.com/articles/security-management/335971.html
+为nodejs开发的类似于内容安全策略（CSP）的资源访问策略控制组件，其防御思路可供参考
+
+4. ServerLess Aws Lambda攻击与横向方法研究
+https://xz.aliyun.com/t/11442
+文章围绕三个问题1、lambda会遇到什么攻击场景2、什么情况下，在lambda中读取到的env环境变量密钥可以让我们接管服务器甚至整个账号3、什么情况下，可以通过lambda权限去横向到其他的EC2服务器讲解。ServerLess与lambda碰撞到一起的攻击思路总结，可供参考
+
+5. 向Typora学习electron安全攻防
+https://mp.weixin.qq.com/s/Ggx34AqhzsbBLkecv5RNJw
+通过对 typora 的逆向分析和调试展示了针对 electron 产品应该如何着手进行安全分析和测试，其中提取源码的思路和源码级别的调试方法非常值得我们关注
+
+7. Android IPC: Part 2 – Binder and Service Manager Perspective
+https://blog.hacktivesecurity.com/index.php/2020/04/26/android-ipc-part-2-binder-and-service-manager-perspective/
+从底层代码出发，介绍了 IBinder 的基本概念，通过代码走读，分析了Client 和 servceManager 交互的整个流程，对我们理解 Android的 IPC 机制有很大帮助
+
+8. 探寻Java文件上传流量层面waf绕过姿势系列二
+https://y4tacker.github.io/2022/06/21/year/2022/6/%E6%8E%A2%E5%AF%BBJava%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%B5%81%E9%87%8F%E5%B1%82%E9%9D%A2waf%E7%BB%95%E8%BF%87%E5%A7%BF%E5%8A%BF%E7%B3%BB%E5%88%97%E
+《探寻Tomcat文件上传流量层面绕waf新姿势》文章的姊妹篇
+
+9. 探寻Tomcat文件上传流量层面绕waf新姿势
+http://www.ctfiot.com/45762.html
+文章结合RFC文档以及Tomcat源码，讲解了多个绕过WAF上传文件的姿势，值得学习和研究。
+
+10. Bypassing CSP with dangling iframes
+https://portswigger.net/research/bypassing-csp-with-dangling-iframes
+文中讲解了一种结合浏览器特性，通过about:blank绕过CSP策略的思路和方法。
+
+
+   
+
+
+
+
+
