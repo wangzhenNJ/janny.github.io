@@ -1,0 +1,365 @@
+SnakeYAML官网 
+https://bitbucket.org/snakeyaml/snakeyaml
+
+https://bitbucket.org/asomov/snakeyaml/wiki/Documentation#markdown-header-installation 
+
+
+https://www.javadoc.io/static/org.yaml/snakeyaml/1.19/org/yaml/snakeyaml/constructor/SafeConstructor.html
+
+https://www.javadoc.io/static/org.yaml/snakeyaml/1.19/org/yaml/snakeyaml/constructor/CustomClassLoaderConstructor.html
+
+
+
+snakeyaml
+来自 <https://xz.aliyun.com/t/11599#toc-8> 
+
+代码样例
+https://codingdict.com/sources/java/org.yaml.snakeyaml/62562.html
+
+
+Java SnakeYaml反序列化漏洞
+
+https://www.mi1k7ea.com/2019/11/29/Java-SnakeYaml%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E/
+
+
+SnakeYaml反序列化
+https://xz.aliyun.com/t/11599
+
+
+
+https://github.com/artsploit/yaml-payload
+
+IDEA动态调试(三)——反序列化漏洞(xml+Yaml)
+来自 <https://cloud.tencent.com/developer/article/1598048> 
+
+
+SnakeYaml从漏洞探测到利用姿势
+
+来自 <https://www.freebuf.com/vuls/343387.html> 
+
+
+XMLDecoder
+https://www.mi1k7ea.com/2021/04/05/%E6%B5%85%E6%9E%90WebLogic-XMLDecoder%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2017-10271%EF%BC%89/
+
+
+
+
+XStream 反序列化命令执行漏洞（CVE-2021-21351）
+https://blog.csdn.net/m0_56642842/article/details/119679743
+
+参考链接：
+	• https://x-stream.github.io/CVE-2021-21351.html
+	• https://paper.seebug.org/1543/
+	• https://www.veracode.com/blog/research/exploiting-jndi-injections-java
+	• https://github.com/welk1n/JNDI-Injection-Exploit/
+
+
+
+
+JNDI-Injection-Exploit
+
+
+fastjson反序列化踩坑记录
+
+来自 <https://www.cnblogs.com/feixuefubing/p/13229764.html> 
+https://paper.seebug.org/1192/
+
+
+jackson
+来自 <https://vulhub.org/#/environments/jackson/CVE-2017-7525/> 
+本实验参考参考资料：
+https://github.com/vulhub/vulhub/tree/master/jackson/CVE-2017-7525
+https://www.cnblogs.com/cute-puli/p/15378959.html
+
+Jackson系列：https://www.mi1k7ea.com/page/27/
+Jackson系列一——反序列化漏洞基本原理
+https://www.mi1k7ea.com/2019/11/13/Jackson%E7%B3%BB%E5%88%97%E4%B8%80%E2%80%94%E2%80%94%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/
+https://www.mi1k7ea.com/2019/11/16/Jackson%E7%B3%BB%E5%88%97%E4%BA%8C%E2%80%94%E2%80%94CVE-2017-7525%EF%BC%88%E5%9F%BA%E4%BA%8ETemplatesImpl%E5%88%A9%E7%94%A8%E9%93%BE%EF%BC%89/
+
+
+	2. apache shiro介绍
+https://www.ibm.com/developerworks/cn/web/wa-apacheshiro/index.html
+
+https://www.jackson-t.ca/runtime-exec-payloads.html
+
+
+Weblogic12c T3 协议安全漫谈
+来自 <https://paper.seebug.org/category/web-security/> 
+
+
+Weblogic一键漏洞扫描检测工具：WeblogicScan
+https://www.uedbox.com/post/65765/
+
+Weblogic 反序列化漏洞(CVE-2018-2628)漫谈
+
+来自 <https://blog.knownsec.com/2018/04/weblogic-%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9Ecve-2018-2628%E6%BC%AB%E8%B0%88/> 
+
+
+JBOSS发现Java反序列化远程命令执行漏洞
+来自 <https://www.freebuf.com/articles/86950.html> 
+
+jboss反序列化漏洞复现(CVE-2017-7504) 
+来自 <https://www.cnblogs.com/rnss/p/13376149.html> 
+
+
+# JBoss 4.x JBossMQ JMS 反序列化漏洞（CVE-2017-7504）
+Red Hat JBoss Application Server 是一款基于JavaEE的开源应用服务器。JBoss AS 4.x及之前版本中，JbossMQ实现过程的JMS over HTTP Invocation Layer的HTTPServerILServlet.java文件存在反序列化漏洞，远程攻击者可借助特制的序列化数据利用该漏洞执行任意代码。
+参考：
+- https://github.com/joaomatosf/JavaDeserH2HC
+- https://www.youtube.com/watch?v=jVMr4eeJ2Po
+
+
+https://github.com/vulhub/vulhub/tree/master/jboss/CVE-2017-12149
+
+
+# JBoss 5.x/6.x 反序列化漏洞（CVE-2017-12149）
+
+该漏洞为 Java反序列化错误类型，存在于 Jboss 的 HttpInvoker 组件中的 ReadOnlyAccessFilter 过滤器中。该过滤器在没有进行任何安全检查的情况下尝试将来自客户端的数据流进行反序列化，从而导致了漏洞。
+
+参考：
+
+ - https://mp.weixin.qq.com/s/zUJMt9hdGoz1TEOKy2Cgdg
+ - https://access.redhat.com/security/cve/cve-2017-12149
+
+
+dubbo
+https://my.oschina.net/u/2377110/blog/1840477
+
+Dubbo服务暴露过程
+
+来自 <https://blog.csdn.net/luoyu0817/article/details/84592514> 
+
+Dubbo多个远程代码执行漏洞
+
+
+来自 <https://mp.weixin.qq.com/s/B1bltJcdrH-B-iN2p0csqA> 
+
+
+Dubbo samples工程包下载
+https://gitee.com/mirrors/Dubbo-Spring-Boot-Project
+
+
+CVE-2020-1948（toStringBean抛异常）
+
+
+漏洞复现
+方式1：使用JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar开启ldap服务
+Dubbo 漏洞 CVE-2020-1948 复现+简单修复---利用JNDI---参照此操作，可复现成功
+
+来自 <https://www.cnblogs.com/JingQ/p/13329083.html> 
+
+
+
+CVE-2020-1948：Dubbo Provider默认反序列化复现-----参照此步骤可以复现
+
+来自 <https://www.secpulse.com/archives/141703.html> 
+
+
+CVE-2020-1948：Dubbo Provider默认反序列化复现----利用marshalsec开启LDAP服务调用本地exp触发漏洞
+来自 <https://www.secpulse.com/archives/141703.html> 
+
+
+
+CVE-2020-1948--Provider默认反序列化远程代码执行-----good
+Dubbo本次的漏洞触发原理就是toStringBean类内部动态调用外部传入对象的方法导致的代码执行。
+
+来自 <https://paper.seebug.org/1264/> 
+
+
+[CVE-2020-1948] Apache Dubbo Provider反序列化漏洞复现及分析
+
+来自 <https://my.oschina.net/u/4541916/blog/4356921> 
+
+
+
+Apache Dubbo 惊爆高危漏洞（CVE-2020-1948），黑客攻击可执行任意代码，腾讯安全已发布完整解决方案
+
+来自 <https://s.tencent.com/research/bsafe/1014.html> 
+
+
+Apache Dubbo Provider反序列化(CVE-2020-1948) 利用复现及POC
+
+来自 <https://www.sayers3.com/cve_2020_1948.html> 
+
+Apache Dubbo Provider默认反序列漏洞复现（CVE-2020-1948）---LDAP服务
+
+来自 <https://www.cnblogs.com/zhengjim/p/13204194.html> 
+
+Dubbo 漏洞 CVE-2020-1948 分析
+
+来自 <https://paper.seebug.org/1264/> 
+
+[CVE-2020-1948]Apache Dubbo Provider默认反序列化RCE---使用marshal
+
+来自 <https://blog.csdn.net/caiqiiqi/article/details/106934770> 
+
+
+Apache Dubbo CVE-2020-1948 反序列化漏洞利用==marshal
+https://blog.csdn.net/weixin_46137328/article/details/107194560?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.control&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.control
+
+
+
+CVE-2020-11995（Hessian2）
+
+CVE-2020-11995：Apache Dubbo默认反序列化协议Hessian2导致远程代码执行
+
+来自 <https://s.tencent.com/research/bsafe/1090.html> 
+
+
+
+Apache Dubbo远程代码执行漏洞CVE-2020-11995
+
+来自 <https://www.secpulse.com/archives/138771.html> 
+
+
+dubbo-spring-boot的auto-configure示例报Not found exported service的解决办法
+
+来自 <https://www.cnblogs.com/default/p/11627567.html> 
+
+
+Hessian 反序列化及相关利用链
+
+来自 <https://paper.seebug.org/1131/> 
+
+
+
+
+Hessian反序列化RCE漏洞复现及分析 
+
+来自 <https://www.sohu.com/a/366724418_354899> 
+
+
+CVE-2020-9480：Apache Spark RCE漏洞风险通告
+
+来自 <https://s.tencent.com/research/bsafe/1015.html> 
+
+反序列化之AMF
+
+反序列化之Kryo
+
+反序列化之jYAML（YAML）
+
+
+Burp Suite 反序列化插件 Java Deserialization Scanner
+
+来自 <https://xz.aliyun.com/t/496> 
+
+
+1020.Burp Suite扩展之Java-Deserialization-Scanner
+
+来自 <https://www.cnblogs.com/yh-ma/p/10299289.html> 
+
+https://github.com/federicodottaa/Java-Deserialization-Scanner/releases
+https://github.com/federicodotta/Java-Deserialization-Scanner/tree/v0.5
+https://github.com/federicodotta/Java-Deserialization-Scanner/releases
+
+来自 <https://blog.csdn.net/cd_xuyue/article/details/50243689?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_baidulandingword-6&spm=1001.2101.3001.4242> 
+
+java反序列化工具ysoserial分析 – angelwhu
+
+来自 <http://www.vuln.cn/6295> 
+
+
+反序列化工具ysoserial使用介绍
+
+来自 <https://blog.51cto.com/13770310/2157251> 
+
+
+
+https://www.jianshu.com/p/79baa1fc32c3
+
+
+BUUCTF-web ikun(Python 反序列化)-
+https://www.cnblogs.com/remon535/p/12884834.html
+
+在线平台：BUUCTF-https://buuoj.cn/challenges
+
+一篇文章带你理解漏洞之Python 反序列化漏洞
+https://www.k0rz3n.com/2018/11/12/%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E5%B8%A6%E4%BD%A0%E7%90%86%E8%A7%A3%E6%BC%8F%E6%B4%9E%E4%B9%8BPython%20%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E/
+
+
+
+SSRF常用的四种协议
+
+来自 <https://www.bilibili.com/read/cv12733096> 
+
+
+实战 | 记一次针对非法网站的SSRF渗透
+
+来自 <https://mp.weixin.qq.com/s?__biz=MzI5MDU1NDk2MA==&mid=2247511509&idx=1&sn=73c16119dd7334591cfeb502a3523011&chksm=ec1cf8eadb6b71fc37282df87494e2b425068b73d157052c400a9a3d150ff526307c4c7b7d64&scene=21#wechat_redirect> 
+
+phpmyadmin
+
+来自 <https://mp.weixin.qq.com/s?__biz=MzI5MDU1NDk2MA==&mid=2247511509&idx=1&sn=73c16119dd7334591cfeb502a3523011&chksm=ec1cf8eadb6b71fc37282df87494e2b425068b73d157052c400a9a3d150ff526307c4c7b7d64&scene=21#wechat_redirect> 
+
+利用 # 绕过防火墙
+#号在linux是属于提示符
+
+利用#绕过防火墙，读取文件
+
+ssrf的file协议 file=file://xxx
+
+
+https://blog.brycec.me/posts/starctf2021_writeups/#oh-my-bet
+https://www.blackhat.com/docs/us-17/thursday/us-17-Tsai-A-New-Era-Of-SSRF-Exploiting-URL-Parser-In-Trending-Programming-Languages.pdf
+
+原文链接：https://www.anquanke.com/post/id/239994
+
+
+
+DNS 重绑定 Bypass
+
+https://zhuanlan.zhihu.com/p/89426041
+
+
+重定向绑定服务器
+https://lock.cmpxchg8b.com/rebinder.html
+
+
+服务器源码
+https://github.com/taviso/rbndr
+
+进制转换
+https://tool.520101.com/wangluo/jinzhizhuanhuan/
+
+URL Bypass
+绕过方式参考 https://www.secpulse.com/archives/65832.html
+Redis
+https://www.cnblogs.com/linuxsec/articles/11221756.html
+
+
+FastCGI协议
+https://blog.csdn.net/mysteryflower/article/details/94386461
+
+https://blog.csdn.net/weixin_39664643/article/details/114977217
+
+https://github.com/tarunkant/Gopherus  工具
+
+SSRF，伪协议读取文件
+
+https://www.cnblogs.com/-mo-/p/11673190.html
+
+
+
+SSRF POST报文
+
+https://senimo.blog.csdn.net/article/details/118387034?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.opensearchhbase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.opensearchhbase
+
+
+https://buuoj.cn/challenges#[%E8%99%8E%E7%AC%A6CTF%202021]Internal%20System
+
+wp
+https://miaotony.xyz/2021/04/05/CTF_2021HFCTF_internal_system/
+
+
+
+
+
+
+
+
+
+
+
+
+
