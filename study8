@@ -1,0 +1,317 @@
+DASCTF｜June GKCTF X DASCTF应急挑战杯WriteUP-WEB篇
+https://cloud.tencent.com/developer/article/1844890
+
+
+nginx error_page 存在走私漏洞
+https://v0w.top/2020/12/20/HTTPsmuggling/#5-1-%EF%BC%88CVE-2019-20372%EF%BC%89Nginx-error-page-%E8%AF%B7%E6%B1%82%E8%B5%B0%E7%A7%81%E6%BC%8F%E6%B4%9E
+
+
+CTF | 2021 虎符CTF Web internal_system 复现
+https://miaotony.xyz/2021/04/05/CTF_2021HFCTF_internal_system/
+
+
+[网鼎杯 2020 玄武组]SSRFMe
+https://liotree.github.io/2020/07/10/%E7%BD%91%E9%BC%8E%E6%9D%AF-2020-%E7%8E%84%E6%AD%A6%E7%BB%84-SSRFMe/
+
+
+
+刷题[FireshellCTF2020]ScreenShooter
+https://www.cnblogs.com/karsa/p/14332273.html
+
+
+原文：http://w4nder.top/?p=364
+[网鼎杯 2020 半决赛]faka
+https://www.cnblogs.com/W4nder/p/14078695.html
+
+
+redis命令执行
+dict：https://f5.pm/go-48109.html
+Gopher;https://blog.csdn.net/weixin_44037296/article/details/118490660
+
+
+
+https://blog.summ3r.top/2021/05/18/JMCTF-2021-GoOss/
+
+weblogic全量利用exp
+https://github.com/GGyao/CVE-2020-14882_ALL/blob/master/CVE-2020-14882_ALL.py
+
+
+CORS
+https://portswigger.net/web-security/cors
+
+
+CORS跨域漏洞学习
+https://www.shuzhiduo.com/A/Gkz1wOE25R/
+
+
+https://blog.csdn.net/weixin_44604541/article/details/124281738
+
+
+CORS跨域魔法：揭示网络世界的神秘面纱
+https://cloud.tencent.com/developer/article/2356283?areaId=106001
+
+
+第40篇：CORS跨域资源共享漏洞的复现、分析、利用及修复过程
+https://cloud.tencent.com/developer/article/2225047
+
+
+跟我一起探索 HTTP-跨源资源共享（CORS）
+https://cloud.tencent.com/developer/article/2342519?areaId=106001
+
+浅学前端：跨域问题
+来自 <https://cloud.tencent.com/developer/article/2356962?areaId=106001> 
+
+CORS
+来自 <https://cloud.tencent.com/developer/article/2287433?areaId=106001> 
+
+iframe-sandbox
+https://www.runoob.com/tags/att-iframe-sandbox.html
+
+
+HTML <iframe> srcdoc 属性
+来自 <https://www.runoob.com/tags/att-iframe-srcdoc.html> 
+
+
+srcdoc 属性规定要显示在内联框架中的页面的 HTML 内容。
+来自 <https://www.runoob.com/tags/att-iframe-srcdoc.html> 
+
+
+【【poi】java使用poi对docx文档进行操作——纯文本篇】
+https://mbd.baidu.com/ma/s/CdT30h8s
+
+
+XML & ZIP: Explore Your Excel Workbooks File Structure
+来自 <https://professor-excel.com/xml-zip-excel-file-structure/> 
+xlsx,OOM根因分析
+原理：
+POI底层OPCPackage.open方法有多个重载，
+OPCPackage open(InputStream in)；
+OPCPackage open(File file)
+OPCPackage open(String path)
+搜索关键字：
+OPCPackage\.open|XSSFWorkbook|checkExcelIsValid|WorkbookFactory 
+|PackageHelper\.open|XSSFWorkbookFactory|HSSFWorkbook
+
+CVE-2017-5644 Apache POI Dos漏洞原理详解
+来自 <http://www.dawuzhe.cn/134453.html> 
+
+
+POI官方网站的描述https://poi.apache.org/changes.html?fromacct=525a03cf-8bd2-4921-b724-84ea259121fb&utm_source=V1g3MDY4NTY=&utm_medium=cps&utm_campaign=201905
+
+tealeg/xlsx是一个go语言下读写XLSX文件的库，代码仓地址:
+https://github.com/tealeg/xlsx
+
+来自 <https://bbs.huaweicloud.com/blogs/142684> 
+参考资料
+https://professor-excel.com/xml-zip-excel-file-structure/
+https://en.wikipedia.org/wiki/ZIP_(file_format)
+https://segmentfault.com/a/1190000016412013
+
+
+upload-labs：一个帮你总结所有类型的上传漏洞的靶场
+https://www.chabug.org/tools/469.html
+一个帮你总结所有类型的上传漏洞的靶场，推荐windows（除了Pass-19必须在linux下，其余Pass都可以在windows上运行）PHP
+
+DVWA－全等级文件上传
+https://www.cnblogs.com/N0r4h/p/12257848.html
+
+Antsword安装：
+https://blog.csdn.net/weixin_41924764/article/details/108099952
+
+https://ctf.bugku.com/challenges/detail/id/204.html
+
+upload-labs
+http://upload-labs.caoyo.top
+
+
+https://secgeek.net/bookfresh-vulnerability/
+
+
+Java安全之JNDI注入
+来自 <https://www.anquanke.com/post/id/221917> 
+
+
+小心!Apache James拒绝服务漏洞(CVE-2021-40110) - 网安
+来自 <https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&ch=&tn=baidu&bar=&wd=james+CVE&rn=&fenlei=256&oq=&rsv_pq=e866ed0c0000083d&rsv_t=1e87a2bTLzFU0vZbUXCiTCHhqC6WM91%2BjhNFcc7yvAQlO5vjqrum2oXPz%2Bg&rqlang=cn> 
+
+
+Apache James 3.6.1 之前版本存在安全漏洞，攻击者可利用该漏洞使用易受攻击的正则表达式编写 IMAP 列表命令来组织拒绝服务。
+来自 <https://www.wangan.com/p/7fy7fg4b137c7c35> 
+
+
+一文读懂面试官都在问的Shiro漏洞
+来自 <https://www.51cto.com/article/757560.html>
+
+Apache Shiro <1.11.0 存在身份验证绕过漏洞
+https://www.oscs1024.com/hd/MPS-2023-0169
+
+
+Shiro 简介
+来自 <https://www.w3cschool.cn/shiro/co4m1if2.html> 
+Apache Shiro是一个强大且易用的Java安全框架,执行身份验证、授权、密码和会话管理。使用Shiro的易于理解的API,您可以快速、轻松地获得任何应用程序,从最小的移动应用程序到最大的网络和企业应用程序
+
+盘点 Spring Security 框架中的八大经典设计模式
+来自 <https://mp.weixin.qq.com/s/W055bFUoWxwCUFa4VrbXAQ> 
+
+【漏洞预警】Spring Security OAuth拒绝服务漏洞 :
+http://mp.weixin.qq.com/s?__biz=MzI3NzMzNzE5Ng==&mid=2247485442&idx=1&sn=5b30b927b730c50937b021a53341d0ee&chksm=eb668d01dc110417e53cd1809577ee1f6a8ed5d9cf35750b1a6fa71d40e3b4d0502b2f1bb504&mpshare=1&scene=1&srcid=0421UNA4aqmI6GDdR9TQ70Yh&sharer_sharetime=1650546797696&sharer_shareid=dace9c19e0784a93949160f15a3f3dd8#rd
+
+Spark学习之路 （一）Spark初识
+https://www.cnblogs.com/qingyunzong/p/8886338.html
+https://spark.apache.org/docs/latest/security.html
+
+
+【原理】CVE-2022-33891
+Apache Spark 命令注入漏洞分析
+
+spark sql
+
+XMLSEC
+
+Java Web架构知识整理
+来自 <http://www.uml.org.cn/zjjs/2017031605.asp> 
+
+
+Zookeeper安装
+https://www.cnblogs.com/jimcsharp/p/8358271.html
+ 
+ETCD中的RAFT协议工作原理可参考：https://chaindesk.cn/witbook/36/514
+RAFT协议原理可参考：https://raft.github.io/raft.pdf
+
+etcd应用场景可参考：https://www.modb.pro/db/249966
+为etcd集群生成证书：https://github.com/etcd-io/etcd/tree/main/hack/tls-setup
+
+
+scala
+来自 <https://maimai.cn/article/detail?fid=1749405988&efid=TjKKvgo_XyAAYjt9YuEBmQ> 
+
+
+可预测的伪随机数发生器（Scala）
+来自 <https://xz.aliyun.com/t/3358> 
+潜在的命令注入(Scala)
+来自 <https://xz.aliyun.com/t/3358#toc-15> 
+
+
+Flink目录遍历漏洞
+来自 <https://baijiahao.baidu.com/s?id=1695425723184523942&wfr=spider&for=pc> 
+
+
+Scala正则表达式
+https://docs.scala-lang.org/tour/regular-expression-patterns.html 
+
+
+1. SEI CERT Oracle Coding Standard for Java: IDS17-J. Prevent XML External
+Entity Attacks
+2. XML file loader example
+https://alvinalexander.com/java/jwarehouse/scala/src/library/scala/xml/factory/XMLLoader.scala.shtml 
+1、scala XML库--XML注入
+https://alvinalexander.com/java/jwarehouse/scala/src/library/scala/xml/factory/XMLLoader.scala.shtml
+
+2、scala路径遍历--
+
+Bug Patterns
+http://find-sec-bugs.github.io/bugs.htm
+
+
+Hive入门级教程（详细）
+https://www.ngui.cc/el/1649855.html?action=onClick
+
+Apache Hive授权问题漏洞
+
+
+CVE-2023-25194   Apache Kafka Connect 模块存在反序列化漏洞
+来自 <https://www.oscs1024.com/hd/MPS-2023-3834> 
+
+
+来自 <https://hackerone.com/reports/1529790> 
+
+
+python反编译工具
+https://sourceforge.net/projects/easypythondecompiler/
+
+
+bandit
+来自 <https://bandit.readthedocs.io/en/latest/> 
+来自 <https://cloud.tencent.com/developer/article/1447448> 
+
+
+
+Burp Suite使用介绍（一）
+来自 <http://www.360doc.com/content/16/0425/10/29967943_553593234.shtml> 
+
+使用Dirsearch探测Web目录
+https://www.cnblogs.com/qingchengzi/articles/12652232.html
+
+
+DirBuster
+来自 <https://owasp.org/www-community/attacks/Brute_force_attack> 
+
+
+XSS测试辅助工具whistle
+http://wproxy.org/whistle
+
+
+恶意加密流量检测|三款热门黑客工具（冰蝎、哥斯拉、CobaltStrike）
+https://www.aqniu.com/vendor/73751.html
+
+
+
+CNCF《云原生安全白皮书》v2 中文版
+来自 <https://mp.weixin.qq.com/s/f3acQ9Qy9XlqcqZRndMORA> 
+
+
+4. 云原生安全概述
+https://kubernetes.io/zh/docs/concepts/security/overview/
+对云原生安全进行了分层，分为云（Cloud）、集群（Cluster）、容器（Container）和代码（Code）安全几个层次来构建整体的安全能力，可供参考 
+
+1. 阿里云安全云上容器ATT&CK攻防矩阵
+https://developer.aliyun.com/article/765449
+文章对云上容器ATT&CK矩阵做了详细阐述，希望能帮助开发和运维人员了解容器的安全风险和落地安全实践，可供参考
+
+2. 安全狗云原生安全攻防技术浅析
+https://www.anquanke.com/post/id/241004
+文章的主要内容是对云原生安全问题及防御技术做浅析，可供参考
+
+• CIS Kubernetes V1.20 Benchmark v1.0.1
+https://workbench.cisecurity.org/benchmarks/9829
+• Kubernetes 加固指南
+https://lib.jimmysong.io/kubernetes-hardening-guidance/
+
+
+• 云原生基础架构
+https://lib.jimmysong.io/cloud-native-infra/
+
+
+云安全书籍推荐必读榜
+原文地址：https://www.4hou.com/posts/0D4G
+
+
+Serverless
+
+4. 从零开始的Kubernetes攻防
+
+https://github.com/neargle/my-re0-k8s-security
+
+本文聚焦于容器、Kubernetes攻防对抗中所沉淀下来的漏洞，分享在多处攻防场景所遇到的云原生相关的漏洞挖掘和漏洞利用实例，漏洞挖掘方式及利用方式可供后续研究参考
+
+
+云原生安全配置基线规范
+
+
+Azure Kubernetes 服务 (AKS) 的 Azure 安全基线
+https://learn.microsoft.com/zh-cn/security/benchmark/azure/baselines/azure-kubernetes-service-aks-security-baseline?view=azure-bot-service-4.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
