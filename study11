@@ -1,0 +1,351 @@
+鸿蒙 webview调试
+https://blog.51cto.com/u_16213333/9260876
+
+Android task
+https://promon.co/security-news/strandhogg/
+https://thehackernews.com/2019/12/strandhogg-android-vulnerability.html
+
+https://www.anquanke.com/post/id/194224
+
+http://www.wuj.whu.edu.cn/d/file/allhtml/lx/lx1802/e76dfa25-fae9-401e-a91c-0ba134d00a47.htm
+
+https://xiazdong.github.io/2015/03/08/android-launchmode/
+https://juejin.im/post/5c935526e51d45280e7336fb
+https://wrlu.cn/cyber-security/mobile-security/android-strandhogg/#more-651
+
+launchMode的应用场景
+https://juejin.im/post/5ce60931f265da1b8d15f4ea
+https://xiazdong.github.io/2015/03/08/android-launchmode/
+
+Android的taskAffinity对四种launchMode的影响
+https://www.cnblogs.com/yyz666/p/4674173.html
+
+安卓爆影响所有版本的StrandHogg漏洞
+https://www.secpulse.com/archives/120013.html
+
+allowTaskReparenting：
+该值为布尔类型，默认为false，为true表示当该Activity所亲和的任务进入前台时，该Activity可以从它原来的任务转移到它所亲和的任务。
+就是说，一个activity1原来属于task1，但是如果task2启动起来的话，activity1可能不再属于task1了，转而投奔task2去了。 当然前提条件是allowTaskReparenting=true，还有同时设置了taskAffinity属性。
+由于具有singleTask或singleInstance启动模式的Activity只能在任务栈底，因此该属性仅对于standard和singleTop模式有效。
+
+Intent标志FLAG_ACTIVITY_NEW_TASK
+当启动模式为singleTask时，framework会将它的启动标志设为FLAG_ACTIVITY_NEW_TASK
+当启动模式为singleInstance时，framework会将它的启动标志设为FLAG_ACTIVITY_NEW_TASK
+
+
+H5文件上传流程：
+<html>
+	<form enctype="multipart/form-data" method="post" action="/upload">
+	  <input type="file" id="myFile" name="CHOOSE FILE">
+	  <input type="submit" value="Upload Image" name="submit">
+	</form>
+</html>
+当H5中有此标签时<input type=“file” />，表示需要选择文件，此时WebView中需要setWebChromeClient并重写WebChromeClient的onShowFileChooser方法。如果不重写，则无法上传文件 
+方法如下：
+public boolean onShowFileChooser(WebView webView, ValueCallback<Uri[]> filePathCallback,FileChooserParams fileChooserParams) 
+第二个参数中的Uri[]是要上传的文件的具体路径。此路径一般是由文件管理或者图库类应用返回用户选择的文件Uri，然后执行ValueCallback的onReceiveValue接口，H5即可获得选择的文件
+
+选择图片的方式一般有两种：
+1、跳转到图库类应用，用户选择图片，图库类应用返回uri，并携带读权限（此种情况应用不需要应用申请SD卡权限，如华为帐号修改头像选择图片场景）
+对于第一种情况存在安全和隐私风险，
+调用onReceiveValue之前，对uri进行校验，不能加载私有目录下的文件
+2、自定义图片选择界面（此种情况应用需要申请SD卡权限，如问题与建议SDK选择图片场景）
+第二种情况无风险。
+
+
+
+Google的官方文档《Android Intents with Chrome》一文，介绍了在Android Chrome浏览器中网页打开APP的两种方法
+
+一篇关于intent scheme url攻击的文章：
+Whitepaper – Attacking Android browsers via intent scheme URLs
+
+parsedIntent.setComponent(null); 之后，原来的component仍然在？？？
+结论：setComponent只对SEL之前的有效（攻击的时候可以利用这个特点，在component之前加一个SEL，这样该component就不会被删掉，就可以指定被拉起的activity）
+
+
+
+Whitepaper
+Whitepaper – Attacking Android browsers via intent scheme URLs
+https://www.mbsd.jp/Whitepaper/IntentScheme.pdf
+Android安全之Intent Scheme Url攻击
+https://segmentfault.com/a/1190000007747812
+Android Intent Scheme URLs攻击
+https://www.cnblogs.com/lytwajue/p/6724055.html
+Android浏览器跨域数据窃取和Intent Scheme攻击
+https://www.freebuf.com/news/55551.html
+Android安全开发之浅谈网页打开APP
+https://yq.aliyun.com/articles/57088
+Android浅谈网页打开APP(一）
+https://www.jianshu.com/p/65429b93de24
+Android浅谈网页打开APP(二）
+https://www.jianshu.com/p/5685b4a1b77e
+Android安全之WebViewUXSS漏洞
+https://www.jianshu.com/p/8b4cca60dd8a
+CVE-2014-6041 Android（4.4版本以下）浏览器同源策略绕过漏洞
+https://www.freebuf.com/vuls/44763.html
+Android Intents with Chrome
+《Android Intents with Chrome》
+《Intent Scheme URL attack》
+
+深入分析Intent匹配查询
+https://blog.csdn.net/yuanzeyao/article/details/42243583
+
+
+[1] Android Intents with Chrome，https://developer.chrome.com/multidevice/android/intents 
+[2] Intent scheme URL attack，http://drops.wooyun.org/papers/2893 
+[3] Android Appliaction Secure Design/Secure Coding Guidebook，http://www.jssec.org/dl/android_securecoding_en.pdf 
+[4] Handling App Links，http://developer.android.com/intl/zh-cn/training/app-links/index.html 
+[5] Android M App Links: 实现, 缺陷以及解决办法，http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0718/3200.html 
+
+
+PendingIntent
+https://www.cnblogs.com/endv/p/11576121.html
+pendingIntent攻击需要满足2个条件：
+1、pendingIntent泄露
+2、PendingIntent中的intent可被篡改
+Intent篡改----第四个参数可以用PendingIntent.FLAG_IMMUTABLE
+https://blog.csdn.net/szhupeng/article/details/119425404
+5. intent.setDataAndType()
+https://blog.csdn.net/cao478208248/article/details/22178123
+https://blog.csdn.net/hudashi/article/details/7060837
+
+1.PendingIntent基础： 
+https://blog.51cto.com/u_13616847/2120149
+
+PendingIntent重定向：一种针对安卓系统和流行App的通用提权方法——BlackHat EU 2021议题详解 （下）
+https://segmentfault.com/a/1190000041550819?sort=votes  
+
+1、intent的七个属性
+https://www.runoob.com/w3cnote/android-tutorial-intent-base.html
+2、PendingIntent - Android中文版 - API参考文档
+https://www.apiref.com/android-zh/android/app/PendingIntent.html
+3、https://blog.csdn.net/piglite/article/details/46581789
+
+
+【朝花夕拾】Android安全之（一）权限篇--ok
+https://www.cnblogs.com/andy-songwei/p/10638446.html
+
+SYSTEM_ALART_WINDOW和WRITE_SETTINGS。Android6.0开始，除了危险权限需要动态申请外，这两个特殊权限也是一样需要动态申请。
+
+查看Android源码的方法：https://www.cnblogs.com/yongdaimi/p/11572864.html 
+可以帮助理解漏洞产生的原理，例如getxxx需要try catch的原理。getQueryParameter会导致crash的原理
+intent scheme的语法，代码中都能看出来
+
+
+
+http://javascript.ruanyifeng.com/stdlib/console.html
+http://yanhaijing.com/basejs/index.html#sect_conventions
+https://leohxj.gitbooks.io/front-end-database/javascript-basic/scoping-and-hoisting.html
+https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics
+http://www.w3school.com.cn/jsref/dom_obj_window.asp
+http://www.w3school.com.cn/jsref/met_win_setinterval.asp
+http://www.runoob.com/js/js-json.html
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON
+http://www.runoob.com/js/js-json.html
+https://www.cnblogs.com/Jener/p/5878858.html
+https://javascript.ruanyifeng.com/stdlib/object.html
+
+
+protected-broadcast：
+最近看到一个神奇的问题，uid=1000的应用定义的protected-broadcast是无效的，相当于未定义的广播，任意应用可以发这个广播，造成权限降级功能泄露。看到这个问题单我是震惊的，居然还有shareuid=1000的应用做不了事。
+ 
+protected-broadcast生效范围
+经过和PMS同事的讨论，发现只有特权应用 才可以定义protected-broadcast。哪怕uid=1000的系统应用，如果不是特权应用也无法定义protected-broadcast。（未查看PMS代码逻辑，有时间再补吧）
+PS：特权应用一定是系统应用，系统应用不一定是特权应用。
+
+如何判定应用是不是特权应用
+那么特权应用的定义范围是什么？
+华为跟其他厂商是有一点区别的。除了/product/app目录，其他目录都比较好区分。如下：
+预置目录	系统应用	特权应用
+/system/priv-app	是	是
+/system/app	是	否
+/vendor/priv-app	是	是
+/vendor/app	是	否
+/odm/priv-app	是	是
+/odm/app	是	否
+/oem/app	是	否
+/product/priv-app	是	是
+/product/app	是	受华为预置方案影响，配置为priv应用时为特权应用
+其中/product/app目录下的应用比较特殊，不一定是特权应用。
+
+
+/product/app下的应用是不是特权应用判断方式：
+1、输入命令：adb shell env，结果中搜索CUST_POLICY_DIR
+2、命令里面目录下面（包含子目录）所有的APKInstallListEMUI5Release.txt、DelAPKInstallListEMUI5Release.txt中内容带priv的是特权应用。
+（个人感觉，直接adb shell find –name APKInstallListEMUI5Release.txt 找到所有txt也可以，未严谨验证）
+例如：
+ 
+
+
+检测方法
+1、检查应用AndroidManifest是否存在protected-broadcast，不存在则不用测试。
+2、输入命令adb shell pm list package -f ，通过被测应用包名找到应用安装路径。如果被测应用在/system/priv-app、/vendor/priv-app、/odm/priv-app、/product/priv-app下，是特权应用，非问题；如果在/product/app目录，需要继续测试；其他目录，存在问题。
+3、输入命令：adb shell find –name APKInstallListEMUI5Release.txt >xxx.txt、adb shell find –name DelAPKInstallListEMUI5Release.txt>xxx.txt，找到并汇总命令中所有包含的文档
+4、在上一步文档中搜索应用安装路径，检查是否有被测应用，没有则不用测试。如果有，上一步文档中安装路径后面是否有priv字样，如果存在priv则是特权应用，非问题；如果不存在priv，则不是特权应用，存在问题。 
+
+
+热补丁技术
+Dexposed（阿里）
+原理：修改需要hook的方法为native方法，然后在设置nativeFunc值为我们需要处理的函数,然后这个函数在用反射机制调用上层的Java代码即可
+特点：基于Xposed的AOP框架，方法级粒度，可以进行AOP编程、插桩、热补丁、SDK hook等功能。
+缺点：适配方面存在一些问题，目前不支持android6.0，5,1；art运行时； 
+优点：无需重启就可以达到修复bug的目的；
+地址： https://github.com/alibaba/dexposed
+分析：http://www.wjdiankong.cn/archives/599 
+
+
+
+http://bbs.520it.com/forum.php?mod=viewthread&tid=6296
+https://github.com/jeterlee/HotFixFamily
+
+当一个App发布之后，突然发现了一个严重bug需要进行紧急修复，这时候公司各方就会忙得焦头烂额：重新打包App、测试、向各个应用市场和渠道换包、提示用户升级、用户下载、覆盖安装。有时候仅仅是为了修改了一行代码，也要付出巨大的成本进行换包和重新发布。
+这时候就提出一个问题：有没有办法以补丁的方式动态修复紧急Bug，不再需要重新发布App，不再需要用户重新下载，覆盖安装？
+虽然Android系统并没有提供这个技术，但是有很多开源的热修复技术可以供开发者使用。在业界内比较著名的有阿里巴巴的AndFix、Dexposed、HotFix，腾讯QQ空间的超级补丁技术和微信的Tinker。
+分析了这些热修复框架的原理，大概可以分为两类：
+1、	Dex分包重组替换：
+把BUG方法修复以后，放到一个单独的DEX里，插入到dexElements数组的最前面，让虚拟机去加载修复完后的方法。使用热修复原理的典型框架是QQ空间的热补丁技术，参考：安卓App热补丁动态修复技术介绍
+2、	Native方法注入：
+在native动态替换方法java层的代码，通过native层hook java层的代码。使用这种热修复原理的典型框架是阿里的Dexposed和AndFix。原理分析参考：http://www.wjdiankong.cn/archives/599
+
+
+
+http://wps2015.org/drops/drops/Android%20WebView%20File%E5%9F%9F%E6%94%BB%E5%87%BB%E6%9D%82%E8%B0%88.html
+https://developer.android.com/reference/android/webkit/WebSettings.html#setAllowFileAccess(boolean)
+http://blogs.360.cn/360mobile/2014/09/22/webview%E8%B7%A8%E6%BA%90%E6%94%BB%E5%87%BB%E5%88%86%E6%9E%90/
+
+finish的坑：webview校验绕过
+在URL白名单校验代码中，检测到URL为非法时，开发人员使用finish()来使activity进入后台挂起，目的是代码不继续往下文走，但是在onCreate()调用Activity.finish()方法后的生命周期执行是在onCreate()代码全部执行完才会执行onDestroy()，使finish()生效。
+《调用Activity.finish()方法后的生命周期执行过程》
+https://www.jianshu.com/p/ede291c83e70
+
+
+阅读更多关于Intent-based URI、IntentScheme攻击：
+https://developer.chrome.com/multidevice/android/intents
+https://www.mbsd.jp/Whitepaper/IntentScheme.pdf
+
+
+调用getCallingPackage/getCallingActivity获取包名。
+此方法只有在调用方使用startActivityForResult时才返回真实包名。如果调用startActivity，则获取的为空。此时会通过反射获取mReferrer的值来取callingPackage。但是，这个值可以轻易绕过。
+
+
+http://www.cxyzjd.com/article/brave2211/103280429
+
+
+
+1.	任意文件读写，甚至代码执行
+这个FileProvider配置了从根目录进行文件读写
+ 
+ 
+
+新浪微博SDK，有一个Activity, 全名为com.sina.weibo.sdk.share.ShareTransActivity，在AndroidManifest.xml中export=true，这意味着任意外部app都能使用intent启动ShareTransActivity, 且intent内的data和flags可被任意指定。
+对com.sina.weibo.sdk.share.ShareTransActivity，其onCreate函数会尝试启动新浪微博，决定是否能启动新浪微博的判断如下：
+
+public static boolean a(Context context) {
+    String[] strArr = {"com.sina.weibo", "com.sina.weibog3"};
+    for (int i = 0; i < 2; i++) {
+        String str = strArr[i];
+        Intent intent = new Intent("com.sina.weibo.action.sdkidentity");
+        intent.setPackage(str);
+        intent.addCategory("android.intent.category.DEFAULT");
+        if (context != null) {
+            List<ResolveInfo> queryIntentServices = context.getPackageManager().queryIntentServices(intent, 0);
+            if (queryIntentServices != null) {
+                boolean isEmpty = queryIntentServices.isEmpty();
+                if (!isEmpty) {
+                    return true;
+                }
+            } else {
+                continue;
+            }
+        }
+    }
+    return false;
+}
+
+实质是尝试去匹配package="com.sina.weibo"或"com.sina.weibog3",Category="android.intent.category.DEFAULT",Action="com.sina.weibo.action.sdkidentity"的服务，如果匹配到了，ShareTransActivity就会往外发送intent，该intent中重要的参数如下：
+ package = com.sina.weibo 或 com.sina.weibog3，取决于匹配到的服务的包名，如果包名为com.sina.weibo，发送出去的intent的包名也为com.sina.weibo。如果包名为com.sina.weibog3，则发送出去的intent的包名也为com.sina.weibog3
+share_back_flag，每次启动ShareTransAcitivity时，该值都是随机生成的，生成后，被保存在this.w中，同时也会在发出去的intent中保有此值
+可以看到ShareTransActivity试图启动新浪微博时，只检测了特定包名的应用中是否包含特定服务，而没有去检测应用的签名，现在假设同一台手机上存在攻击者的应用，攻击者应用的包名为com.sina.weibo或com.sina.weibog3，攻击者应用中存在着特定的服务，且能够接受ShareTransActivity往外发送的intent。
+这个假设不难达成：
+对于包名而言，新浪微博本身的包名为com.sina.weibo，攻击者应用包名若为com.sina.weibog3。则可与新浪微博本身共存。此外攻击者也能重打包新浪微博
+由于是攻击者的应用，所以在应用内写指定的服务，和能接收ShareTransActivity往外发送的intent都不难
+
+发送intent后，ShareTransActivity在onActivityResult函数内等待返回结果，onActivity及相关函数如下
+public void onActivityResult(int i, int i2, Intent intent) {
+    super.onActivityResult(i, i2, intent);
+    c.a("WBShareTag", "onActivityResult. Means share result coming!");
+    Handler handler = this.x;
+    if (handler == null) { //默认非空
+        return;
+    }
+    if (i2 == -1) {  // 可以被攻击者app控制
+        Message obtain = Message.obtain(handler, 1);
+        obtain.obj = intent;
+        this.x.sendMessageDelayed(obtain, 100);
+        return;
+    }
+    handler.sendEmptyMessageDelayed(0, 100);
+}
+private Handler x = new Handler(Looper.getMainLooper()) { // from class: com.sina.weibo.sdk.share.ShareTransActivity.1
+    @Override // android.os.Handler
+    public final void handleMessage(Message message) {
+        super.handleMessage(message);
+        int i = message.what;
+        if (i == 1) {
+            boolean z = message.obj instanceof Intent;
+            if (z) {
+                ShareTransActivity.this.b((Intent) message.obj); //默认落入该函数内
+                return;
+            }
+        }
+        ShareTransActivity.this.m();
+    }
+};
+private void b(Intent intent) {
+    FrameLayout frameLayout = this.u;
+    if (frameLayout != null) {
+        frameLayout.setVisibility(4);
+    }
+    Handler handler = this.x;
+    if (handler != null) {
+        handler.removeMessages(0);
+        this.x = null;
+    }
+    boolean a2 = a(intent); // 检测返回intent的share_back_flag与该Activity的this.w值是否一致
+    if (!a2) {
+        m();
+        return;
+    }
+    setResult(-1, intent); //直接将onActivityResult函数的intent返还
+    finish();
+
+假设攻击者应用内存在两个Activity, MainActivity和HackActivity，MainActivity函数使用startActivityForResult函数启动com.sina.weibo.sdk.share.ShareTransActivity，ShareTransActivity的onCreate函数向外发送intent1，intent1被攻击者的HackActivity接收。此后HackActivity使用setResult函数设置返回intent2，intent2中的data为攻击者应用想写入的受害者应用的私有文件，flags为Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION，share_back_flag与inten1内的share_back_flag相同，这时，受害者应用com.sina.weibo.sdk.share.ShareTransActivity内的onActivityResult函数看到发送intent1和接收intent2的share_back_flag相同，就会直接将intent2通过setResult函数返回给攻击者应用的MainActivity，而没有过滤intent2的flags，以写权限Intent.FLAG_GRANT_WRITE_URI_PERMISSION为例，就可以利用fileprovider进行任意文件读写，如果有so或者是其他可执行文件就可以直接替换，造成代码执行。
+
+
+
+stevedroid
+heardroid
+
+
+安卓系统中 /data/user/0/ 等目录其实是一个指向 /data/data/ 的软链接， 
+/data/user/0/MyTestApp/xxx 等同于 /data/data/MyTestApp/xxx
+
+可以通过软链接文件 /data/data/hacker/symlink  -> /data/data/MyTestApp/xxx 实现攻击
+/data/./data 同样可以实现攻击
+
+通过伪造 content 路径的方式进行攻击 content:///root/data/data/MyTestApp/xxxx
+
+4.4 版本引入“全盘加密”，对 Android 设备上的所有用户数据（/data，/sdcard）进行编码。
+7.0 版本支持文件级加密。引入 Direct Boot，将 Credential encrypted 和 Device encrypted 区分。可以让用户快速使用那些涉及敏感信息，又需要随机启动的重要的设备功能，如闹钟
+
+
+Android安全攻防权威指南 [（美）德雷克著][人民邮电出版社][2015.04][393页]-13715130
+Android安全攻防实战
+Android进阶之光 刘望舒 (kindle正版)
+Android开发艺术探索
+疯狂Android讲义 第3版
+浅入浅出 Android 安全 中文版
+
+
+
+
