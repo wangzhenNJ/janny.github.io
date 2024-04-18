@@ -1,0 +1,369 @@
+开放原子开发者用户中心：
+https://ohpm.openharmony.cn/#/cn/detail/@hms-security%2Fagoh-crypto
+
+electron跨平台开发实战
+
+鸿蒙生态应用开发白皮书V2.0
+https://developer.huawei.com/consumer/cn/doc/harmonyos-bps?ha_source=wd&ha_sourceId=89000503
+
+干货|python安全和代码审计相关资料整理
+https://www.wangan.com/p/11v6bc1632a6d9fc
+
+electron跨平台开发实战
+
+1.	代码注入、命令执行
+1.内置危险函数
+exec
+execfile
+eval
+
+2.标准库危险模块
+os
+subprocess
+commands
+
+3.危险第三方库
+Template(user_input) : 模板注入(SSTI)所产生的代码执行
+subprocess32 
+
+4.反序列化
+marshal
+PyYAML
+pickle和cpickle
+shelve
+PIL
+unzip
+Python沙箱逃逸的n种姿势
+https://xz.aliyun.com/t/52
+禁用import的情况下绕过python沙箱
+https://www.anquanke.com/post/id/107000
+Escaping the Python Sandbox
+https://zolmeister.com/2013/05/escaping-python-sandbox.html
+Python Sandbox Bypass
+https://mp.weixin.qq.com/s?__biz=MzIzOTQ5NjUzOQ==&mid=2247483665&idx=1&sn=4b18de09738fdc5291634db1ca2dd55a
+Python之数据序列化（json、pickle、shelve）
+http://www.cnblogs.com/yyds/p/6563608.html
+Exploiting Python PIL Module Command Execution Vulnerability
+https://xz.aliyun.com/t/44
+Exploiting Python Code Injection in Web Applications
+https://www.doyler.net/security-not-included/exploiting-python-code-injection
+EXPLOITING PYTHON CODE INJECTION IN WEB APPLICATIONS
+http://www.securitynewspaper.com/2016/11/12/exploiting-python-code-injection-web-applications/
+Python eval的常见错误封装及利用原理
+http://xxlegend.com/2015/07/31/Python eval%E7%9A%84%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%B0%81%E8%A3%85%E5%8F%8A%E5%88%A9%E7%94%A8%E5%8E%9F%E7%90%86/
+http://xxlegend.com/2015/07/31/Python%20eval%E7%9A%84%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%B0%81%E8%A3%85%E5%8F%8A%E5%88%A9%E7%94%A8%E5%8E%9F%E7%90%86/
+Exploiting Python’s Eval
+http://www.floyd.ch/?p=584
+Exploiting insecure file extraction in Python for code execution
+https://ajinabraham.com/blog/exploiting-insecure-file-extraction-in-python-for-code-execution
+掌阅iReader某站Python漏洞挖掘
+https://www.leavesongs.com/PENETRATION/zhangyue-python-web-code-execute.html
+Python Pickle的任意代码执行漏洞实践和Payload构造
+http://code2sec.com/python-picklede-ren-yi-dai-ma-zhi-xing-lou-dong-shi-jian-he-payloadgou-zao.html
+django的secret key泄漏导致的命令执行实践
+http://code2sec.com/djangode-secret-keyxie-lou-dao-zhi-de-ming-ling-zhi-xing-shi-jian.html
+Remote Code Execution on a Facebook server
+https://blog.scrt.ch/2018/08/24/remote-code-execution-on-a-facebook-server/
+Python PyYAML反序列化漏洞实验和payload构造
+http://www.code2sec.com/2017/09/22/python-pyyaml%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%E5%AE%9E%E9%AA%8C%E5%92%8Cpayload%E6%9E%84%E9%80%A0/
+Exploiting Python Deserialization Vulnerabilities
+https://crowdshield.com/blog.php?name=exploiting-python-deserialization-vulnerabilities
+Shellcoding in Python’s serialisation format
+https://media.blackhat.com/bh-us-11/Slaviero/BH_US_11_Slaviero_Sour_Pickles_WP.pdf
+PyCodeInjection代码注入实验环境
+https://github.com/sethsec/PyCodeInjection
+Exploiting Python Code Injection in Web Applications （翻译版）
+https://sethsec.blogspot.com/2016/11/exploiting-python-code-injection-in-web.html
+Numpy反序列化命令执行(CVE-2019-6446)浅析
+https://www.freebuf.com/vuls/194540.html
+2.	代码审计
+Python安全编码和代码审计
+http://xxlegend.com/2015/07/30/Python%E5%AE%89%E5%85%A8%E7%BC%96%E7%A0%81%E5%92%8C%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/
+Python代码审计连载之一：CSRF 同 https://www.cdxy.me/?p=736
+https://xz.aliyun.com/t/391
+Python代码审计连载之二：SSTI 同 https://www.cdxy.me/?p=738
+https://xz.aliyun.com/t/390
+Python代码审计连载之三：Server Side Request 同 https://www.cdxy.me/?p=744
+https://xz.aliyun.com/t/389
+Python代码审计连载之四：Command Execution 同 https://www.cdxy.me/?p=747
+https://xz.aliyun.com/t/388
+Dangerous Python Functions, Part 1
+https://www.kevinlondon.com/2015/07/26/dangerous-python-functions.html
+Dangerous Python Functions, Part 2
+https://www.kevinlondon.com/2015/08/15/dangerous-python-functions-pt2.html
+Dangerous Python Functions, Part 3
+https://www.kevinlondon.com/2017/01/30/dangerous-python-functions-pt3.html
+记一下PythonWeb代码审计应该注意的地方
+http://blog.neargle.com/2016/07/25/log-of-simple-code-review-about-python-base-webapp/
+廖新喜大佬的python代码审计工具
+https://github.com/shengqi158/pyvulhunter
+来自openstack安全团队的python代码静态审计工具
+https://github.com/openstack/bandit
+来自openstack安全团队的python代码静态审计工具2
+https://github.com/openstack/syntribos
+代码审计工具pyt
+https://github.com/python-security/pyt
+xfkxfk的python自动化代码审计 基于pyekaboo 和廖新喜的pyvulhunter
+https://mp.weixin.qq.com/s?__biz=MzUxOTYzMzU0NQ==&mid=2247483887&idx=1&sn=99ab12309de75381e37c058d53def1b6&chksm=f9f7ee09ce80671fc5887a9c25350fc610559cc1e095f9b689473873889581e4c5fbb0dec2cd&mpshare=1&
+3.	Django相关
+Django debug page XSS漏洞（CVE-2017-12794）分析
+https://www.leavesongs.com/PENETRATION/django-debug-page-xss.html
+Django DeleteView without confirmation template, but with CSRF attack
+https://www.leavesongs.com/PYTHON/django-deleteView-without-confirmation-template.html
+Django安全机制
+http://xxlegend.com/2015/04/01/Django%E5%AE%89%E5%85%A8%E6%9C%BA%E5%88%B6/
+从Django的SECTET_KEY到代码执行
+http://xxlegend.com/2015/04/01/%E4%BB%8EDjango%E7%9A%84SECTET_KEY%E5%88%B0%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C/
+Django CSRF Bypass (CVE-2016-7401) 漏洞分析
+https://paper.seebug.org/58/
+Django CSRF Bypass 漏洞分析(CVE-2016-7401)
+http://blog.knownsec.com/2016/10/django-csrf-bypass_cve-2016-7401/
+Django的两个url跳转漏洞分析:CVE-2017-7233&7234
+https://paper.seebug.org/274/
+Python 格式化字符串漏洞（Django为例） 同 https://xz.aliyun.com/t/288
+https://www.leavesongs.com/PENETRATION/python-string-format-vulnerability.html
+Django 安全最佳实践
+http://www.atjiang.com/2scoopsdjango1.8-26-security-best-practices/
+从Pwnhub诞生聊Django安全编码
+https://www.leavesongs.com/PYTHON/django-coding-experience-from-pwnhub.html
+python和django的目录遍历漏洞(任意文件读取)
+http://www.lijiejie.com/python-django-directory-traversal/
+新型任意文件读取漏洞的研究
+https://www.leavesongs.com/PENETRATION/arbitrary-files-read-via-static-requests.html
+django的一些安全问题答案
+https://www.kevinlondon.com/2015/10/16/answers-to-django-security-questions.html
+4.	package钓鱼
+Package 钓鱼
+https://paper.seebug.org/311/
+被忽视的攻击面：Python package 钓鱼
+https://paper.seebug.org/326/
+https://www.pytosquatting.org/
+5.	LDAP注入
+Python安全编码之预防LDAP注入
+http://xxlegend.com/2016/12/01/Python%E5%AE%89%E5%85%A8%E7%BC%96%E7%A0%81%E4%B9%8B%E9%A2%84%E9%98%B2LDAP%E6%B3%A8%E5%85%A5/
+6.	SSRF
+谈一谈如何在Python开发中拒绝SSRF漏洞
+https://www.leavesongs.com/PYTHON/defend-ssrf-vulnerable-in-python.html
+Python安全 - 从SSRF到命令执行惨案
+https://www.leavesongs.com/PENETRATION/getshell-via-ssrf-and-redis.html
+Splash SSRF 到获取内网服务器 ROOT 权限
+https://xz.aliyun.com/t/118
+7.	XSS
+Flask Debugger页面上的通用XSS漏洞分析和挖掘过程记录
+http://blog.neargle.com/2016/09/21/flask-src-review-get-a-xss-from-debuger/
+8.	SQLI
+讨论PythonWeb开发中可能会遇到的安全问题之SQL注入
+http://blog.neargle.com/2016/07/22/pythonweb-framework-dev-vulnerable/
+9.	SSTI模版注入
+Python Security Auditing (II): SSTI
+https://www.cdxy.me/?p=738
+exploring-ssti-in-flask-jinja2
+https://nvisium.com/blog/2016/03/09/exploring-ssti-in-flask-jinja2/
+exploring-ssti-in-flask-jinja2-part-ii
+https://nvisium.com/blog/2016/03/11/exploring-ssti-in-flask-jinja2-part-ii/
+10.	python webshell
+https://github.com/evilcos/python-webshell
+https://github.com/ahhh/Reverse_DNS_Shell
+11.	paper
+Python_Hack_知道创宇_北北(孙博).pdf
+12.	其他
+如何判断目标站点是否为Django开发
+https://www.leavesongs.com/PENETRATION/detect-django.html
+Supervisord远程命令执行漏洞（CVE-2017-11610）
+https://www.leavesongs.com/PENETRATION/supervisord-RCE-CVE-2017-11610.html
+python富文本XSS过滤器
+https://www.leavesongs.com/PYTHON/python-xss-filter.html
+基于mezzanine的攻防比赛环境搭建及XXE漏洞构造/
+http://xxlegend.com/2016/04/01/%E5%9F%BA%E4%BA%8Emezzanine%E7%9A%84%E6%94%BB%E9%98%B2%E6%AF%94%E8%B5%9B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%8F%8AXXE%E6%BC%8F%E6%B4%9E%E6%9E%84%E9%80%A0/
+Python Waf黑名单过滤下的一些Bypass思路
+http://www.0aa.me/index.php/archives/123/
+Pwnhub Web题Classroom题解与分析
+https://www.leavesongs.com/PENETRATION/pwnhub-web-classroom-django-sql-injection.html
+Programming Secure Web Applications in Python
+https://www.thoughtco.com/programming-secure-web-applications-2813531
+[CVE-2016-5699] HTTP Header Injection in Python urllib 同 http://www.anquan.us/static/drops/papers-16905.html
+http://blog.blindspotsecurity.com/2016/06/advisory-http-header-injection-in.html
+[CVE-2019-9740] Python urllib CRLF injection vulnerability 同 https://xz.aliyun.com/t/5123
+https://bugs.python.org/issue36276
+Hack Redis via Python urllib HTTP Header Injection
+https://security.tencent.com/index.php/blog/msg/106
+【技术分享】python web 安全总结
+http://bobao.360.cn/learning/detail/4522.html
+13.	安全工具
+python正向连接后门
+https://www.leavesongs.com/PYTHON/python-shell-backdoor.html
+struts2 S2-016/S2-017 Python GetShell
+https://www.leavesongs.com/PENETRATION/UseOfStruts.html
+Python多线程端口扫描工具
+https://www.leavesongs.com/PYTHON/PortScanner.html
+Python JSON Fuzzer: PyJFuzz
+https://n0where.net/python-json-fuzzer-pyjfuzz/
+https://github.com/smartFlash/pySecurity
+14.	对象注入、底层安全
+DEFENCELY CLARIFIES PYTHON OBJECT INJECTION EXPLOITATION
+https://defencely.com/blog/defencely-clarifies-python-object-injection-exploitation/
+OWASP Python Security Project
+https://github.com/ebranca/owasp-pysec
+Escaping a Python sandbox with a memory corruption bug
+https://hackernoon.com/python-sandbox-escape-via-a-memory-corruption-bug-19dde4d5fea5
+
+基于python的自动化代码审计
+https://cloud.tencent.com/developer/article/1078195
+
+
+SpringMVC启动过程详解（li）
+https://www.cnblogs.com/RunForLove/p/5688731.html
+
+https://www.imooc.com/article/7989
+Apache Shiro远程安全限制绕过漏洞（CVE-2016-6802）
+https://www.seebug.org/vuldb/ssvid-92540
+
+Authentication（Spring Security 认证笔记）
+https://www.cnblogs.com/renjiaqi/p/11186172.html
+
+
+Nginx安全配置
+https://www.php.cn/faq/572310.html
+
+Zookeeper和Kafka安全配置
+https://www.bilibili.com/read/cv11773508/
+
+ESAPI
+
+ETCD简介及使用 
+https://blog.51cto.com/u_7961702/5567971
+
+《kubernetes 系列》5. etcd 是如何通过鉴权实现数据安全的？详解 etcd 的认证、授权与权限
+https://www.cnblogs.com/traditional/p/17444921.html
+
+RESTFUL API 安全设计指南
+https://cloud.tencent.com/developer/article/1876495
+
+solr
+
+Spark安全研究
+
+首个Spark REST API未授权漏洞利用分析
+https://www.sohu.com/a/244142965_354899
+
+XMPP
+
+Hybrid应用安全与漏洞实战
+
+
+Android应用中的JavaScript使用模式及其安全漏洞分析
+https://wap.cnki.net/touch/web/Dissertation/Article/1017053405.nh.html
+
+《攻防启示：Chromium组件风险剖析与收敛》
+https://mp.weixin.qq.com/s/f0aFLEKyABpYDobPN2b6tQ
+
+zipperdown漏洞
+https://xz.aliyun.com/t/2340?time__1311=n4%2BxnieDqWqxBDIxCqGNapQo2Ar%3Dx7wAxwD&alichlgref=https%3A%2F%2Fwww.baidu.com%2Flink%3Furl%3DXlQ_gwW6k0yLmDSGVsSCpk1jtFMTxG2e1mUmzzZZOtlEVokxPSzkC6x9l9ei7R0q%26wd%3D%26eqid%3Db3f587e40006311e00000006661f8158
+
+Rpktool（Oppo开发的快应用工具）
+OPPO子午互联网安全实验室开发的快应用工具rpktool也在安全专场正式亮相。
+据介绍，rpktool是一款用于解包、调试、重打包快应用的工具，能够实现解包时对js代码进行美化和分析，辅助相关人员进行安全与隐私合规测试。
+
+The Inside Story: There are Apps in Apps and Here is How to Break Them	
+https://www.blackhat.com/asia-20/briefings/schedule/#the-inside-story-there-are-apps-in-apps-and-here-is-how-to-break-them-18380
+A New Era of One-Click Attacks: How to Break Install-Less Apps	
+https://www.blackhat.com/asia-21/briefings/schedule/#a-new-era-of-one-click-attacks-how-to-break-install-less-apps-22259
+Rpktool	
+https://github.com/oppo-security/rpktool
+
+
+动态调试	"C:\Program Files (x86)\xxxPC\xxxPC.exe" --remote-debugging-port=8898	https://knowledge.kofax.com/Robotic_Process_Automation/Troubleshooting/How_to_enable_Debugging_Tools_for_the_Chromium_browser_(CEF)
+流量抓包	1、参数注入	xxPC.exe --ignore-certificate-errors --proxy-server="https=127.0.0.1:9999;http=127.0.0.1:9999"
+	2、程序自带代理设置	看程序是否有此功能
+	3、Profixer联动Burp/fiddler	http://3ms.huawei.com/km/groups/2027333/blogs/details/10798715
+案例	网易云音乐客户端远程命令执行漏洞	"https://cloud.tencent.com/developer/article/1579540
+https://www.chinabaiker.com/thread-2897-1-1.html"
+案例	"调戏" 微信PC端浏览器内置浏览器	https://juejin.cn/post/6844904082314887182
+
+chrome-pak-customizer	https://github.com/myfreeer/chrome-pak-customizer
+a-study-of-electron-securit	https://www.blackhat.com/docs/us-17/thursday/us-17-Carettoni-Electronegativity-A-Study-Of-Electron-Security.pdf
+reloading-Insecurity-In-Your-Electron	i.blakhat.com/asia-19/Thu-March-28/bh-asia-Carettoni-Preloading-Insecurity-In-Your-Electron.pdf
+"Discovering Hidden Properties to Attack
+Node.js Ecosystem"	https://i.blackhat.com/USA-20/Wednesday/us-20-Xiao-Discovering-Hidden-Properties-To-Attack-Nodejs-Ecosystem.pdf
+
+
+模式库	
+Electronegativity Official Documentation	https://github.com/doyensec/electronegativity/wiki
+反编译	
+npm install -g asar	https://github.com/electron/asar
+	asar extract app.asar xxxxxx_out	https://github.com/electron/asar
+	扒一扒迅雷的代码结构	https://juejin.cn/post/6890344584078721031
+动态调试	
+代码里加入openDevTools方法	https://www.electronjs.org/docs/latest/tutorial/application-debugging
+	"C:\XXX\xxxxPC.exe" --inspect=0.0.0.0:9229	https://www.electronjs.org/docs/latest/api/command-line-switches#--inspect-brkhostport
+	Debugtron	https://github.com/bytedance/debugtron
+流量抓包	
+1、代码注入	commandLine.appendSwitch("proxy-server","127.0.0.1:8080")
+	2、参数注入	--ignore-certificate-errors --proxy-server="https=127.0.0.1:9999;http=127.0.0.1:9999"
+	3、程序自带代理设置	看程序是否有此功能
+	4、Profixer联动Burp/fiddler	
+工具	
+Debugtron	https://github.com/bytedance/debugtron
+	Electronegativity	https://github.com/doyensec/electronegativity
+	Lynx	https://github.com/xiaofen9/Lynx
+	Inspect_ParameterInjection_RCE_tool_on_Electron(ExP)	
+
+趋势总结	攻防启示：Chromium组件风险剖析与收敛	
+https://mp.weixin.qq.com/s/f0aFLEKyABpYDobPN2b6tQ
+dalvikvm	Abusing Android Apps And Gaining Remote Code Execution	
+https://www.blackhat.com/docs/ldn-15/materials/london-15-Welton-Abusing-Android-Apps-And-Gaining-Remote-Code-Execution.pdf
+app_process	android：app_process两种用法	
+https://blog.csdn.net/wanchupin/article/details/76223381
+
+远程监听议题	Can You Hear Me Now? Remote Eavesdropping Vulnerabilities in Mobile Messaging Applications	
+https://i.blackhat.com/USA21/Wednesday-Handouts/us-21-Can-You-Hear-Me-Now-Remote-Eavesdropping-Vulnerabilities-In-Mobile-Messaging-Applications.pdf
+
+黑客字典 UltraDict
+
+Elasticsearch安全配置详解
+https://cloud.tencent.com/developer/article/2234567
+
+
+
+Reference
+https://www.usenix.org/system/files/conference/woot15/woot15-paper-peles.pdf
+https://securitylab.github.com/research/android-deserialization-vulnerabilities/
+https://securitylab.github.com/research/android-deserialization-vulnerabilities/
+
+利用SSTI漏洞获取服务器Shell
+https://xz.aliyun.com/t/2637?u_atoken=6ee1a8321a5020f7120938056771a5e6&u_asession=01XGfzdIkmtXPGa9uA6mhZJycFKagKFTyfBhCrxrousTuFlf8AusatZMLcZovPR_3mdlmHJsN3PcAI060GRB4YZGyPlBJUEqctiaTooWaXr7I&u_asig=05mhxoNj_6mgx38QJTtAuW7i6YC33HNIFHBPH12qZ4msG9an77Tsjl3ro4kHhOr62iHPwohYpHaqh3Ova4bs2jMIYNrwxHl_oFt1U5YdP-keC-3uZ7PyWB0aalBUPuBSNnqXaTWI1XZe0U8kzc4Mog9YQhYUBNB5-OlfgCiUK24rtg2QMxYs6lyXb1lFWKql56EuyQDE3VTIUQV8Jpz3ELdSq-_SCeZsn7LQhlkuJ3zKJc1WUhOZzmH7ZE_6OlUhmFoXq9UtI9N87yAsl21Q69ERTSE757d7MCXlE4xXWLJht6gx6UxFgdF3ARCQ86jS_u_XR5hatHQVh06VuUZ-D1wA&u_aref=sgobMqUEjtqlPrAljQJTTEcByn8%3D
+
+
+
+
+大模型越狱攻击框架：集成11种方法，揭示大模型参数量和安全性的新规律
+https://www.secrss.com/articles/65288
+
+《The WebSocket Protocol RFC6455》
+
+《浅析WebSocket安全》
+
+《CSWSH漏洞总结》
+
+《挖洞经验 | 利用跨站WebSocket劫持（CSWSH）实现账户劫持》
+
+《Tomcat Websocket DoS CVE-2020-13935分析》
+
+《Apache Tomcat WebSocket DoS (CVE-2020-13935)》
+
+《What’s wrong with WebSocket APIs? Unveiling vulnerabilities in WebSocket APIs.》
+
+《websocket-smuggle》
+
+《WebSocket应用安全问题分析》
+
+《websocket-connection-smuggling》
+
+
+
+HOW DO YOU ACTUALLY FIND BUGS?（译文）
+https://tttang.com/archive%2f1597/#toc_bug
+
+
+
+
